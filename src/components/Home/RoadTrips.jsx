@@ -24,7 +24,7 @@ const RoadTrips = () => {
         },
     ];
     return (
-        <div className="mt-[60px]">
+        <div className="mt-[80px]">
             <div className="w-full">
                 <h1 className="text-center text-3xl font-bold mb-[40px] xl:mb-[60px] relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4">
                     Road Trips

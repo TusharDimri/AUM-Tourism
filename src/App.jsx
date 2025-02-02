@@ -2,8 +2,9 @@ import { useState, useRef, useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 import Home from './pages/home';
-import ReligiousToursPage from './pages/RelegiousToursPage';
 import Header from './components/Header';
+import ReligiousToursPage from './pages/RelegiousToursPage';
+import ContactUs from "./pages/ContactUs";
 import Footer from './components/Footer';
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home isTransparent={isTransparent} heroRef={heroRef} />} />
         <Route path="/religious-tours/:id?" element={<ReligiousToursPage />} />
+        <Route path="/contact?" element={<ContactUs />} />
       </Routes>
       <Footer />
     </>

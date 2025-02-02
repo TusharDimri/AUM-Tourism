@@ -9,7 +9,7 @@ const navLinks = [
     { name: "Road Trips", link: "/" },
     { name: "Treks", link: "/" },
     { name: "Packages", link: "/" },
-    { name: "Contact Us", link: "/" },
+    { name: "Contact Us", link: "/contact" },
 ];
 
 const Header = ({ isTransparent }) => {
@@ -101,7 +101,7 @@ const Header = ({ isTransparent }) => {
 
             {/* Floating Action Buttons */}
             {!isMenuOpen && (
-                <div className="fixed bottom-[10vh] right-6 z-50 flex flex-col gap-4">
+                <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
                     <a
                         href="https://wa.me/919876543210"
                         target="_blank"

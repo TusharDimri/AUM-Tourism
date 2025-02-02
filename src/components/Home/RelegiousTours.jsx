@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -11,7 +11,7 @@ const RelegiousTours = ({ isTransparent }) => {
         const { onClick } = props;
         return (
             <div
-                className="absolute top-1/2 -right-4 sm:-right-8 transform translate-y-[-50%]"
+                className="absolute top-1/2 -right-4 sm:-right-8 transform translate-y-[-50%] cursor-pointer"
                 onClick={onClick}
             >
                 <svg
@@ -34,7 +34,7 @@ const RelegiousTours = ({ isTransparent }) => {
         const { onClick } = props;
         return (
             <div
-                className="absolute top-1/2 -left-4 sm:-left-8 transform translate-y-[-50%]"
+                className="absolute top-1/2 -left-4 sm:-left-8 transform translate-y-[-50%] cursor-pointer"
                 onClick={onClick}
             >
                 <svg
@@ -81,29 +81,44 @@ const RelegiousTours = ({ isTransparent }) => {
     };
 
     return (
-        <div className={`mt-[40px] xl:mt-[50px] flex flex-col justify-center `}>
+        <div className={`mt-[40px] xl:mt-[50px] flex flex-col justify-center`}>
             <h2 className="text-center text-3xl font-bold mb-[40px] xl:mb-[50px] relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4">
                 Religious Tours
             </h2>
             <div className="w-[97vw] sm:w-[90vw] mx-auto px-4">
                 <Slider {...settings}>
                     {tours.map((tour, index) => (
-                        <Link to={`/religious-tours/?tourId=${tour.id}`} key={index}>
-                            <div className="px-2">
-                                <div className="relative h-[400px] w-full rounded-xl overflow-hidden group">
+                        <Link to={`/religious-tours/?tourId=${tour.id}`} key={index} className="h-full">
+                            <div className="mx-4 h-full py-8">
+                                <div className="rounded-[50px] overflow-hidden transition-all duration-300 hover:scale-105 bg-white shadow-lg hover:shadow-xl border border-gray-100 h-full flex flex-col group">
                                     <div
-                                        className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                                        className="h-[350px] bg-cover bg-center rounded-b-[50px] border-b-4 border-[#0071c0] relative overflow-hidden"
                                         style={{ backgroundImage: `url(${tour.image})` }}
                                     >
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent">
-                                            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                                <h3 className="text-xl md:text-2xl font-bold mb-2">{tour.title}</h3>
-                                                <p className="text-base opacity-90">{tour.subtitle}</p>
-                                                <button className="text-base mt-4 bg-[#0071c0] text-white px-4 py-2 rounded-full transition-colors group-hover:text-[#f2942b]">
-                                                    Learn More
-                                                </button>
-                                            </div>
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                                    </div>
+                                    <div className="p-6 text-center rounded-b-[50px] flex flex-col flex-1">
+                                        <h3 className="text-xl font-bold text-[#1a202c] mb-2 group-hover:text-[#005a9c] transition-colors">
+                                            {tour.title}
+                                        </h3>
+                                        <div className="flex-1">
+                                            <p className="text-sm text-gray-600 line-clamp-3 leading-relaxed">
+                                                {tour.description}
+                                            </p>
                                         </div>
+                                        <button className="text-[#0071c0] mt-4 text-sm font-medium flex items-center justify-center hover:text-[#00457a] transition-colors">
+                                            Explore
+                                            <svg
+                                                className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                                viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path d="M9 5l7 7-7 7" />
+                                            </svg>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -111,8 +126,24 @@ const RelegiousTours = ({ isTransparent }) => {
                     ))}
                 </Slider>
             </div>
-        </div>
-    )
-}
 
-export default RelegiousTours
+            {/* Keep existing global slick slider styles */}
+            <style jsx global>{`
+                .slick-track {
+                    display: flex !important;
+                    align-items: stretch !important;
+                }
+                
+                .slick-slide {
+                    height: auto !important;
+                }
+                
+                .slick-slide > div {
+                    height: 100%;
+                }
+            `}</style>
+        </div>
+    );
+};
+
+export default RelegiousTours;
