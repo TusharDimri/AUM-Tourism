@@ -1,5 +1,16 @@
 import React, { useState } from "react";
 import { FaWhatsapp, FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
+const navLinks = [
+    { name: "Home", link: "/" },
+    { name: "About Us", link: "/" },
+    { name: "Religious Tours", link: `/religious-tours/?tourId=${"badrinath-dham"}` },
+    { name: "Road Trips", link: "/" },
+    { name: "Treks", link: "/" },
+    { name: "Packages", link: "/" },
+    { name: "Contact Us", link: "/" },
+];
 
 const Header = ({ isTransparent }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,42 +24,31 @@ const Header = ({ isTransparent }) => {
             {/* Header */}
             <nav
                 className={`fixed top-0 left-0 w-full h-[64px] flex items-center px-6 z-10 shadow-md transition-colors duration-300 ${isTransparent
-                    ? "bg-black bg-opacity-30 text-white"
-                    : "bg-[#0071c0] text-white shadow-[4px_4px_10px_0px_#f89128]"
+                        ? "bg-black bg-opacity-30 text-white"
+                        : "bg-[#0071c0] text-white shadow-[4px_4px_10px_0px_#f89128]"
                     }`}
             >
                 {/* Logo and Brand */}
-                <div className="flex items-center space-x-4">
-                    <img src="/Logo.jpeg" alt="AUM Tourism Logo" className="h-12 rounded-full" />
-                    <h1 className="text-lg md:text-xl font-bold">AUM Tourism</h1>
-                </div>
+                <Link to="/">
+                    <div className="flex items-center space-x-4">
+                        <img src="/Logo.jpeg" alt="AUM Tourism Logo" className="h-12 rounded-full" />
+                        <h1 className="text-lg md:text-xl font-bold">AUM Tourism</h1>
+                    </div>
+                </Link>
 
                 {/* Desktop Menu */}
                 <ul className="hidden lg:flex ml-auto space-x-6">
-                    {["Home", "About Us", "Religious Tours", "Road Trips", "Treks", "Packages", "Contact Us"].map(
-                        (item) => (
-                            <li
-                                key={item}
-                                className="hover:text-[#f2942b] cursor-pointer transition-colors duration-200"
-                            >
-                                {item}
-                            </li>
-                        )
-                    )}
+                    {navLinks.map(({ name, link }) => (
+                        <li key={name} className="hover:text-[#f2942b] cursor-pointer transition-colors duration-200">
+                            <Link to={link}>{name}</Link>
+                        </li>
+                    ))}
                 </ul>
 
                 {/* Hamburger Menu Icon (Mobile) */}
                 <div className="ml-auto lg:hidden">
-                    <button
-                        onClick={toggleMenu}
-                        className="text-white focus:outline-none"
-                        aria-label="Toggle Menu"
-                    >
-                        {isMenuOpen ? (
-                            <FaTimes className="text-2xl" />
-                        ) : (
-                            <FaBars className="text-2xl" />
-                        )}
+                    <button onClick={toggleMenu} className="text-white focus:outline-none" aria-label="Toggle Menu">
+                        {isMenuOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
                     </button>
                 </div>
             </nav>
@@ -61,27 +61,18 @@ const Header = ({ isTransparent }) => {
                 <div className="flex flex-col h-full">
                     {/* Close Button */}
                     <div className="flex justify-end p-6">
-                        <button
-                            onClick={toggleMenu}
-                            className="text-white text-2xl focus:outline-none"
-                            aria-label="Close Menu"
-                        >
+                        <button onClick={toggleMenu} className="text-white text-2xl focus:outline-none" aria-label="Close Menu">
                             <FaTimes />
                         </button>
                     </div>
 
                     {/* Menu Items */}
                     <ul className="flex flex-col items-center justify-center space-y-6 text-lg font-semibold">
-                        {["Home", "About Us", "Religious Tours", "Road Trips", "Treks", "Packages", "Contact Us"].map(
-                            (item) => (
-                                <li
-                                    key={item}
-                                    className="hover:text-[#f2942b] transition-colors duration-200 cursor-pointer"
-                                >
-                                    {item}
-                                </li>
-                            )
-                        )}
+                        {navLinks.map(({ name, link }) => (
+                            <li key={name} className="hover:text-[#f2942b] transition-colors duration-200 cursor-pointer">
+                                <Link to={link}>{name}</Link>
+                            </li>
+                        ))}
                     </ul>
 
                     {/* Contact Buttons */}

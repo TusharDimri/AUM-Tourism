@@ -24,9 +24,9 @@ const RoadTrips = () => {
         },
     ];
     return (
-        <div className="mt-[60px] xl:mt-[90px]">
+        <div className="mt-[60px]">
             <div className="w-full">
-                <h1 className="text-center text-3xl font-bold mb-[40px] xl:mb-[80px] relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4">
+                <h1 className="text-center text-3xl font-bold mb-[40px] xl:mb-[60px] relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4">
                     Road Trips
                 </h1>
                 <div className="w-[90vw] mx-auto px-4">

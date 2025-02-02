@@ -86,8 +86,8 @@ const Treks = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center px-4 sm:px-8 mt-[40px] xl:mt-[80px]">
-            <h2 className="text-center text-3xl font-bold mb-[40px] xl:mb-[80px] relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4">
+        <div className="flex flex-col items-center justify-center px-4 sm:px-8 mt-[40px] xl:mt-[60px]">
+            <h2 className="text-center text-3xl font-bold mb-[40px] xl:mb-[60px] relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4">
                 Explore Treks
             </h2>
 

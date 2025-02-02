@@ -21,8 +21,8 @@ const PackagesSection = () => {
     ]
 
     return (
-        <div className="my-[60px] xl:my-[80px] px-4 sm:px-8">
-            <h2 className="mb-[40px] xl:mb-[80px] text-center text-3xl font-bold relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4">
+        <div className="my-[60px] px-4 sm:px-8">
+            <h2 className="mb-[40px] xl:mb-[60px] text-center text-3xl font-bold relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4">
                 Our Packages
             </h2>
 
