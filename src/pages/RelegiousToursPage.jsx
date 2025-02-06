@@ -39,7 +39,6 @@ const ReligiousToursPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 mt-[64px]">
-      {/* Navigation - Centered Carousel */}
       <div className="relative py-2 bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-4">
           <Swiper
@@ -47,7 +46,7 @@ const ReligiousToursPage = () => {
             grabCursor={true}
             centeredSlides={true}
             slidesPerView="auto"
-            loop={false} // Disable looping
+            loop={false} 
             coverflowEffect={{
               rotate: 8,
               stretch: 0,
@@ -88,13 +87,12 @@ const ReligiousToursPage = () => {
         </div>
       </div>
 
-      {/* Main Content Grid */}
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_350px] gap-8">
-        {/* Main Section */}
+      
         <div className="space-y-8">
           {selectedTour ? (
             <>
-              {/* Hero Image */}
+              
               <div className="relative group overflow-hidden rounded-xl shadow-lg">
                 <img
                   src={selectedTour.image}
@@ -108,7 +106,7 @@ const ReligiousToursPage = () => {
                 </div>
               </div>
 
-              {/* Journey Overview */}
+              
               <div className="bg-white rounded-xl p-8 shadow-md space-y-8">
                 <h2 className="text-3xl font-bold text-[#0071c0]">Journey Overview</h2>
                 <p className="text-lg text-gray-700">{selectedTour.description}</p>
@@ -131,7 +129,7 @@ const ReligiousToursPage = () => {
           )}
         </div>
 
-        {/* Sidebar */}
+        
         <div className="lg:sticky lg:top-8">
           <div className="bg-white rounded-xl p-6 shadow-lg space-y-6">
             <div className="bg-gradient-to-br from-[#0071c0] to-[#005a9b] text-white rounded-xl p-6 text-center">

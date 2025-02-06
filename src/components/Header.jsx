@@ -7,7 +7,7 @@ const navLinks = [
     { name: "About Us", link: "/" },
     { name: "Religious Tours", link: `/religious-tours/?tourId=${"badrinath-dham"}` },
     { name: "Road Trips", link: "/" },
-    { name: "Treks", link: "/" },
+    { name: "Treks", link: `/treks/?trekId=${"garhwal-trek"}` },
     { name: "Packages", link: "/" },
     { name: "Contact Us", link: "/contact" },
 ];
@@ -21,14 +21,12 @@ const Header = ({ isTransparent }) => {
 
     return (
         <>
-            {/* Header */}
             <nav
-                className={`fixed top-0 left-0 w-full h-[64px] flex items-center px-6 z-10 shadow-md transition-colors duration-300 ${isTransparent
+                className={`fixed top-0 left-0 w-full h-[64px] flex items-center px-6 z-40 shadow-md transition-colors duration-300 ${isTransparent
                         ? "bg-black bg-opacity-30 text-white"
                         : "bg-[#0071c0] text-white shadow-[4px_4px_10px_0px_#f89128]"
                     }`}
             >
-                {/* Logo and Brand */}
                 <Link to="/">
                     <div className="flex items-center space-x-4">
                         <img src="/Logo.jpeg" alt="AUM Tourism Logo" className="h-12 rounded-full" />
@@ -36,7 +34,6 @@ const Header = ({ isTransparent }) => {
                     </div>
                 </Link>
 
-                {/* Desktop Menu */}
                 <ul className="hidden lg:flex ml-auto space-x-6">
                     {navLinks.map(({ name, link }) => (
                         <li key={name} className="hover:text-[#f2942b] cursor-pointer transition-colors duration-200">
@@ -45,7 +42,6 @@ const Header = ({ isTransparent }) => {
                     ))}
                 </ul>
 
-                {/* Hamburger Menu Icon (Mobile) */}
                 <div className="ml-auto lg:hidden">
                     <button onClick={toggleMenu} className="text-white focus:outline-none" aria-label="Toggle Menu">
                         {isMenuOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
@@ -59,14 +55,12 @@ const Header = ({ isTransparent }) => {
                     } z-20`}
             >
                 <div className="flex flex-col h-full">
-                    {/* Close Button */}
                     <div className="flex justify-end p-6">
                         <button onClick={toggleMenu} className="text-white text-2xl focus:outline-none" aria-label="Close Menu">
                             <FaTimes />
                         </button>
                     </div>
 
-                    {/* Menu Items */}
                     <ul className="flex flex-col items-center justify-center space-y-6 text-lg font-semibold">
                         {navLinks.map(({ name, link }) => (
                             <li key={name} className="hover:text-[#f2942b] transition-colors duration-200 cursor-pointer">
@@ -75,7 +69,6 @@ const Header = ({ isTransparent }) => {
                         ))}
                     </ul>
 
-                    {/* Contact Buttons */}
                     <div className="mt-auto p-6 flex flex-col space-y-4">
                         <a
                             href="https://wa.me/919876543210"
@@ -99,7 +92,6 @@ const Header = ({ isTransparent }) => {
                 </div>
             </div>
 
-            {/* Floating Action Buttons */}
             {!isMenuOpen && (
                 <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
                     <a
@@ -114,7 +106,7 @@ const Header = ({ isTransparent }) => {
 
                     <a
                         href="tel:+919876543210"
-                        className="bg-[#0071c0] text-white p-3 rounded-full shadow-lg hover:shadow-md transition-all duration-300 hover:scale-105 flex items-center justify-center w-12 h-12 md:w-14 md:h-14"
+                        className="bg-[#1a75b4] text-white p-3 rounded-full shadow-lg hover:shadow-md transition-all duration-300 hover:scale-105 flex items-center justify-center w-12 h-12 md:w-14 md:h-14"
                         aria-label="Call us"
                     >
                         <FaPhoneAlt className="text-xl md:text-2xl" />

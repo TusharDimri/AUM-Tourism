@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
+import treks from '../../utils/TreksData';
+import { useNavigate } from 'react-router-dom';
 
 const Treks = () => {
-    const treks = [
-        { name: 'Garhwal', image: '/GarhwalTrek.jpg', type: 'large' },
-        { name: 'Kumaon', image: '/KumaonTrek.webp', type: 'medium' },
-        { name: 'Kashmir', image: '/KashmirTrek.jpg', type: 'medium' },
-        { name: 'Himachal', image: '/HimachalTrek.jpg', type: 'large' },
-        { name: 'Nepal', image: '/NepalTrek.jpg', type: 'medium' },
-    ];
 
     const largeTreks = treks.filter((t) => t.type === 'large');
     const mediumTreks = treks.filter((t) => t.type === 'medium');
 
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1070);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleResize = () => {
@@ -95,7 +91,7 @@ const Treks = () => {
                 {isSmallScreen ? (
                     <Slider {...settings}>
                         {[...largeTreks, ...mediumTreks].map((trek) => (
-                            <div key={trek.name} className="relative group h-[400px] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl">
+                            <div key={trek.name} className="relative group h-[400px] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl" onClick={() => {navigate(`/treks/?trekId=${trek.id}`)} } >
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                                 <img
                                     src={trek.image}
@@ -116,7 +112,7 @@ const Treks = () => {
                         {/* Left Column - Large Treks */}
                         <div className="space-y-[50px]">
                             {largeTreks.map((trek) => (
-                                <div key={trek.name} className="relative group h-[400px] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl">
+                                <div key={trek.name} className="relative group h-[400px] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl" onClick={() => {navigate(`/treks/?trekId=${trek.id}`)} }>
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                                     <img
                                         src={trek.image}
@@ -136,7 +132,7 @@ const Treks = () => {
                         {/* Right Column - Medium Treks */}
                         <div className="space-y-[20px]">
                             {mediumTreks.map((trek) => (
-                                <div key={trek.name} className="relative group h-[250px] lg:h-[270px] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl">
+                                <div key={trek.name} className="relative group h-[250px] lg:h-[270px] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl" onClick={() => {navigate(`/treks/?trekId=${trek.id}`)} }>
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                                     <img
                                         src={trek.image}
