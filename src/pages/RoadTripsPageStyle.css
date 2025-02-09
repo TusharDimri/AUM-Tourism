@@ -1,0 +1,11 @@
+.swiper {
+    overflow: visible !important;
+  }
+  
+  .swiper-slide {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }

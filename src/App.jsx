@@ -4,9 +4,10 @@ import './App.css';
 import Home from './pages/home';
 import Header from './components/Header';
 import ReligiousToursPage from './pages/RelegiousToursPage';
+import RoadTripsPage from './pages/RoadTripsPage';
+import TreksPage from './pages/Treks';
 import ContactUs from "./pages/ContactUs";
 import Footer from './components/Footer';
-import TreksPage from './pages/Treks';
 
 function App() {
   const [isTransparent, setIsTransparent] = useState(true);
@@ -48,6 +49,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home isTransparent={isTransparent} heroRef={heroRef} />} />
         <Route path="/religious-tours/:id?" element={<ReligiousToursPage />} />
+        <Route path="/road-trips/:id?" element={<RoadTripsPage />} />
         <Route path="/treks/:id?" element={<TreksPage />} />
         <Route path="/contact?" element={<ContactUs />} />
       </Routes>
