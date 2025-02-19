@@ -8,7 +8,7 @@ const navLinks = [
     { name: "Religious Tours", link: `/religious-tours/?tourId=${"badrinath-dham"}` },
     { name: "Road Trips", link: `/road-trips/?id=${"uttarakhand"}` },
     { name: "Treks", link: `/treks/?trekId=${"garhwal-trek"}` },
-    { name: "Packages", link: "/" },
+    { name: "Packages", link: `/packages/?packageId=${"holiday"}` },
     { name: "Contact Us", link: "/contact" },
 ];
 

@@ -6,6 +6,7 @@ import Header from './components/Header';
 import ReligiousToursPage from './pages/RelegiousToursPage';
 import RoadTripsPage from './pages/RoadTripsPage';
 import TreksPage from './pages/Treks';
+import PackagesPage from "./pages/PackagesPage";
 import ContactUs from "./pages/ContactUs";
 import Footer from './components/Footer';
 
@@ -51,6 +52,7 @@ function App() {
         <Route path="/religious-tours/:id?" element={<ReligiousToursPage />} />
         <Route path="/road-trips/:id?" element={<RoadTripsPage />} />
         <Route path="/treks/:id?" element={<TreksPage />} />
+        <Route path="/packages/:id?" element={<PackagesPage />} />
         <Route path="/contact?" element={<ContactUs />} />
       </Routes>
       <Footer />
