@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 import Home from './pages/home';
 import Header from './components/Header';
+import AboutUs from './pages/AboutUs';
 import ReligiousToursPage from './pages/RelegiousToursPage';
 import RoadTripsPage from './pages/RoadTripsPage';
 import TreksPage from './pages/Treks';
@@ -54,6 +55,7 @@ function App() {
         <Route path="/treks/:id?" element={<TreksPage />} />
         <Route path="/packages/:id?" element={<PackagesPage />} />
         <Route path="/contact?" element={<ContactUs />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
       <Footer />
     </>

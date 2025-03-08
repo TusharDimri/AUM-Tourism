@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const navLinks = [
     { name: "Home", link: "/" },
-    { name: "About Us", link: "/" },
+    { name: "About Us", link: "/about-us" },
     { name: "Religious Tours", link: `/religious-tours/?tourId=${"badrinath-dham"}` },
     { name: "Road Trips", link: `/road-trips/?id=${"uttarakhand"}` },
     { name: "Treks", link: `/treks/?trekId=${"garhwal-trek"}` },
