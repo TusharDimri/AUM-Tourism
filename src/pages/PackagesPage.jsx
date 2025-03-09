@@ -155,9 +155,9 @@ const PackagesPage = () => {
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#0071c0]/10 to-[#005a9b]/10 rounded-3xl transform rotate-x-12 -rotate-y-3 -translate-z-12 scale-95 transition-transform duration-500 group-hover:-translate-z-20" />
 
                                 <div className="relative bg-white rounded-3xl transform transition-transform duration-500 group-hover:translate-z-20 h-full flex flex-col justify-between overflow-hidden shadow-xl">
+
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 p-6 md:p-8">
-                                        
-                                        <div className="relative aspect-square md:aspect-video rounded-xl overflow-hidden border-4 border-white shadow-lg transform transition-transform hover:scale-[1.02]">
+                                        <div className="relative aspect-square md:aspect-video rounded-xl overflow-hidden border-4 border-white shadow-lg transform transition-transform hover:scale-[1.02] self-center">
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 z-10" />
                                             <img
                                                 src={pkg.image}
@@ -203,7 +203,7 @@ const PackagesPage = () => {
                                             </div>
 
                                             <button className="bg-gradient-to-r from-[#0071c0] to-[#005a9b] text-white py-3 md:py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-95 text-sm md:text-base">
-                                                Book Now 
+                                                Book Now
                                                 <span>
                                                     <FaChevronRight className="inline-block ml-2" />
                                                 </span>

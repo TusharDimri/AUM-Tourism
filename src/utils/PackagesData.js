@@ -70,6 +70,24 @@ const packages = [
         price: 'From $499',
         bestSeason: 'Spring-Fall',
         inclusions: ['Camping Gear', 'Meals', 'Safety Equipment', 'Guides']
+    },
+    {
+        id: 'uttarakhand-cab',
+        name: 'Uttarakhand Taxi Services',
+        subtitle: 'Reliable & Budget-Friendly Car Rentals',
+        image: '/CabBooking.jpg',
+        description: 'Explore Uttarakhand hassle-free with our reliable cab and taxi services. Whether you are traveling from Dehradun, Haridwar, or Haldwani, we offer budget-friendly and comfortable rides with trusted operators.',
+        highlights: [
+            'Wide range of vehicle options',
+            'Experienced and trusted drivers',
+            'Flexible rental plans',
+            'Comfortable and well-maintained vehicles'
+        ],
+        difficulty: 'Easy',
+        duration: 'Customizable',
+        price: 'Varies by Vehicle',
+        bestSeason: 'Year-round',
+        inclusions: ['AC & Non-AC Cars', 'Professional Drivers', 'Flexible Pickup & Drop', 'Custom Packages']
     }
 ];
 
