@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/navigation";
 import treks from "../utils/TreksData";
+import { FaChevronRight } from "react-icons/fa";
 
 const TreksPage = () => {
   const location = useLocation();
@@ -214,7 +215,10 @@ const TreksPage = () => {
               <h3 className="text-2xl font-black mb-4 font-serif">Ready to Explore?</h3>
               <p className="opacity-90 mb-6">Reserve your spot now</p>
               <button className="bg-white/90 text-[#0071c0] px-8 py-4 rounded-xl font-bold hover:bg-white w-full shadow-lg transition-all duration-300 hover:translate-y-1">
-                Book Now ➔
+                Book Now 
+                <span>
+                  <FaChevronRight className="inline-block ml-2" />
+                </span>
               </button>
             </div>
           </div>

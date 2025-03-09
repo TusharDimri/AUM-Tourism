@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useMemo } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Keyboard, EffectCreative } from "swiper/modules";
-import { FaMoneyBill } from "react-icons/fa";
+import { FaMoneyBill, FaChevronRight } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/effect-creative";
 import "swiper/css/navigation";
@@ -203,7 +203,10 @@ const PackagesPage = () => {
                                             </div>
 
                                             <button className="bg-gradient-to-r from-[#0071c0] to-[#005a9b] text-white py-3 md:py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-95 text-sm md:text-base">
-                                                Book Now ➔
+                                                Book Now 
+                                                <span>
+                                                    <FaChevronRight className="inline-block ml-2" />
+                                                </span>
                                             </button>
                                         </div>
                                     </div>

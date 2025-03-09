@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { useLocation, Link } from "react-router-dom";
 import tours from "../utils/RelegiousToursData";
+import { FaChevronRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper/modules";
 import "swiper/css";
@@ -129,6 +130,9 @@ const ReligiousToursPage = () => {
               <p className="opacity-90">Start your spiritual journey today</p>
               <button className="bg-white/90 text-[#0071c0] px-8 py-2 rounded-full font-bold hover:bg-white transition-colors w-full shadow-md">
                 Book Now
+                <span>
+                  <FaChevronRight className="inline-block ml-2" />
+                </span>
               </button>
             </div>
             <div>

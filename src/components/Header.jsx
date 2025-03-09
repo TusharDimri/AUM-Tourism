@@ -19,6 +19,10 @@ const Header = ({ isTransparent }) => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
         <>
             <nav
@@ -44,7 +48,7 @@ const Header = ({ isTransparent }) => {
 
                 <div className="ml-auto lg:hidden font-sans">
                     <button onClick={toggleMenu} className="text-white focus:outline-none" aria-label="Toggle Menu">
-                        {isMenuOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
+                        <FaBars className="text-2xl" />
                     </button>
                 </div>
             </nav>
@@ -52,7 +56,7 @@ const Header = ({ isTransparent }) => {
             {/* Mobile Menu */}
             <div
                 className={`fixed inset-0 bg-gradient-to-b from-[#0071c0] to-[#003e82] text-white transform transition-all duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
-                    } z-20`}
+                    } z-50`}
             >
                 <div className="flex flex-col h-full">
                     <div className="flex justify-end p-6">
@@ -64,7 +68,7 @@ const Header = ({ isTransparent }) => {
                     <ul className="flex flex-col items-center justify-center space-y-6 text-lg font-semibold font-sans">
                         {navLinks.map(({ name, link }) => (
                             <li key={name} className="hover:text-[#f2942b] transition-colors duration-200 cursor-pointer">
-                                <Link to={link}>{name}</Link>
+                                <Link to={link} onClick={closeMenu}>{name}</Link>
                             </li>
                         ))}
                     </ul>
@@ -76,6 +80,7 @@ const Header = ({ isTransparent }) => {
                             rel="noopener noreferrer"
                             className="flex items-center justify-center bg-[#25D366] text-white py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                             aria-label="Contact via WhatsApp"
+                            onClick={closeMenu}
                         >
                             <FaWhatsapp className="mr-2" />
                             Contact via WhatsApp
@@ -84,6 +89,7 @@ const Header = ({ isTransparent }) => {
                             href="tel:+919876543210"
                             className="flex items-center justify-center bg-[#0071c0] text-white py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                             aria-label="Call us"
+                            onClick={closeMenu}
                         >
                             <FaPhoneAlt className="mr-2" />
                             Call Us
@@ -91,6 +97,7 @@ const Header = ({ isTransparent }) => {
                     </div>
                 </div>
             </div>
+
 
             {!isMenuOpen && (
                 <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4 font-sans">

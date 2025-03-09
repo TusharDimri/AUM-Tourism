@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { FaChevronRight } from 'react-icons/fa';
 import { EffectCoverflow, Keyboard, Navigation } from 'swiper/modules';
 import roadTrips from '../utils/RoadTripsData';
 import './RoadTripsPageStyle.css';
@@ -227,7 +228,9 @@ const RoadTripsPage = () => {
                                     </div>
                                     <button className="w-full bg-white text-[#0071c0] py-2 rounded-lg font-bold mt-4 hover:bg-gray-100 transition-colors">
                                         Plan Journey 
-                                        
+                                        <span>
+                                            <FaChevronRight className="ml-2 inline-block" />
+                                        </span>
                                     </button>
                                 </div>
                                 <div className="bg-white border-2 border-[#0071c0]/10 p-6 rounded-xl">
