@@ -9,8 +9,8 @@ import "./AboutUs.css"
 const AboutUs = () => {
     const swiperRef = useRef(null);
     const certifications = [
-        "/cert1.jpg",
-        "/cert2.jpg",
+        "Cert1.jpg",
+        // "/cert2.jpg",
     ];
     const [selectedCert, setSelectedCert] = useState(null);
     const [showArrows, setShowArrows] = useState(false);
@@ -39,13 +39,13 @@ const AboutUs = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 font-sans">
             <div className="max-w-7xl mx-auto px-4 py-12 sm:py-20">
 
 
                 <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 lg:p-16">
-                    <h1 className="text-4xl md:text-5xl font-bold text-[#0071c0] mb-8 text-center">
-                        Our Mountain Journey
+                    <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#0071c0] mb-8 text-center">
+                        Our Story
                     </h1>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -57,7 +57,7 @@ const AboutUs = () => {
                                     alt="Mukesh Airy - Founder"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40" />
-                                <h3 className="absolute bottom-6 left-6 text-2xl font-bold text-white">
+                                <h3 className="absolute bottom-6 left-6 text-2xl font-bold text-white font-serif">
                                     Mukesh Airy
                                 </h3>
                             </div>
@@ -75,7 +75,7 @@ const AboutUs = () => {
                                     alt="Ashish Kumar - Co-Founder"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40" />
-                                <h3 className="absolute bottom-6 left-6 text-2xl font-bold text-white">
+                                <h3 className="absolute bottom-6 left-6 text-2xl font-bold text-white font-serif">
                                     Ashish Kumar
                                 </h3>
                             </div>
@@ -98,12 +98,12 @@ const AboutUs = () => {
 
 
                 <div className="mt-20 bg-gradient-to-r from-[#0071c0] to-[#005a9b] rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center font-serif">
                         Recognized Excellence
                     </h2>
 
                     <div className="relative px-2 sm:px-4">
-                        <div className="max-w-6xl mx-auto"> {/* Added container for better centering */}
+                        <div className="max-w-6xl mx-auto"> 
                             <Swiper
                                 ref={swiperRef}
                                 modules={[Navigation, FreeMode]}
@@ -139,7 +139,7 @@ const AboutUs = () => {
                                 {certifications.map((cert, index) => (
                                     <SwiperSlide
                                         key={index}
-                                        className="!w-[280px] sm:!w-[320px] !h-[200px] !flex !items-center !justify-center"
+                                        className="!w-[280px] sm:!w-[400px] sm:!h-[400px] !flex !items-center !justify-center"
                                     >
                                         <div
                                             className="relative w-full h-full rounded-xl overflow-hidden bg-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-xl border-2 border-white/20 cursor-pointer"
@@ -148,7 +148,7 @@ const AboutUs = () => {
                                             <img
                                                 src={cert}
                                                 alt={`Certification ${index + 1}`}
-                                                className="w-full h-full object-contain p-4"
+                                                className="w-full h-full object-contain p-2"
                                             />
                                         </div>
                                     </SwiperSlide>

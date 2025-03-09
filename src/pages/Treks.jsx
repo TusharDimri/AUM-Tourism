@@ -37,7 +37,7 @@ const TreksPage = () => {
   }, [selectedTrek]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 font-sans">
       <section className="relative py-16 md:h-[800px] bg-gradient-to-br from-[#0071c0] to-[#005a9b] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 h-full relative">
           <Swiper
@@ -108,7 +108,7 @@ const TreksPage = () => {
                       className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-center space-y-2">
-                      <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg">
+                      <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg font-serif">
                         {trek.name}
                       </h3>
                       <p className="text-gray-200 text-sm bg-black/30 px-3 py-1 rounded-full inline-block">
@@ -157,10 +157,7 @@ const TreksPage = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
             </svg>
           </button>
-
-
         </div>
-
       </section>
 
       <main className="max-w-7xl mx-auto px-4 pt-12 grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-8 md:gap-12">
@@ -175,13 +172,13 @@ const TreksPage = () => {
                     className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40" />
-                  <h1 className="absolute bottom-4 left-4 md:bottom-6 md:left-6 text-2xl md:text-4xl font-black text-white">
+                  <h1 className="absolute bottom-4 left-4 md:bottom-6 md:left-6 text-2xl md:text-4xl font-black text-white font-serif">
                     {selectedTrek.name}
                   </h1>
                 </div>
 
                 <div className="mt-6 md:mt-8 space-y-6 md:space-y-8">
-                  <h2 className="text-2xl md:text-3xl font-black text-[#0071c0]">
+                  <h2 className="text-2xl md:text-3xl font-black text-[#0071c0] font-serif">
                     Journey Overview
                   </h2>
                   <p className="text-base md:text-lg leading-relaxed text-gray-700">
@@ -214,7 +211,7 @@ const TreksPage = () => {
           <div className="bg-gradient-to-br from-[#0071c0] to-[#005a9b] text-white rounded-2xl p-8 shadow-2xl relative overflow-hidden">
             <div className="absolute w-32 h-32 bg-white/10 -top-8 -right-8 rounded-full" />
             <div className="relative z-10">
-              <h3 className="text-2xl font-black mb-4">Ready to Explore?</h3>
+              <h3 className="text-2xl font-black mb-4 font-serif">Ready to Explore?</h3>
               <p className="opacity-90 mb-6">Reserve your spot now</p>
               <button className="bg-white/90 text-[#0071c0] px-8 py-4 rounded-xl font-bold hover:bg-white w-full shadow-lg transition-all duration-300 hover:translate-y-1">
                 Book Now ➔
@@ -224,7 +221,7 @@ const TreksPage = () => {
 
           {selectedTrek && (
             <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg md:shadow-xl">
-              <h4 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6">Key Facts</h4>
+              <h4 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif">Key Facts</h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                 {[
                   { label: "Difficulty", value: selectedTrek.difficulty },

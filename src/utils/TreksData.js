@@ -1,5 +1,3 @@
-// src/utils/treksData.js
-
 const treks = [
     {
         id: "garhwal-trek",

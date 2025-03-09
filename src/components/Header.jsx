@@ -23,18 +23,18 @@ const Header = ({ isTransparent }) => {
         <>
             <nav
                 className={`fixed top-0 left-0 w-full h-[64px] flex items-center px-6 z-40 shadow-md transition-colors duration-300 ${isTransparent
-                        ? "bg-black bg-opacity-30 text-white"
-                        : "bg-[#0071c0] text-white shadow-[4px_4px_10px_0px_#f89128]"
+                    ? "bg-black bg-opacity-30 text-white"
+                    : "bg-[#0071c0] text-white shadow-[4px_4px_10px_0px_#f89128]"
                     }`}
             >
                 <Link to="/">
                     <div className="flex items-center space-x-4">
-                        <img src="/Logo.jpeg" alt="AUM Tourism Logo" className="h-12 rounded-full" />
-                        <h1 className="text-lg md:text-xl font-bold">AUM Tourism</h1>
+                        <img src="/Logo.jpeg" alt="AUM Tourism Logo" className="h-[55px] w-[55px] rounded-full" />
+                        <h1 className="text-lg md:text-xl font-bold font-serif">AUM Tourism</h1>
                     </div>
                 </Link>
 
-                <ul className="hidden lg:flex ml-auto space-x-6">
+                <ul className="hidden lg:flex ml-auto space-x-6 font-sans">
                     {navLinks.map(({ name, link }) => (
                         <li key={name} className="hover:text-[#f2942b] cursor-pointer transition-colors duration-200">
                             <Link to={link}>{name}</Link>
@@ -42,7 +42,7 @@ const Header = ({ isTransparent }) => {
                     ))}
                 </ul>
 
-                <div className="ml-auto lg:hidden">
+                <div className="ml-auto lg:hidden font-sans">
                     <button onClick={toggleMenu} className="text-white focus:outline-none" aria-label="Toggle Menu">
                         {isMenuOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
                     </button>
@@ -61,7 +61,7 @@ const Header = ({ isTransparent }) => {
                         </button>
                     </div>
 
-                    <ul className="flex flex-col items-center justify-center space-y-6 text-lg font-semibold">
+                    <ul className="flex flex-col items-center justify-center space-y-6 text-lg font-semibold font-sans">
                         {navLinks.map(({ name, link }) => (
                             <li key={name} className="hover:text-[#f2942b] transition-colors duration-200 cursor-pointer">
                                 <Link to={link}>{name}</Link>
@@ -69,7 +69,7 @@ const Header = ({ isTransparent }) => {
                         ))}
                     </ul>
 
-                    <div className="mt-auto p-6 flex flex-col space-y-4">
+                    <div className="mt-auto p-6 flex flex-col space-y-4 font-sans">
                         <a
                             href="https://wa.me/919876543210"
                             target="_blank"
@@ -93,7 +93,7 @@ const Header = ({ isTransparent }) => {
             </div>
 
             {!isMenuOpen && (
-                <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+                <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4 font-sans">
                     <a
                         href="https://wa.me/919876543210"
                         target="_blank"

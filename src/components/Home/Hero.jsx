@@ -3,7 +3,6 @@ import React from "react";
 const HeroSection = () => {
     return (
         <div className="relative hero-section flex flex-col items-center justify-center w-full h-[100vh] text-white overflow-hidden">
-            {/* Background Image */}
             <div
                 className="absolute inset-0"
                 style={{
@@ -16,15 +15,14 @@ const HeroSection = () => {
                 }}
             ></div>
 
-            {/* Overlay for better text visibility */}
+            {/* Overlay*/}
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-            {/* Content */}
             <div className="relative z-10 p-6 text-center">
-                <h1 className="text-2xl md:text-4xl md:text-6xl font-bold mb-4">
+                <h1 className="text-2xl md:text-5xl font-bold mb-4 font-serif">
                     Explore the Spiritual and Scenic Beauty of India
                 </h1>
-                <p className="text-lg md:text-2xl">
+                <p className="text-lg md:text-2xl font-sans">
                     Journey beyond the ordinary and discover the divine.
                 </p>
             </div>

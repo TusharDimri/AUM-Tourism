@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import tours from "../../utils/RelegiousToursData";
 import { Link } from 'react-router-dom';
-
+import { FaC, FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 const RelegiousTours = ({ isTransparent }) => {
 
     const NextArrow = (props) => {
@@ -14,18 +14,7 @@ const RelegiousTours = ({ isTransparent }) => {
                 className="absolute top-1/2 -right-4 sm:-right-8 transform translate-y-[-50%] cursor-pointer"
                 onClick={onClick}
             >
-                <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                >
-                    <polyline points="9 18 15 12 9 6" />
-                </svg>
+                <FaChevronRight size={30} />
             </div>
         );
     };
@@ -37,18 +26,7 @@ const RelegiousTours = ({ isTransparent }) => {
                 className="absolute top-1/2 -left-4 sm:-left-8 transform translate-y-[-50%] cursor-pointer"
                 onClick={onClick}
             >
-                <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                >
-                    <polyline points="15 18 9 12 15 6" />
-                </svg>
+                <FaChevronLeft size={30} />
             </div>
         );
     };
@@ -82,7 +60,7 @@ const RelegiousTours = ({ isTransparent }) => {
 
     return (
         <div className={`mt-[40px] xl:mt-[50px] flex flex-col justify-center`}>
-            <h2 className="text-center text-3xl font-bold mb-[40px] xl:mb-[50px] relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4">
+            <h2 className="text-center text-3xl font-bold mb-[40px] xl:mb-[50px] relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4 font-serif">
                 Religious Tours
             </h2>
             <div className="w-[97vw] sm:w-[90vw] mx-auto px-4">
@@ -98,15 +76,15 @@ const RelegiousTours = ({ isTransparent }) => {
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                                     </div>
                                     <div className="p-6 text-center rounded-b-[50px] flex flex-col flex-1">
-                                        <h3 className="text-xl font-bold text-[#1a202c] mb-2 group-hover:text-[#005a9c] transition-colors">
+                                        <h3 className="font-serif text-2xl font-bold text-[#1a202c] mb-2 group-hover:text-[#005a9c] transition-colors">
                                             {tour.title}
                                         </h3>
                                         <div className="flex-1">
-                                            <p className="text-sm text-gray-600 line-clamp-3 leading-relaxed">
+                                            <p className="text-sm text-gray-600 font-sans leading-relaxed">
                                                 {tour.description}
                                             </p>
                                         </div>
-                                        <button className="text-[#0071c0] mt-4 text-sm font-medium flex items-center justify-center hover:text-[#00457a] transition-colors">
+                                        <button className="font-sans text-[#0071c0] mt-4 text-lg font-medium flex items-center justify-center hover:text-[#00457a] transition-colors">
                                             Explore
                                             <svg
                                                 className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
@@ -127,8 +105,7 @@ const RelegiousTours = ({ isTransparent }) => {
                 </Slider>
             </div>
 
-            {/* Keep existing global slick slider styles */}
-            <style jsx global>{`
+            <style>{`
                 .slick-track {
                     display: flex !important;
                     align-items: stretch !important;

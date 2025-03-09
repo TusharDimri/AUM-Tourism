@@ -5,7 +5,7 @@ import packages from '../../utils/PackagesData';
 const PackagesSection = () => {
     return (
         <div className="my-[60px] px-4 sm:px-8">
-            <h2 className="mb-[40px] xl:mb-[60px] text-center text-3xl font-bold relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4">
+            <h2 className="mb-[40px] xl:mb-[60px] text-center text-3xl font-bold relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4 font-serif">
                 Our Packages
             </h2>
 
@@ -23,7 +23,7 @@ const PackagesSection = () => {
                             </div>
 
                             <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white z-15">
-                                <h3 className="text-lg md:text-2xl font-bold mb-2">{pkg.name}</h3>
+                                <h3 className="font-serif text-lg md:text-2xl font-bold mb-2">{pkg.name}</h3>
                             </div>
                         </div>
                     </Link>

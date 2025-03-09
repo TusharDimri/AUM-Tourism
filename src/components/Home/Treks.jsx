@@ -83,7 +83,7 @@ const Treks = () => {
 
     return (
         <div className="flex flex-col items-center justify-center px-4 sm:px-8 mt-[40px] xl:mt-[60px]">
-            <h2 className="text-center text-3xl font-bold mb-[40px] xl:mb-[60px] relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4">
+            <h2 className="text-center text-3xl font-bold mb-[40px] xl:mb-[60px] relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4 font-serif">
                 Explore Treks
             </h2>
 
@@ -99,8 +99,8 @@ const Treks = () => {
                                     alt={`${trek.name} Trek`}
                                 />
                                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                    <h3 className="text-lg font-bold">{trek.name} Treks</h3>
-                                    <button className="text-base mt-3 lg:mt-5 bg-[#0071c0] text-white px-4 py-2 lg:px-8 lg:py-3 rounded-full transition-colors group-hover:text-[#f2942b]">
+                                    <h3 className="text-lg font-bold font-serif">{trek.name} Treks</h3>
+                                    <button className="font-sans text-base mt-3 lg:mt-5 bg-[#0071c0] text-white px-4 py-2 lg:px-8 lg:py-3 rounded-full transition-colors group-hover:text-[#f2942b]">
                                         Explore
                                     </button>
                                 </div>
@@ -120,7 +120,7 @@ const Treks = () => {
                                         alt={`${trek.name} Trek`}
                                     />
                                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                        <h3 className="text-2xl lg:text-3xl font-bold">{trek.name} Treks</h3>
+                                        <h3 className="text-2xl lg:text-3xl font-bold font-serif">{trek.name} Treks</h3>
                                         <button className="mt-4 lg:mt-6 bg-[#0071c0] text-white px-4 py-2 lg:px-8 lg:py-3 rounded-full transition-colors group-hover:text-[#f2942b]">
                                             Explore
                                         </button>
@@ -140,7 +140,7 @@ const Treks = () => {
                                         alt={`${trek.name} Trek`}
                                     />
                                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                        <h3 className="text-2xl font-bold">{trek.name}</h3>
+                                        <h3 className="text-2xl font-bold font-serif">{trek.name}</h3>
                                         <button className="mt-4 bg-[#0071c0] text-white px-6 py-2 rounded-full transition-colors group-hover:text-[#f2942b]">
                                             Explore
                                         </button>

@@ -46,7 +46,7 @@ const RoadTripsPage = () => {
             if (tripIndex !== -1) {
                 const swiper = swiperRef.current.swiper;
                 if (swiper.realIndex !== tripIndex) {
-                    swiper.slideToLoop(tripIndex, 600); // Changed from slideTo to slideToLoop
+                    swiper.slideToLoop(tripIndex, 600);
                     setSelectedTrip(roadTrips[tripIndex]);
                 }
             }
@@ -64,7 +64,7 @@ const RoadTripsPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#0071c0]/5 to-gray-50">
+        <div className="min-h-screen bg-gradient-to-br from-[#0071c0]/5 to-gray-50 font-sans">
             <div className="relative h-screen-70 md:h-screen-80 py-12">
                 <Swiper
                     ref={swiperRef}
@@ -126,7 +126,7 @@ const RoadTripsPage = () => {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent/30 to-transparent" />
                                 <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
-                                    <h3 className="text-xl md:text-2xl font-bold text-white drop-shadow-lg">
+                                    <h3 className="text-xl md:text-2xl font-bold text-white drop-shadow-lg font-serif">
                                         {trip.name}
                                     </h3>
                                     <p className="text-gray-200 text-sm mt-2">{trip.subtitle}</p>
@@ -182,7 +182,7 @@ const RoadTripsPage = () => {
                 >
                     <div className="bg-white rounded-2xl shadow-lg pb-6 md:pb-8">
                         <div className="grid md:grid-cols-[1fr_300px] gap-8">
-                            <div className="space-y-6">
+                            <div className="space-y-6 p-6">
                                 <div className="relative h-64 md:h-96 rounded-xl overflow-hidden shadow-lg">
                                     <img
                                         src={selectedTrip.image}
@@ -190,12 +190,12 @@ const RoadTripsPage = () => {
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <h1 className="text-2xl md:text-3xl font-bold text-[#0071c0]">
+                                <h1 className="text-2xl md:text-3xl font-bold text-[#0071c0] font-serif">
                                     {selectedTrip.name} Road Expedition
                                 </h1>
                                 <p className="text-gray-700">{selectedTrip.description}</p>
-                                <div className="space-y-4">
-                                    <h2 className="text-xl font-bold text-[#0071c0]">Route Highlights</h2>
+                                <div className="space-y-6">
+                                    <h2 className="text-2xl md:text-3xl font-bold text-[#0071c0] font-serif">Route Highlights</h2>
                                     <div className="grid gap-4 md:grid-cols-2">
                                         {selectedTrip.highlights.map((h, i) => (
                                             <div
@@ -210,7 +210,7 @@ const RoadTripsPage = () => {
                             </div>
                             <div className="space-y-6">
                                 <div className="bg-gradient-to-br from-[#0071c0] to-[#005a9b] text-white p-6 rounded-xl">
-                                    <h3 className="text-lg font-bold mb-4">Trip Essentials</h3>
+                                    <h3 className="text-xl font-bold mb-4 font-serif">Trip Essentials</h3>
                                     <div className="space-y-3">
                                         <div className="flex justify-between items-center">
                                             <span>Difficulty</span>
@@ -225,12 +225,13 @@ const RoadTripsPage = () => {
                                             <span className="font-bold">{selectedTrip.bestSeason}</span>
                                         </div>
                                     </div>
-                                    <button className="w-full bg-white text-[#0071c0] py-3 rounded-lg font-bold mt-4 hover:bg-gray-100 transition-colors">
-                                        Plan Journey →
+                                    <button className="w-full bg-white text-[#0071c0] py-2 rounded-lg font-bold mt-4 hover:bg-gray-100 transition-colors">
+                                        Plan Journey 
+                                        
                                     </button>
                                 </div>
                                 <div className="bg-white border-2 border-[#0071c0]/10 p-6 rounded-xl">
-                                    <h3 className="text-lg font-bold text-[#0071c0] mb-4">Included Features</h3>
+                                    <h3 className="text-xl font-bold text-[#0071c0] mb-4 font-serif">Included Features</h3>
                                     <ul className="space-y-3">
                                         {['Custom Route Map', '24/7 Road Assistance', 'Accommodation Guide', 'Local Experience Kit'].map((f) => (
                                             <li key={f} className="flex items-center">

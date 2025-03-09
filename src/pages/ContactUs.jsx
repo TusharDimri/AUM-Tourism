@@ -20,9 +20,9 @@ const ContactUs = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6 md:p-12">
+        <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6 md:p-12 font-sans">
             <div className="w-[80vw] w-full bg-white shadow-2xl rounded-2xl p-10 md:p-16">
-                <h2 className="text-4xl font-bold text-[#0071c0] text-center mb-6">Contact Us</h2>
+                <h2 className="text-4xl font-bold text-[#0071c0] text-center mb-6 font-serif">Contact Us</h2>
                 <p className="text-center text-gray-600 mb-10 text-lg">We would love to hear from you!</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 
@@ -77,7 +77,7 @@ const ContactUs = () => {
                         </button>
                     </form>
 
-                    <div className="h-[100%] w-[100%] space-y-6 flex flex-col items-center justify-center">
+                    <div className="h-[100%] w-[100%] space-y-6 flex flex-col items-center justify-center font-sans">
                         <div className="flex  space-x-4 text-gray-700">
                             <FaEnvelope className="text-[#0071c0] text-2xl" />
                             <p className="text-lg">support@example.com</p>

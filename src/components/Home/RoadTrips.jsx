@@ -6,7 +6,7 @@ const RoadTrips = () => {
     return (
         <div className="mt-[80px]">
             <div className="w-full">
-                <h1 className="text-center text-3xl font-bold mb-[40px] xl:mb-[60px] relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4">
+                <h1 className="text-center text-3xl font-bold mb-[40px] xl:mb-[60px] relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4 font-serif">
                     Road Trips
                 </h1>
                 <div className="w-[90vw] mx-auto px-4">
@@ -18,9 +18,9 @@ const RoadTrips = () => {
                                         style={{ backgroundImage: `url(${destination.image})` }}>
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
                                             <div className="absolute bottom-0 left-0 right-0 px-3 py-6 md:px-6 text-white">
-                                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold">{destination.name}</h3>
+                                                <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-bold">{destination.name}</h3>
                                                 <button 
-                                                    className="text-base mt-3 md:mt-5 bg-[#0071c0] text-white px-4 py-2 rounded-full transition-colors group-hover:text-[#f2942b]"
+                                                    className="font-sans text-base mt-3 md:mt-5 bg-[#0071c0] text-white px-4 py-2 rounded-full transition-colors group-hover:text-[#f2942b]"
                                                     onClick={() => navigate(`/road-trips/?id=${destination.id}`)}
                                                 >
                                                     Explore
