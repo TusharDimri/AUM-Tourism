@@ -21,6 +21,7 @@ const TreksPage = () => {
     [trekId]
   );
 
+  // Scroll to top and set scroll restoration on pathname change
   useEffect(() => {
     window.scrollTo(0, 0);
     document.documentElement.scrollTop = 0;
@@ -31,12 +32,28 @@ const TreksPage = () => {
     }
   }, [location.pathname]);
 
+  // Sync carousel with URL trekId
   useEffect(() => {
     if (selectedTrek) {
       const selectedIndex = treks.findIndex((trek) => trek.id === selectedTrek.id);
-      swiperRef.current?.swiper?.slideToLoop(selectedIndex);
+      if (swiperRef.current?.swiper && selectedIndex !== swiperRef.current.swiper.realIndex) {
+        swiperRef.current.swiper.slideToLoop(selectedIndex);
+      }
     }
   }, [selectedTrek]);
+
+  // Handle slide change with optimized navigation
+  const handleSlideChange = (swiper) => {
+    const newIndex = swiper.realIndex;
+    setActiveIndex(newIndex);
+    const newTrekId = treks[newIndex].id;
+    const currentTrekId = queryParams.get("trekId");
+
+    // Update URL only if trekId changes, using replace to avoid history clutter
+    if (newTrekId !== currentTrekId) {
+      navigate(`/treks/?trekId=${newTrekId}`, { replace: true });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 font-sans">
@@ -64,33 +81,30 @@ const TreksPage = () => {
             modules={[EffectCoverflow, Mousewheel, Keyboard, Navigation]}
             className="!h-full !py-12 !overflow-visible"
             ref={swiperRef}
-            onSlideChange={(swiper) => {
-              setActiveIndex(swiper.realIndex);
-              navigate(`/treks/?trekId=${treks[swiper.realIndex].id}`);
-            }}
+            onSlideChange={handleSlideChange}
             breakpoints={{
               0: {
                 coverflowEffect: {
                   rotate: 10,
                   stretch: 0,
                   depth: 150,
-                  modifier: 1.5
-                }
+                  modifier: 1.5,
+                },
               },
               640: {
                 coverflowEffect: {
                   rotate: 20,
                   stretch: -40,
                   depth: 200,
-                }
+                },
               },
               1024: {
                 coverflowEffect: {
                   rotate: 25,
                   stretch: -60,
                   depth: 400,
-                }
-              }
+                },
+              },
             }}
           >
             {treks.map((trek, index) => (
@@ -98,10 +112,12 @@ const TreksPage = () => {
                 key={trek.id}
                 className="!w-[260px] sm:!w-[300px] lg:!w-[400px] !h-[400px] sm:!h-[500px] transition-transform duration-500"
               >
-                <div className={`relative h-full w-full transform transition-all duration-500 ${activeIndex === index
-                  ? 'scale-110 z-10 shadow-2xl'
-                  : 'scale-90 opacity-90 hover:scale-95'
-                  }`}>
+                <div
+                  className={`relative h-full w-full transform transition-all duration-500 ${activeIndex === index
+                      ? 'scale-110 z-10 shadow-2xl'
+                      : 'scale-90 opacity-90 hover:scale-95'
+                    }`}
+                >
                   <Link
                     to={`/treks/?trekId=${trek.id}`}
                     className="group relative h-full w-full block rounded-xl overflow-hidden shadow-xl"
@@ -135,8 +151,8 @@ const TreksPage = () => {
                 key={index}
                 onClick={() => swiperRef.current?.swiper?.slideToLoop(index)}
                 className={`w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full transition-all duration-300 ${activeIndex === index
-                  ? 'bg-white scale-150 shadow-sm shadow-white/50'
-                  : 'bg-white/40 hover:bg-white/60'
+                    ? 'bg-white scale-150 shadow-sm shadow-white/50'
+                    : 'bg-white/40 hover:bg-white/60'
                   }`}
               />
             ))}
@@ -146,19 +162,28 @@ const TreksPage = () => {
             className="swiper-button-prev hidden lg:flex absolute top-1/2 left-2 xl:left-[-40px] -translate-y-1/2 z-20 bg-white/90 border-2 border-white/90 shadow-lg shadow-[#005a9b]/50 p-2.5 md:p-3.5 rounded-full backdrop-blur-sm hover:bg-white hover:shadow-xl hover:shadow-[#005a9b]/60 hover:-translate-x-[2px] active:scale-95 active:shadow-inner active:border-white/70 transition-all duration-300 group w-12 h-12 md:w-14 md:h-14 flex items-center justify-center"
             aria-label="Previous"
           >
-            <svg className="w-7 h-7 md:w-9 md:h-9 text-[#0071c0] flex items-center justify-center transform group-hover:-translate-x-1 transition-transform"
-              fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <svg
+              className="w-7 h-7 md:w-9 md:h-9 text-[#0071c0] flex items-center justify-center transform group-hover:-translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
 
           <button
-            className="swiper-button-next hidden lg:flex absolute top-1/2 right-2 xl:right-[-40px] -translate-y-1/2 z-20 bg-white/90 border-2 border-white/90 shadow-lg shadow-[#005a9b]/50 p-2.5 md:p-3.5 rounded-full backdrop-blur-sm hover:bg-white hover:shadow-xl hover:shadow-[#005a9b]/60 hover:translate-x-[2px] active:scale-95 active:shadow-inner active:border-white/70
-            transition-all duration-300 group w-12 h-12 md:w-14 md:h-14 flex items-center justify-center"
+            className="swiper-button-next hidden lg:flex absolute top-1/2 right-2 xl:right-[-40px] -translate-y-1/2 z-20 bg-white/90 border-2 border-white/90 shadow-lg shadow-[#005a9b]/50 p-2.5 md:p-3.5 rounded-full backdrop-blur-sm hover:bg-white hover:shadow-xl hover:shadow-[#005a9b]/60 hover:translate-x-[2px] active:scale-95 active:shadow-inner active:border-white/70 transition-all duration-300 group w-12 h-12 md:w-14 md:h-14 flex items-center justify-center"
             aria-label="Next"
           >
-            <svg className="w-7 h-7 md:w-9 md:h-9 text-[#0071c0] flex items-center justify-center transform group-hover:translate-x-1 transition-transform"
-              fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <svg
+              className="w-7 h-7 md:w-9 md:h-9 text-[#0071c0] flex items-center justify-center transform group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
             </svg>
           </button>
