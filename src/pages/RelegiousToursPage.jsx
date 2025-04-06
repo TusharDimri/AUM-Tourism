@@ -92,8 +92,8 @@ const ReligiousToursPage = () => {
                 <Link
                   to={`/religious-tours/?tourId=${tour.id}`}
                   className={`block relative h-full rounded-xl overflow-hidden shadow-lg transition-transform duration-300 ${selectedTour?.id === tour.id
-                      ? "scale-105 border-4 border-[#0071c0]"
-                      : "hover:scale-105"
+                    ? "scale-105 border-4 border-[#0071c0]"
+                    : "hover:scale-105"
                     }`}
                 >
                   <img src={tour.image} alt={tour.title} className="w-full h-full object-cover" />
@@ -126,13 +126,11 @@ const ReligiousToursPage = () => {
                   alt={selectedTour.title}
                   className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 <div className="absolute bottom-6 left-6 text-white">
-                  <h1 className="text-3xl md:text-4xl font-bold drop-shadow-lg font-serif">
-                    {selectedTour.title}
-                  </h1>
-                  <p className="text-lg md:text-xl font-medium text-gray-200">
-                    {selectedTour.subtitle}
-                  </p>
+                  <p className="text-3xl md:text-4xl font-bold drop-shadow-lg font-serif">{selectedTour.title}</p>
+                  <p className="text-lg md:text-xl font-medium text-gray-200">{selectedTour.subtitle}</p>
                 </div>
               </div>
 
@@ -292,19 +290,16 @@ const ReligiousToursPage = () => {
             <div className="flex items-center mb-3">
               <FaList className="text-[#0071c0] text-xl mr-2" />
               <h4 className="text-xl md:text-2xl font-bold text-[#0071c0] font-serif">
-                Tour Features
+                Highlights
               </h4>
             </div>
             <ul className="space-y-3 text-sm md:text-base text-gray-700">
-              {[
-                { icon: FaUser, text: "Expert Guides" },
-                { icon: FaHotel, text: "Premium Accommodations" },
-                { icon: FaGlobe, text: "Cultural Experiences" },
-                { icon: FaShieldAlt, text: "Safety Protocols" },
-              ].map((item, idx) => (
+              {selectedTour.highlights.map((item, idx) => (
                 <li key={idx} className="flex items-center gap-2">
-                  <item.icon className="text-[#0071c0] text-xl" />
-                  <span>{item.text}</span>
+                  <div>
+                    <FaCheck className="text-green-500 " />
+                  </div>
+                  <p>{item}</p>
                 </li>
               ))}
             </ul>
@@ -320,8 +315,10 @@ const ReligiousToursPage = () => {
               </div>
               <ul className="space-y-2 text-sm md:text-base text-gray-700">
                 {selectedTour.best_time_to_visit.map((item, idx) => (
-                  <li key={idx} className="flex items-start">
-                    <FaCheck className="text-green-500 mt-1 mr-2" />
+                  <li key={idx} className="flex items-center gap-2">
+                    <div>
+                      <FaCheck className="text-green-500 " />
+                    </div>
                     <span>{item}</span>
                   </li>
                 ))}

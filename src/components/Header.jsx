@@ -102,7 +102,7 @@ const Header = ({ isTransparent }) => {
             {!isMenuOpen && (
                 <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4 font-sans">
                     <a
-                        href="https://wa.me/919876543210"
+                        href="https://wa.me/9119058603"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:shadow-md transition-all duration-300 hover:scale-105 flex items-center justify-center w-12 h-12 md:w-14 md:h-14"
@@ -112,7 +112,7 @@ const Header = ({ isTransparent }) => {
                     </a>
 
                     <a
-                        href="tel:+919876543210"
+                        href="tel:9119058603"
                         className="bg-[#1a75b4] text-white p-3 rounded-full shadow-lg hover:shadow-md transition-all duration-300 hover:scale-105 flex items-center justify-center w-12 h-12 md:w-14 md:h-14"
                         aria-label="Call us"
                     >
