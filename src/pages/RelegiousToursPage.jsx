@@ -147,8 +147,8 @@ const ReligiousToursPage = () => {
               </div>
 
               {selectedTour.itinerary && (
-                <div className="bg-white rounded-xl shadow-md p-6">
-                  <div className="flex items-center mb-4">
+                <div className="bg-white rounded-xl shadow-md p-3 sm:p-6">
+                  <div className="flex items-start mb-4">
                     <FaCalendarAlt className="text-[#0071c0] text-3xl mr-2" />
                     <h3 className="text-2xl md:text-3xl font-bold text-[#0071c0] font-serif">
                       Itinerary
@@ -159,17 +159,17 @@ const ReligiousToursPage = () => {
                       <div key={index}>
                         <button
                           onClick={() => toggleAccordion(index)}
-                          className="w-full flex justify-between items-center py-4 focus:outline-none hover:bg-gray-50 transition-colors"
+                          className="w-full flex justify-between items-start py-4 focus:outline-none hover:bg-gray-50 transition-colors"
                         >
-                          <div className="flex items-center">
-                            <span className="bg-[#0071c0] text-white px-3 py-1 rounded-full text-sm font-bold mr-3">
+                          <div className="flex items-start gap-4 min-w-0">
+                            <span className="bg-[#0071c0] text-white px-3 py-1 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap flex-shrink-0 mt-1">
                               Day {day.day}
                             </span>
-                            <span className="text-base md:text-xl font-bold text-gray-800">
+                            <span className="text-base md:text-xl font-bold text-gray-800 line-clamp-2 text-left min-w-0 text-wrap">
                               {day.title}
                             </span>
                           </div>
-                          <span className="text-gray-600 text-lg">
+                          <span className="text-gray-600 text-lg flex-shrink-0 ml-4 mt-1">
                             {openAccordions[index] ? <FaChevronUp /> : <FaChevronDown />}
                           </span>
                         </button>
