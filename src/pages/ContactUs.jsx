@@ -29,7 +29,7 @@ const ContactUs = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center  mt-[65px] p-4 sm:p-6 lg:p-8">
             <div className="w-full max-w-6xl bg-white shadow-xl rounded-2xl p-6 md:p-10 lg:p-14">
                 <div className="mb-10 text-center">
                     <h2 className="text-4xl lg:text-5xl font-bold text-[#0071c0] mb-4 font-serif">

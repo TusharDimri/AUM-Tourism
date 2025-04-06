@@ -39,8 +39,8 @@ const AboutUs = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 font-sans">
-            <div className="max-w-7xl mx-auto px-4 py-12 sm:py-20">
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 font-sans mt-[64px]">
+            <div className="w-[97vw] mx-auto px-4 py-8 md:py-20">
 
 
                 <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 lg:p-16">
@@ -87,7 +87,7 @@ const AboutUs = () => {
                         </div>
                     </div>
 
-                    <div className="mt-16 text-center">
+                    <div className="mt-8 md:mt-16 text-center">
                         <p className="text-xl text-gray-700 max-w-3xl mx-auto">
                             In 2015, their shared passion ignited Aum Tourism - born from countless campfire discussions
                             and mountain trails. Today, we're proud to have crafted 5000+ unforgettable adventures while
@@ -97,7 +97,7 @@ const AboutUs = () => {
                 </div>
 
 
-                <div className="mt-20 bg-gradient-to-r from-[#0071c0] to-[#005a9b] rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div className="mt-8 md:mt-20 bg-gradient-to-r from-[#0071c0] to-[#005a9b] rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center font-serif">
                         Recognized Excellence
                     </h2>
@@ -139,7 +139,7 @@ const AboutUs = () => {
                                 {certifications.map((cert, index) => (
                                     <SwiperSlide
                                         key={index}
-                                        className="!w-[280px] sm:!w-[400px] sm:!h-[400px] !flex !items-center !justify-center"
+                                        className="!w-[220px] sm:!w-[400px] sm:!h-[400px] !flex !items-center !justify-center"
                                     >
                                         <div
                                             className="relative w-full h-full rounded-xl overflow-hidden bg-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-xl border-2 border-white/20 cursor-pointer"
