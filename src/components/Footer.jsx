@@ -13,7 +13,7 @@ const Footer = () => {
                     
                     <div className="w-full md:w-1/5 text-center ">
                         <div className="flex flex-col items-center  mb-4">
-                            <img src="/Logo.jpeg" alt="Logo" className="h-[55px] w-[55px] rounded-full mb-3" />
+                            <img src="/AUM.png" alt="Logo" className="h-[75px] w-[75px] rounded-full mb-3" />
                             <h3 className="font-serif text-xl font-bold">AUM Tourism</h3>
                         </div>
                         <p className="font-sans text-sm opacity-90">

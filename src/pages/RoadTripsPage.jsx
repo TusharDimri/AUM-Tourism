@@ -179,11 +179,13 @@ const RoadTripsPage = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="max-w-7xl mx-auto px-4 py-8"
+                    className="max-w-[70%] mx-auto px-4 py-8"
                 >
-                    <div className="bg-white rounded-2xl shadow-lg pb-6 md:pb-8">
-                        <div className="grid md:grid-cols-[1fr_300px] gap-8">
-                            <div className="space-y-6 p-6">
+                    <div className="max-w-[80vw] mx-auto rounded-2xl pb-6 md:pb-8 px-4 sm:px-6 lg:px-8">
+                        <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
+                            {/* Left Column */}
+                            <div className="space-y-6">
+                                {/* Image Hero */}
                                 <div className="relative h-64 md:h-96 rounded-xl overflow-hidden shadow-lg">
                                     <img
                                         src={selectedTrip.image}
@@ -191,13 +193,19 @@ const RoadTripsPage = () => {
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
+
+                                {/* Title & Description */}
                                 <h1 className="text-2xl md:text-3xl font-bold text-[#0071c0] font-serif">
                                     {selectedTrip.name} Road Expedition
                                 </h1>
                                 <p className="text-gray-700">{selectedTrip.description}</p>
+
+                                {/* Route Highlights */}
                                 <div className="space-y-6">
-                                    <h2 className="text-2xl md:text-3xl font-bold text-[#0071c0] font-serif">Route Highlights</h2>
-                                    <div className="grid gap-4 md:grid-cols-2">
+                                    <h2 className="text-2xl md:text-3xl font-bold text-[#0071c0] font-serif">
+                                        Route Highlights
+                                    </h2>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         {selectedTrip.highlights.map((h, i) => (
                                             <div
                                                 key={i}
@@ -209,7 +217,10 @@ const RoadTripsPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="space-y-6">
+
+                            {/* Right Column (Sticky on large) */}
+                            <div className="space-y-6 lg:sticky lg:top-[90px]">
+                                {/* Trip Essentials */}
                                 <div className="bg-gradient-to-br from-[#0071c0] to-[#005a9b] text-white p-6 rounded-xl">
                                     <h3 className="text-xl font-bold mb-4 font-serif">Trip Essentials</h3>
                                     <div className="space-y-3">
@@ -227,14 +238,16 @@ const RoadTripsPage = () => {
                                         </div>
                                     </div>
                                     <button className="w-full bg-white text-[#0071c0] py-2 rounded-lg font-bold mt-4 hover:bg-gray-100 transition-colors">
-                                        Plan Journey 
-                                        <span>
-                                            <FaChevronRight className="ml-2 inline-block" />
-                                        </span>
+                                        Plan Journey
+                                        <FaChevronRight className="ml-2 inline-block" />
                                     </button>
                                 </div>
+
+                                {/* Included Features */}
                                 <div className="bg-white border-2 border-[#0071c0]/10 p-6 rounded-xl">
-                                    <h3 className="text-xl font-bold text-[#0071c0] mb-4 font-serif">Included Features</h3>
+                                    <h3 className="text-xl font-bold text-[#0071c0] mb-4 font-serif">
+                                        Included Features
+                                    </h3>
                                     <ul className="space-y-3">
                                         {['Custom Route Map', '24/7 Road Assistance', 'Accommodation Guide', 'Local Experience Kit'].map((f) => (
                                             <li key={f} className="flex items-center">

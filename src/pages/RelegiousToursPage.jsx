@@ -9,10 +9,6 @@ import {
   FaCalendarAlt,
   FaCheck,
   FaTimes,
-  FaUser,
-  FaHotel,
-  FaGlobe,
-  FaShieldAlt,
   FaCheckCircle,
   FaTimesCircle,
   FaSuitcase,
@@ -269,7 +265,7 @@ const ReligiousToursPage = () => {
         </div>
 
         {/* Right Column: CTA, Features & Quick Facts */}
-        <div className="lg:sticky lg:top-[80px] space-y-8 self-start">
+        <div className="lg:sticky lg:top-[90px] space-y-8 self-start">
           {/* CTA Box for large screens */}
           <div className="hidden lg:block bg-white rounded-xl shadow-lg">
             <div className="bg-gradient-to-br from-[#0071c0] to-[#005a9b] rounded-xl p-6 text-center text-white">

@@ -70,7 +70,7 @@ const PackagesPage = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 font-sans overflow-hidden">
 
-            <div className="mt-[64px] z-50 py-4">
+            <div className="mt-[75px] z-50 py-4">
                 {/* Desktop Navigation: Horizontal Tabs */}
                 <div className="hidden sm:block relative overflow-x-auto">
                     <div className="flex items-center justify-center relative px-4 sm:px-8">
