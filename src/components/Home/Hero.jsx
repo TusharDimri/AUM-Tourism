@@ -1,4 +1,5 @@
 import React from "react";
+import HeroSearch from "./HeroSearch";
 
 const HeroSection = () => {
     return (
@@ -26,6 +27,8 @@ const HeroSection = () => {
                     Journey beyond the ordinary and discover the divine.
                 </p>
             </div>
+
+            <HeroSearch />
         </div>
     );
 };

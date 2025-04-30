@@ -86,7 +86,7 @@ const PackagesSection = () => {
                 </Slider>
             </div>
 
-            <style jsx global>{`
+            <style>{`
                 .package-carousel .slick-track {
                     display: flex !important;
                     align-items: stretch;
