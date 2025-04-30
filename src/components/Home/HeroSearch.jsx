@@ -46,7 +46,7 @@ export default function HeroSearch() {
       <input
         type="text"
         className="w-full px-5 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500
-                   bg-white bg-opacity-90 placeholder-gray-500 text-gray-800"
+                   bg bg-opacity-90 placeholder-gray-500 text-gray-800"
         placeholder="Search Treks, Tours, Road Trips & Packages…"
         value={query}
         onChange={e => setQuery(e.target.value)}

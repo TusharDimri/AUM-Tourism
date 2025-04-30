@@ -1,5 +1,144 @@
 const tours = [
     {
+        "id": "kedarnath-yatra",
+        "title": "Kedarnath Yatra",
+        "subtitle": "Pilgrimage to the Abode of Lord Shiva",
+        "image": "/Kedarnath.jpg",
+        "description": "Kedarnath Yatra – 3 Days / 2 Nights\nRoute: Haridwar → Guptkashi / Sitapur → Kedarnath → Haridwar\nBest Time: May to October",
+        "highlights": [
+            "Darshan at the sacred Kedarnath Temple – one of the 12 Jyotirlingas and part of Char Dham.",
+            "Trek through scenic Himalayan routes or opt for helicopter service.",
+            "Visit Guptkashi, Triyuginarayan, and Sonprayag.",
+            "Witness the Mandakini River and serene mountain landscapes."
+        ],
+        "itinerary": [
+            {
+                "day": 1,
+                "title": "Haridwar – Guptkashi / Sitapur",
+                "description": "Haridwar – Guptkashi / Sitapur (210–220 km / 8–9 hrs)\nEarly morning departure from Haridwar\nScenic drive along the Ganga and Alaknanda rivers\nEn route stops at Devprayag, Rudraprayag\nReach Guptkashi or Sitapur by evening\nVisit Ardh Narishwar Temple if time permits\nOvernight Stay: Guptkashi / Sitapur"
+            },
+            {
+                "day": 2,
+                "title": "Guptkashi / Sitapur – Kedarnath",
+                "description": "Guptkashi / Sitapur – Kedarnath (Drive + 18 km Trek / 5–6 hrs)\nEarly morning drive to Sonprayag, transfer to Gaurikund\nBegin 18 km trek to Kedarnath (Pony/Palki/Helicopter option available)\nReach Kedarnath, visit Kedarnath Temple and surrounding sites\nAttend the evening aarti if time allows\nOvernight Stay: Kedarnath (basic guest house or tented accommodation)"
+            },
+            {
+                "day": 3,
+                "title": "Kedarnath – Guptkashi – Haridwar",
+                "description": "Kedarnath – Guptkashi – Haridwar (Trek + Drive / 10–11 hrs)\nEarly morning darshan (if missed earlier), then trek down to Gaurikund\nReturn via Sonprayag to Guptkashi, then drive back to Haridwar\nReach Haridwar by late evening\nTour concludes with divine blessings"
+            }
+        ],
+        "inclusions": [
+            "Transportation from Haridwar to Haridwar by private vehicle.",
+            "Accommodation in Guptkashi/Sitapur and Kedarnath (on sharing basis).",
+            "Breakfast and dinner during the journey.",
+            "Parking, driver charges, tolls, fuel, and basic coordination."
+        ],
+        "exclusions": [
+            "Helicopter, pony, or palki charges.",
+            "Personal expenses, snacks, tips.",
+            "Medical or emergency evacuation charges.",
+            "Entry fees, VIP darshan, or special pooja.",
+            "Anything not mentioned under 'Inclusions'."
+        ],
+        "things_to_carry": [],
+        "best_time_to_visit": [],
+        "why_choose_us": [
+            "Local experts with extensive Yatra planning experience.",
+            "Clean, hygienic stays near temples and base camps.",
+            "Trekking/transport assistance for elderly & first-time yatris.",
+            "Transparent pricing, personalized service.",
+            "24x7 assistance during the yatra."
+        ]
+    },
+    {
+        "id": "adi-kailash",
+        "title": "Adi Kailash & Om Parvat Yatra",
+        "subtitle": "The Himalayan Mystery",
+        "image": "/AdiKailash.webp",
+        "description": "Adi Kailash & Om Parvat Yatra (9 Days / 8 Nights)\nRoute: Kathgodam → Pithoragarh → Dharchula → Gunji → Adi Kailash → Om Parvat → Kathgodam\nRegion: Kumaon Himalayas, Uttarakhand\nMax Altitude: 15,500 ft approx.",
+        "highlights": [
+            "Darshan of Adi Kailash, known as the Chhota Kailash, sacred to Lord Shiva",
+            "Visit the divine Om Parvat, where the natural formation of \"ॐ\" is seen on the mountain",
+            "Spiritual experiences at sacred sites like Parvati Sarovar, Kunti Parvat, and Brahma Parvat",
+            "Adventure drive through high mountain passes like Lipulekh and beautiful valleys",
+            "Cultural insights at tribal villages and monasteries near the Indo-Tibet border"
+        ],
+        "itinerary": [
+            {
+                "day": 1,
+                "title": "Kathgodam – Pithoragarh",
+                "description": "Kathgodam – Pithoragarh (250 km / 8-9 hrs)\nEarly morning arrival at Kathgodam and group departure\nScenic drive through Almora, Berinag, and Askot\nReach Pithoragarh and check into hotel\nOvernight stay: Pithoragarh"
+            },
+            {
+                "day": 2,
+                "title": "Pithoragarh – Dharchula",
+                "description": "Pithoragarh – Dharchula (90 km / 3-4 hrs)\nDrive along Kali River, passing beautiful Himalayan landscapes\nComplete ILP (Inner Line Permit) process in Dharchula\nFree time to explore the Indo-Nepal border town\nOvernight stay: Dharchula"
+            },
+            {
+                "day": 3,
+                "title": "Dharchula – Nabi / Gunji",
+                "description": "Dharchula – Nabi / Gunji (80 km / 5-6 hrs)\nEnter the restricted zone with government-permitted vehicles\nDrive via Chialekh and Garbyang – ancient high-altitude villages\nReach Gunji or Nabi and acclimatize\nOvernight stay: Homestay/Camp in Gunji/Nabi"
+            },
+            {
+                "day": 4,
+                "title": "Gunji – Kuti – Jyolingkong – Adi Kailash – Gunji",
+                "description": "Gunji – Kuti – Jyolingkong – Adi Kailash – Gunji (100 km round trip)\nStart early for Jyolingkong (the base of Adi Kailash)\nEn route visit Kunti Parvat and Pandav Parvat\nEnjoy darshan of Adi Kailash and Parvati Sarovar\nPerform puja and return to Gunji\nOvernight stay: Gunji/Nabi"
+            },
+            {
+                "day": 5,
+                "title": "Gunji – Om Parvat",
+                "description": "Gunji – Om Parvat – Kalapani – Gunji (70 km round trip)\nMorning drive to see Om Parvat, where natural snow patterns form the sacred ॐ symbol\nVisit Kalapani Temple, origin of River Kali\nExplore Nabidhang and enjoy views of Brahma Parvat\nReturn to Gunji by evening\nOvernight stay: Gunji/Nabi"
+            },
+            {
+                "day": 6,
+                "title": "Gunji – Dharchula",
+                "description": "Gunji – Dharchula\nBegin return journey towards Dharchula\nEn route enjoy local Kumaoni food and village interactions\nOvernight stay: Dharchula"
+            },
+            {
+                "day": 7,
+                "title": "Dharchula – Pithoragarh",
+                "description": "Dharchula – Pithoragarh\nLeisurely drive back to Pithoragarh\nVisit local temples and enjoy the Himalayan views\nOvernight stay: Pithoragarh"
+            },
+            {
+                "day": 8,
+                "title": "Pithoragarh – Kathgodam",
+                "description": "Pithoragarh – Kathgodam\nFinal journey back to Kathgodam with drop by evening\nYatra concludes with divine blessings and memorable experiences"
+            }
+        ],
+        "inclusions": [
+            "Accommodation (hotels, homestays, camps) on twin/triple sharing basis.",
+            "Vegetarian meals (Breakfast, Lunch, Dinner).",
+            "Local transportation from Kathgodam and back in tempo traveller/jeep.",
+            "Inner Line Permits and government formalities.",
+            "English/Hindi speaking experienced guide.",
+            "First-aid and oxygen cylinder support."
+        ],
+        "exclusions": [
+            "Travel to/from Kathgodam.",
+            "Personal expenses like shopping, phone usage, bottled water.",
+            "Tips, extra meals, and entry tickets not mentioned.",
+            "Medical insurance and emergency evacuation charges."
+        ],
+        "things_to_carry": [
+            "Government-issued photo ID (Aadhaar/Passport).",
+            "Warm jackets, gloves, thermals, trekking shoes.",
+            "Sunglasses, sunscreen, and personal toiletries.",
+            "Reusable water bottle, power bank, and basic medicines."
+        ],
+        "best_time_to_visit": [
+            "May to mid-July and September to early October.",
+            "Avoid monsoon season due to landslides and bad roads."
+        ],
+        "why_choose_us": [
+            "Trusted spiritual and adventure travel partner.",
+            "End-to-end assistance including permits and local coordination.",
+            "Culturally immersive journeys with experienced Kumaon guides.",
+            "Well-planned itineraries for altitude adaptation and comfort.",
+            "Small-group departures with personalized attention."
+        ]
+    },
+    {
         "id": "char-dham-yatra",
         "title": "Char Dham Yatra",
         "subtitle": "Yamunotri, Gangotri, Kedarnath & Badrinath Pilgrimage",
@@ -176,93 +315,6 @@ const tours = [
         ]
     },
     {
-        "id": "adi-kailash",
-        "title": "Adi Kailash & Om Parvat Yatra",
-        "subtitle": "The Himalayan Mystery",
-        "image": "/AdiKailash.webp",
-        "description": "Adi Kailash & Om Parvat Yatra (9 Days / 8 Nights)\nRoute: Kathgodam → Pithoragarh → Dharchula → Gunji → Adi Kailash → Om Parvat → Kathgodam\nRegion: Kumaon Himalayas, Uttarakhand\nMax Altitude: 15,500 ft approx.",
-        "highlights": [
-            "Darshan of Adi Kailash, known as the Chhota Kailash, sacred to Lord Shiva",
-            "Visit the divine Om Parvat, where the natural formation of \"ॐ\" is seen on the mountain",
-            "Spiritual experiences at sacred sites like Parvati Sarovar, Kunti Parvat, and Brahma Parvat",
-            "Adventure drive through high mountain passes like Lipulekh and beautiful valleys",
-            "Cultural insights at tribal villages and monasteries near the Indo-Tibet border"
-        ],
-        "itinerary": [
-            {
-                "day": 1,
-                "title": "Kathgodam – Pithoragarh",
-                "description": "Kathgodam – Pithoragarh (250 km / 8-9 hrs)\nEarly morning arrival at Kathgodam and group departure\nScenic drive through Almora, Berinag, and Askot\nReach Pithoragarh and check into hotel\nOvernight stay: Pithoragarh"
-            },
-            {
-                "day": 2,
-                "title": "Pithoragarh – Dharchula",
-                "description": "Pithoragarh – Dharchula (90 km / 3-4 hrs)\nDrive along Kali River, passing beautiful Himalayan landscapes\nComplete ILP (Inner Line Permit) process in Dharchula\nFree time to explore the Indo-Nepal border town\nOvernight stay: Dharchula"
-            },
-            {
-                "day": 3,
-                "title": "Dharchula – Nabi / Gunji",
-                "description": "Dharchula – Nabi / Gunji (80 km / 5-6 hrs)\nEnter the restricted zone with government-permitted vehicles\nDrive via Chialekh and Garbyang – ancient high-altitude villages\nReach Gunji or Nabi and acclimatize\nOvernight stay: Homestay/Camp in Gunji/Nabi"
-            },
-            {
-                "day": 4,
-                "title": "Gunji – Kuti – Jyolingkong – Adi Kailash – Gunji",
-                "description": "Gunji – Kuti – Jyolingkong – Adi Kailash – Gunji (100 km round trip)\nStart early for Jyolingkong (the base of Adi Kailash)\nEn route visit Kunti Parvat and Pandav Parvat\nEnjoy darshan of Adi Kailash and Parvati Sarovar\nPerform puja and return to Gunji\nOvernight stay: Gunji/Nabi"
-            },
-            {
-                "day": 5,
-                "title": "Gunji – Om Parvat",
-                "description": "Gunji – Om Parvat – Kalapani – Gunji (70 km round trip)\nMorning drive to see Om Parvat, where natural snow patterns form the sacred ॐ symbol\nVisit Kalapani Temple, origin of River Kali\nExplore Nabidhang and enjoy views of Brahma Parvat\nReturn to Gunji by evening\nOvernight stay: Gunji/Nabi"
-            },
-            {
-                "day": 6,
-                "title": "Gunji – Dharchula",
-                "description": "Gunji – Dharchula\nBegin return journey towards Dharchula\nEn route enjoy local Kumaoni food and village interactions\nOvernight stay: Dharchula"
-            },
-            {
-                "day": 7,
-                "title": "Dharchula – Pithoragarh",
-                "description": "Dharchula – Pithoragarh\nLeisurely drive back to Pithoragarh\nVisit local temples and enjoy the Himalayan views\nOvernight stay: Pithoragarh"
-            },
-            {
-                "day": 8,
-                "title": "Pithoragarh – Kathgodam",
-                "description": "Pithoragarh – Kathgodam\nFinal journey back to Kathgodam with drop by evening\nYatra concludes with divine blessings and memorable experiences"
-            }
-        ],
-        "inclusions": [
-            "Accommodation (hotels, homestays, camps) on twin/triple sharing basis.",
-            "Vegetarian meals (Breakfast, Lunch, Dinner).",
-            "Local transportation from Kathgodam and back in tempo traveller/jeep.",
-            "Inner Line Permits and government formalities.",
-            "English/Hindi speaking experienced guide.",
-            "First-aid and oxygen cylinder support."
-        ],
-        "exclusions": [
-            "Travel to/from Kathgodam.",
-            "Personal expenses like shopping, phone usage, bottled water.",
-            "Tips, extra meals, and entry tickets not mentioned.",
-            "Medical insurance and emergency evacuation charges."
-        ],
-        "things_to_carry": [
-            "Government-issued photo ID (Aadhaar/Passport).",
-            "Warm jackets, gloves, thermals, trekking shoes.",
-            "Sunglasses, sunscreen, and personal toiletries.",
-            "Reusable water bottle, power bank, and basic medicines."
-        ],
-        "best_time_to_visit": [
-            "May to mid-July and September to early October.",
-            "Avoid monsoon season due to landslides and bad roads."
-        ],
-        "why_choose_us": [
-            "Trusted spiritual and adventure travel partner.",
-            "End-to-end assistance including permits and local coordination.",
-            "Culturally immersive journeys with experienced Kumaon guides.",
-            "Well-planned itineraries for altitude adaptation and comfort.",
-            "Small-group departures with personalized attention."
-        ]
-    },
-    {
         "id": "panch-kedar",
         "title": "Panch Kedar Yatra",
         "subtitle": "Five Ancient Shiva Temples",
@@ -363,110 +415,58 @@ const tours = [
             "Small Groups for a Personalized Experience – Avoid the crowds and connect deeply with nature."
         ]
     },
-    {
-        "id": "badrinath-dham",
-        "title": "Badrinath Yatra",
-        "subtitle": "Sacred Journey to Badrinath Temple",
-        "image": "/Badrinath.jpg",
-        "description": "Badrinath Yatra – 3 Days / 2 Nights\nRoute: Haridwar → Joshimath → Badrinath → Haridwar",
-        "highlights": [
-            "Darshan at Badrinath Temple, one of the four Char Dhams.",
-            "Scenic drive through Devprayag, Rudraprayag, Karnaprayag.",
-            "Explore Mana Village – the last village of India.",
-            "Visit holy sites like Tapt Kund, Narad Kund, and witness the confluence of rivers."
-        ],
-        "itinerary": [
-            {
-                "day": 1,
-                "title": "Haridwar – Joshimath / Pipalkoti",
-                "description": "Haridwar – Joshimath / Pipalkoti (260–280 km / 9–10 hrs)\nEarly departure from Haridwar\nDrive along the Alaknanda River\nEn route visit Devprayag, Rudraprayag, Karnaprayag – sacred river confluences\nArrive at Joshimath or Pipalkoti in the evening\nOvernight Stay: Joshimath / Pipalkoti"
-            },
-            {
-                "day": 2,
-                "title": "Joshimath / Pipalkoti – Badrinath – Rudraprayag / Srinagar",
-                "description": "Joshimath / Pipalkoti – Badrinath – Rudraprayag / Srinagar (180–200 km total / 7–8 hrs)\nEarly morning drive to Badrinath (via Joshimath if staying in Pipalkoti)\nDarshan at Badrinath Temple, take a dip in Tapt Kund, visit Narad Kund\nVisit Mana Village, Vyas Gufa, Bhim Pul, and Saraswati River origin\nAfter sightseeing and darshan, drive back towards Rudraprayag/Srinagar\nOvernight Stay: Rudraprayag / Srinagar"
-            },
-            {
-                "day": 3,
-                "title": "Rudraprayag / Srinagar – Haridwar",
-                "description": "Rudraprayag / Srinagar – Haridwar (160–180 km / 6–7 hrs)\nAfter breakfast, begin the drive back to Haridwar\nEn route enjoy views of Ganga Valley and small towns\nReach Haridwar by evening\nTour concludes with blessings of Lord Badri Vishal"
-            }
-        ],
-        "inclusions": [
-            "Transport by private vehicle from Haridwar to Haridwar.",
-            "Accommodation on double/triple sharing basis.",
-            "Breakfast and dinner during the trip.",
-            "Driver allowances, tolls, parking, and fuel.",
-            "Basic assistance during temple visit."
-        ],
-        "exclusions": [
-            "Personal expenses, snacks, bottled water, tips.",
-            "Special pooja arrangements or VIP darshan passes.",
-            "Medical/emergency expenses.",
-            "Anything not mentioned in 'Inclusions'."
-        ],
-        "things_to_carry": [],
-        "best_time_to_visit": [],
-        "why_choose_us": [
-            "Local experts with years of Himalayan yatra experience.",
-            "Comfortable and clean stays for a rejuvenating journey.",
-            "Well-maintained vehicles and trained drivers.",
-            "Personalized service and end-to-end yatra coordination.",
-            "Transparent pricing and support for elderly/yatris."
-        ]
-    },
-    {
-        "id": "kedarnath-yatra",
-        "title": "Kedarnath Yatra",
-        "subtitle": "Pilgrimage to the Abode of Lord Shiva",
-        "image": "/Kedarnath.jpg",
-        "description": "Kedarnath Yatra – 3 Days / 2 Nights\nRoute: Haridwar → Guptkashi / Sitapur → Kedarnath → Haridwar\nBest Time: May to October",
-        "highlights": [
-            "Darshan at the sacred Kedarnath Temple – one of the 12 Jyotirlingas and part of Char Dham.",
-            "Trek through scenic Himalayan routes or opt for helicopter service.",
-            "Visit Guptkashi, Triyuginarayan, and Sonprayag.",
-            "Witness the Mandakini River and serene mountain landscapes."
-        ],
-        "itinerary": [
-            {
-                "day": 1,
-                "title": "Haridwar – Guptkashi / Sitapur",
-                "description": "Haridwar – Guptkashi / Sitapur (210–220 km / 8–9 hrs)\nEarly morning departure from Haridwar\nScenic drive along the Ganga and Alaknanda rivers\nEn route stops at Devprayag, Rudraprayag\nReach Guptkashi or Sitapur by evening\nVisit Ardh Narishwar Temple if time permits\nOvernight Stay: Guptkashi / Sitapur"
-            },
-            {
-                "day": 2,
-                "title": "Guptkashi / Sitapur – Kedarnath",
-                "description": "Guptkashi / Sitapur – Kedarnath (Drive + 18 km Trek / 5–6 hrs)\nEarly morning drive to Sonprayag, transfer to Gaurikund\nBegin 18 km trek to Kedarnath (Pony/Palki/Helicopter option available)\nReach Kedarnath, visit Kedarnath Temple and surrounding sites\nAttend the evening aarti if time allows\nOvernight Stay: Kedarnath (basic guest house or tented accommodation)"
-            },
-            {
-                "day": 3,
-                "title": "Kedarnath – Guptkashi – Haridwar",
-                "description": "Kedarnath – Guptkashi – Haridwar (Trek + Drive / 10–11 hrs)\nEarly morning darshan (if missed earlier), then trek down to Gaurikund\nReturn via Sonprayag to Guptkashi, then drive back to Haridwar\nReach Haridwar by late evening\nTour concludes with divine blessings"
-            }
-        ],
-        "inclusions": [
-            "Transportation from Haridwar to Haridwar by private vehicle.",
-            "Accommodation in Guptkashi/Sitapur and Kedarnath (on sharing basis).",
-            "Breakfast and dinner during the journey.",
-            "Parking, driver charges, tolls, fuel, and basic coordination."
-        ],
-        "exclusions": [
-            "Helicopter, pony, or palki charges.",
-            "Personal expenses, snacks, tips.",
-            "Medical or emergency evacuation charges.",
-            "Entry fees, VIP darshan, or special pooja.",
-            "Anything not mentioned under 'Inclusions'."
-        ],
-        "things_to_carry": [],
-        "best_time_to_visit": [],
-        "why_choose_us": [
-            "Local experts with extensive Yatra planning experience.",
-            "Clean, hygienic stays near temples and base camps.",
-            "Trekking/transport assistance for elderly & first-time yatris.",
-            "Transparent pricing, personalized service.",
-            "24x7 assistance during the yatra."
-        ]
-    }
+    // {
+    //     "id": "badrinath-dham",
+    //     "title": "Badrinath Yatra",
+    //     "subtitle": "Sacred Journey to Badrinath Temple",
+    //     "image": "/Badrinath.jpg",
+    //     "description": "Badrinath Yatra – 3 Days / 2 Nights\nRoute: Haridwar → Joshimath → Badrinath → Haridwar",
+    //     "highlights": [
+    //         "Darshan at Badrinath Temple, one of the four Char Dhams.",
+    //         "Scenic drive through Devprayag, Rudraprayag, Karnaprayag.",
+    //         "Explore Mana Village – the last village of India.",
+    //         "Visit holy sites like Tapt Kund, Narad Kund, and witness the confluence of rivers."
+    //     ],
+    //     "itinerary": [
+    //         {
+    //             "day": 1,
+    //             "title": "Haridwar – Joshimath / Pipalkoti",
+    //             "description": "Haridwar – Joshimath / Pipalkoti (260–280 km / 9–10 hrs)\nEarly departure from Haridwar\nDrive along the Alaknanda River\nEn route visit Devprayag, Rudraprayag, Karnaprayag – sacred river confluences\nArrive at Joshimath or Pipalkoti in the evening\nOvernight Stay: Joshimath / Pipalkoti"
+    //         },
+    //         {
+    //             "day": 2,
+    //             "title": "Joshimath / Pipalkoti – Badrinath – Rudraprayag / Srinagar",
+    //             "description": "Joshimath / Pipalkoti – Badrinath – Rudraprayag / Srinagar (180–200 km total / 7–8 hrs)\nEarly morning drive to Badrinath (via Joshimath if staying in Pipalkoti)\nDarshan at Badrinath Temple, take a dip in Tapt Kund, visit Narad Kund\nVisit Mana Village, Vyas Gufa, Bhim Pul, and Saraswati River origin\nAfter sightseeing and darshan, drive back towards Rudraprayag/Srinagar\nOvernight Stay: Rudraprayag / Srinagar"
+    //         },
+    //         {
+    //             "day": 3,
+    //             "title": "Rudraprayag / Srinagar – Haridwar",
+    //             "description": "Rudraprayag / Srinagar – Haridwar (160–180 km / 6–7 hrs)\nAfter breakfast, begin the drive back to Haridwar\nEn route enjoy views of Ganga Valley and small towns\nReach Haridwar by evening\nTour concludes with blessings of Lord Badri Vishal"
+    //         }
+    //     ],
+    //     "inclusions": [
+    //         "Transport by private vehicle from Haridwar to Haridwar.",
+    //         "Accommodation on double/triple sharing basis.",
+    //         "Breakfast and dinner during the trip.",
+    //         "Driver allowances, tolls, parking, and fuel.",
+    //         "Basic assistance during temple visit."
+    //     ],
+    //     "exclusions": [
+    //         "Personal expenses, snacks, bottled water, tips.",
+    //         "Special pooja arrangements or VIP darshan passes.",
+    //         "Medical/emergency expenses.",
+    //         "Anything not mentioned in 'Inclusions'."
+    //     ],
+    //     "things_to_carry": [],
+    //     "best_time_to_visit": [],
+    //     "why_choose_us": [
+    //         "Local experts with years of Himalayan yatra experience.",
+    //         "Comfortable and clean stays for a rejuvenating journey.",
+    //         "Well-maintained vehicles and trained drivers.",
+    //         "Personalized service and end-to-end yatra coordination.",
+    //         "Transparent pricing and support for elderly/yatris."
+    //     ]
+    // },
 ]
 
 export default tours;

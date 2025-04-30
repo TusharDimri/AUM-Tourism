@@ -1,47 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import Slider from 'react-slick';
-import treks from '../../utils/TreksData';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import treks from "../../utils/TreksData";
+import { Link } from 'react-router-dom';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 
 const Treks = () => {
-
-    const largeTreks = treks.filter((t) => t.type === 'large');
-    const mediumTreks = treks.filter((t) => t.type === 'medium');
-
-    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1070);
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsSmallScreen(window.innerWidth <= 1070);
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
     const NextArrow = (props) => {
         const { onClick } = props;
         return (
             <div
-                className="absolute top-1/2 -right-[22px] sm:-right-8 transform translate-y-[-50%]"
+                className="absolute top-1/2 -right-4 sm:-right-8 transform translate-y-[-50%] cursor-pointer"
                 onClick={onClick}
             >
-                <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                >
-                    <polyline points="9 18 15 12 9 6" />
-                </svg>
+                <FaChevronRight size={30} />
             </div>
         );
     };
@@ -50,21 +23,10 @@ const Treks = () => {
         const { onClick } = props;
         return (
             <div
-                className="absolute top-1/2 -left-[22px] sm:-left-8 transform translate-y-[-50%]"
+                className="absolute top-1/2 -left-4 sm:-left-8 transform translate-y-[-50%] cursor-pointer"
                 onClick={onClick}
             >
-                <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                >
-                    <polyline points="15 18 9 12 15 6" />
-                </svg>
+                <FaChevronLeft size={30} />
             </div>
         );
     };
@@ -74,83 +36,89 @@ const Treks = () => {
         arrows: true,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
-        autoplay: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
     };
 
     return (
-        <div className="flex flex-col items-center justify-center px-4 sm:px-8 mt-[40px] xl:mt-[60px]">
-            <h2 className="text-center text-3xl font-bold mb-[40px] xl:mb-[60px] relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4 font-serif">
-                Explore Treks
+        <div className={`mt-[40px] xl:mt-[50px] flex flex-col justify-center`}>
+            <h2 className="text-center text-3xl font-bold mb-[40px] xl:mb-[50px] relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4 font-serif">
+                Himalayan Treks
             </h2>
-
-            <div className="w-[90vw] mx-auto">
-                {isSmallScreen ? (
-                    <Slider {...settings}>
-                        {[...largeTreks, ...mediumTreks].map((trek) => (
-                            <div key={trek.name} className="relative group h-[400px] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl" onClick={() => {navigate(`/treks/?trekId=${trek.id}`)} } >
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                                <img
-                                    src={trek.image}
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                    alt={`${trek.name} Trek`}
-                                />
-                                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                    <h3 className="text-lg font-bold font-serif">{trek.name} Treks</h3>
-                                    <button className="font-sans text-base mt-3 lg:mt-5 bg-[#0071c0] text-white px-4 py-2 lg:px-8 lg:py-3 rounded-full transition-colors group-hover:text-[#f2942b]">
-                                        Explore
-                                    </button>
+            <div className="w-[97vw] sm:w-[90vw] mx-auto px-4">
+                <Slider {...settings}>
+                    {treks.map((trek, index) => (
+                        <Link to={`/treks/?trekId=${trek.id}`} key={index} className="h-full">
+                            <div className="mx-4 h-full py-8">
+                                <div className="rounded-[50px] overflow-hidden transition-all duration-300 hover:scale-105 bg-white shadow-lg hover:shadow-xl border border-gray-100 h-full flex flex-col group">
+                                    <div
+                                        className="h-[350px] bg-cover bg-center rounded-b-[50px] border-b-4 border-[#0071c0] relative overflow-hidden"
+                                        style={{ backgroundImage: `url(${trek.image})` }}
+                                    >
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                                    </div>
+                                    <div className="p-6 text-center rounded-b-[50px] flex flex-col flex-1">
+                                        <h3 className="font-serif text-2xl font-bold text-[#1a202c] mb-2 group-hover:text-[#005a9c] transition-colors">
+                                            {trek.name}
+                                        </h3>
+                                        <div className="flex-1">
+                                            <p className="text-sm text-gray-600 font-sans leading-relaxed">
+                                                {trek.subtitle}
+                                            </p>
+                                        </div>
+                                        <button className="font-sans text-[#0071c0] mt-4 text-lg font-medium flex items-center justify-center hover:text-[#00457a] transition-colors">
+                                            Explore
+                                            <svg
+                                                className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                                viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path d="M9 5l7 7-7 7" />
+                                            </svg>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        ))}
-                    </Slider>
-                ) : (
-                    <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-8">
-                        {/* Left Column - Large Treks */}
-                        <div className="space-y-[50px]">
-                            {largeTreks.map((trek) => (
-                                <div key={trek.name} className="relative group h-[400px] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl" onClick={() => {navigate(`/treks/?trekId=${trek.id}`)} }>
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                                    <img
-                                        src={trek.image}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                        alt={`${trek.name} Trek`}
-                                    />
-                                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                        <h3 className="text-2xl lg:text-3xl font-bold font-serif">{trek.name} Treks</h3>
-                                        <button className="mt-4 lg:mt-6 bg-[#0071c0] text-white px-4 py-2 lg:px-8 lg:py-3 rounded-full transition-colors group-hover:text-[#f2942b]">
-                                            Explore
-                                        </button>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* Right Column - Medium Treks */}
-                        <div className="space-y-[20px]">
-                            {mediumTreks.map((trek) => (
-                                <div key={trek.name} className="relative group h-[250px] lg:h-[270px] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-xl" onClick={() => {navigate(`/treks/?trekId=${trek.id}`)} }>
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                                    <img
-                                        src={trek.image}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                        alt={`${trek.name} Trek`}
-                                    />
-                                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                        <h3 className="text-2xl font-bold font-serif">{trek.name}</h3>
-                                        <button className="mt-4 bg-[#0071c0] text-white px-6 py-2 rounded-full transition-colors group-hover:text-[#f2942b]">
-                                            Explore
-                                        </button>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                )}
+                        </Link>
+                    ))}
+                </Slider>
             </div>
+
+            <style>{`
+                .slick-track {
+                    display: flex !important;
+                    align-items: stretch !important;
+                }
+                
+                .slick-slide {
+                    height: auto !important;
+                }
+                
+                .slick-slide > div {
+                    height: 100%;
+                }
+            `}</style>
         </div>
     );
 };
