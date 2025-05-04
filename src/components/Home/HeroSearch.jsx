@@ -42,12 +42,12 @@ export default function HeroSearch() {
   }, [query]);
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto">
+    <div className="relative w-full w-[60vw] md:max-w-[40vw] mx-auto">
       <input
         type="text"
         className="w-full px-5 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500
                    bg bg-opacity-90 placeholder-gray-500 text-gray-800"
-        placeholder="Search Treks, Tours, Road Trips & Packages…"
+        placeholder="Search"
         value={query}
         onChange={e => setQuery(e.target.value)}
       />

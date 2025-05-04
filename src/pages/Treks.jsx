@@ -6,7 +6,36 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import treks from "../utils/TreksData";
-import { FaChevronRight } from "react-icons/fa";
+import {
+  FaChevronRight,
+  FaMapMarkerAlt,
+  FaMountain,
+  FaHiking,
+  FaRegClock,
+  FaUtensils,
+  FaCampground,
+  FaCheckCircle,
+  FaTimesCircle,
+  FaBus,
+  FaFirstAid,
+  FaWallet,
+  FaSnowflake,
+  FaSun,
+  FaLeaf,
+  FaMobileAlt,
+  FaTrain,
+  FaPlane,
+  FaQuestionCircle,
+  FaUserTie,
+  FaShieldAlt,
+  FaSeedling,
+  FaUserFriends,
+  FaStar
+} from "react-icons/fa";
+import { GiPathDistance} from "react-icons/gi";
+import { BiCalendar } from "react-icons/bi";
+import { div } from "framer-motion/client";
+import { FaTents } from "react-icons/fa6";
 
 const TreksPage = () => {
   const location = useLocation();
@@ -101,11 +130,10 @@ const TreksPage = () => {
                 className="!w-[260px] sm:!w-[300px] lg:!w-[400px] !h-[400px] sm:!h-[500px] transition-transform duration-500"
               >
                 <div
-                  className={`relative h-full w-full transform transition-all duration-500 ${
-                    activeIndex === idx
-                      ? 'scale-110 z-10 shadow-2xl'
-                      : 'scale-90 opacity-90 hover:scale-95'
-                  }`}
+                  className={`relative h-full w-full transform transition-all duration-500 ${activeIndex === idx
+                    ? 'scale-110 z-10 shadow-2xl'
+                    : 'scale-90 opacity-90 hover:scale-95'
+                    }`}
                 >
                   {/* clicking this will update the URL, which then triggers our effect to move the swiper */}
                   <div
@@ -140,11 +168,10 @@ const TreksPage = () => {
               <button
                 key={idx}
                 onClick={() => swiperRef.current?.swiper.slideToLoop(idx)}
-                className={`w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full transition-all duration-300 ${
-                  activeIndex === idx
-                    ? 'bg-white scale-150 shadow-sm shadow-white/50'
-                    : 'bg-white/40 hover:bg-white/60'
-                }`}
+                className={`w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full transition-all duration-300 ${activeIndex === idx
+                  ? 'bg-white scale-150 shadow-sm shadow-white/50'
+                  : 'bg-white/40 hover:bg-white/60'
+                  }`}
               />
             ))}
           </div>
@@ -182,7 +209,7 @@ const TreksPage = () => {
         </div>
       </section>
 
-      <main className="max-w-7xl mx-auto px-4 pt-12 grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-8 md:gap-12">
+      {/* <main className="max-w-7xl mx-auto px-4 pt-12 grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-8 md:gap-12">
         <div className="space-y-8 md:space-y-12 relative">
           {selectedTrek ? (
             <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl md:shadow-3xl transform -translate-y-24 md:-translate-y-32 z-10">
@@ -259,6 +286,334 @@ const TreksPage = () => {
                     <p className="text-lg md:text-xl font-bold text-[#0071c0] mt-1">
                       {fact.value}
                     </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </main> */}
+
+      <main className="max-w-7xl mx-auto px-4 pt-12 grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-8 md:gap-12">
+        <div className="space-y-8 md:space-y-12 relative">
+          {selectedTrek ? (
+            <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl md:shadow-3xl transform -translate-y-24 md:-translate-y-32 z-10">
+              <div className="relative h-64 sm:h-80 md:h-[500px] rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-2xl">
+                <img
+                  src={selectedTrek.image}
+                  alt={selectedTrek.name}
+                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40" />
+                <h1 className="absolute bottom-4 left-4 md:bottom-6 md:left-6 text-2xl md:text-4xl font-black text-white font-serif">
+                  {selectedTrek.name}
+                </h1>
+              </div>
+
+              {/* Detailed Information Sections */}
+              <div className="mt-6 space-y-12">
+                {/* Trek Details Grid */}
+                <section className="bg-gray-50 rounded-2xl p-6 md:p-8">
+                  <h2 className="text-2xl font-black text-[#0071c0] mb-6 font-serif flex items-center gap-2">
+                    <FaMapMarkerAlt className="text-xl" /> Trek Details
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {Object.entries(selectedTrek.details).map(([key, value]) => (
+                      <div key={key} className="flex items-start gap-4 p-3 bg-white rounded-lg">
+                        <div className="text-[#0071c0] mt-1">
+                          {{
+                            location: <FaMapMarkerAlt />,
+                            altitude: <FaMountain />,
+                            duration: <FaRegClock />,
+                            distance: <GiPathDistance />,
+                            difficulty: <FaHiking />,
+                            startingPoint: <FaBus />,
+                            bestTime: <BiCalendar />
+                          }[key]}
+                        </div>
+                        <div>
+                          <h3 className="font-semibold capitalize">{key.replace(/([A-Z])/g, ' $1')}</h3>
+                          <p className="text-gray-600">
+                            {Array.isArray(value) ? value.join(" | ") : value}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                {/* Itinerary Section */}
+                <section>
+                  <h2 className="text-2xl font-black text-[#0071c0] mb-6 font-serif flex items-center gap-2">
+                    <FaRegClock /> Detailed Itinerary
+                  </h2>
+                  <div className="space-y-6">
+                    {selectedTrek.itinerary.map((day, index) => (
+                      <div key={index} className="bg-white rounded-xl p-6 shadow-md border-l-4 border-[#0071c0]">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="bg-[#0071c0] text-white w-8 h-8 rounded-full flex items-center justify-center">
+                            {index + 1}
+                          </div>
+                          <h3 className="text-xl font-semibold">{day.title}</h3>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div className="flex items-center gap-2">
+                            <FaMountain className="text-[#0071c0]" />
+                            <span className="font-medium">Altitude:</span>
+                            <span>{day.altitude}</span>
+                          </div>
+                          {day.drive && (
+                            <div className="flex items-center gap-2">
+                              <FaBus className="text-[#0071c0]" />
+                              <span className="font-medium">Drive:</span>
+                              <span>{day.drive}</span>
+                            </div>
+                          )}
+                          <div className="flex items-center gap-2">
+                            <GiPathDistance className="text-[#0071c0]" />
+                            <span className="font-medium">Trek:</span>
+                            <span>{day.trek}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <FaRegClock className="text-[#007a0]" />
+                            <span className="font-medium">Time:</span>
+                            <span>{day.trekTime}</span>
+                          </div>
+                          {day.stay && (
+                            <div className="flex items-center gap-2">
+                              <FaCampground className="text-[#0071c0]" />
+                              <span className="font-medium">Stay:</span>
+                              <span>{day.stay}</span>
+                            </div>
+                          )}
+                          <div className="col-span-full">
+                            <h4 className="font-semibold mb-2 flex items-center gap-2">
+                              <FaUtensils className="text-[#0071c0]" />
+                              Meals Included:
+                            </h4>
+                            <div className="flex gap-2 flex-wrap">
+                              {day.meals.map((meal, i) => (
+                                <span key={i} className="bg-[#0071c0]/10 text-[#0071c0] px-3 py-1 rounded-full text-sm">
+                                  {meal}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                          <div className="col-span-full">
+                            <h4 className="font-semibold mb-2 flex items-center gap-2">
+                              <FaMountain className="text-[#0071c0]" />
+                              Highlights:
+                            </h4>
+                            <ul className="list-disc pl-6 space-y-2">
+                              {day.highlights.map((highlight, i) => (
+                                <li key={i} className="text-gray-600">{highlight}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                {/* Cost & Gear Section */}
+                <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-green-50 rounded-xl p-6">
+                    <h3 className="text-xl font-semibold mb-4 flex items-center gap-2 text-green-800">
+                      <FaCheckCircle /> Includes
+                    </h3>
+                    <ul className="space-y-2">
+                      {selectedTrek.costIncludes.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <FaCheckCircle className="text-green-600 mt-1 flex-shrink-0" />
+                          <span className="text-gray-700">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="bg-red-50 rounded-xl p-6">
+                    <h3 className="text-xl font-semibold mb-4 flex items-center gap-2 text-red-800">
+                      <FaTimesCircle /> Excludes
+                    </h3>
+                    <ul className="space-y-2">
+                      {selectedTrek.costExcludes.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <FaTimesCircle className="text-red-600 mt-1 flex-shrink-0" />
+                          <span className="text-gray-700">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </section>
+
+                {/* Things to Carry */}
+                <section>
+                  <h2 className="text-2xl font-black text-[#0071c0] mb-6 font-serif flex items-center gap-2">
+                    <FaTents /> Essential Gear
+                  </h2>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                    {selectedTrek.thingsToCarry.map((item, i) => (
+                      <div key={i} className="bg-white p-3 rounded-lg border border-gray-200 flex items-center gap-2">
+                        <FaCheckCircle className="text-[#0071c0] flex-shrink-0" />
+                        <span className="text-sm">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                {/* Best Time to Visit */}
+                <section>
+                  <h2 className="text-2xl font-black text-[#0071c0] mb-6 font-serif flex items-center gap-2">
+                    <BiCalendar /> Ideal Seasons
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {selectedTrek.bestTime.map((season, i) => (
+                      <div key={i} className="bg-white p-6 rounded-xl shadow-md text-center">
+                        {/* <div className="text-4xl mb-3 text-[#0071c0] mx-auto">
+                          {i === 0 ? <FaSnowflake /> : i === 1 ? <FaSun /> : <FaLeaf />}
+                        </div> */}
+                        <h3 className="font-semibold mb-2">{season.split(":")[0]}</h3>
+                        <p className="text-gray-600 text-sm">{season.split(":")[1]}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                {/* Why Choose Us */}
+                <section className="bg-[#0071c0]/10 rounded-2xl p-6 md:p-8">
+                  <h2 className="text-2xl font-black text-[#0071c0] mb-6 font-serif flex items-center gap-2">
+                    <FaCheckCircle className="text-[#0071c0]" /> Why Choose Us for {selectedTrek.name} Trek
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {selectedTrek.whyChooseUs.map((point, i) => {
+                      let icon;
+                      switch (true) {
+                        case point.includes('Experienced'):
+                          icon = <FaUserTie className="text-2xl" />;
+                          break;
+                        case point.includes('safety'):
+                          icon = <FaShieldAlt className="text-2xl" />;
+                          break;
+                        case point.includes('camping'):
+                          icon = <FaCampground className="text-2xl" />;
+                          break;
+                        case point.includes('Eco-friendly'):
+                          icon = <FaSeedling className="text-2xl" />;
+                          break;
+                        case point.includes('personalized'):
+                          icon = <FaUserFriends className="text-2xl" />;
+                          break;
+                        default:
+                          icon = <FaCheckCircle className="text-2xl" />;
+                      }
+                      return (
+                        <div key={i} className="flex items-start gap-4 p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+                          <div className="text-[#0071c0] mt-1 flex-shrink-0">
+                            {icon}
+                          </div>
+                          <p className="text-gray-700 leading-relaxed">{point}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </section>
+
+                {/* Quick Facts */}
+                <section>
+                  <h2 className="text-2xl font-black text-[#0071c0] mb-6 font-serif flex items-center gap-2">
+                    <FaQuestionCircle /> Quick Facts
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="bg-white p-4 rounded-xl flex items-center gap-4">
+                      <FaTrain className="text-3xl text-[#0071c0]" />
+                      <div>
+                        <h3 className="font-semibold">Nearest Railway</h3>
+                        <p className="text-gray-600">{selectedTrek.quickFacts.nearestRailway}</p>
+                      </div>
+                    </div>
+                    <div className="bg-white p-4 rounded-xl flex items-center gap-4">
+                      <FaPlane className="text-3xl text-[#0071c0]" />
+                      <div>
+                        <h3 className="font-semibold">Nearest Airport</h3>
+                        <p className="text-gray-600">{selectedTrek.quickFacts.nearestAirport}</p>
+                      </div>
+                    </div>
+                    <div className="bg-white p-4 rounded-xl flex items-center gap-4">
+                      <FaMobileAlt className="text-3xl text-[#0071c0]" />
+                      <div>
+                        <h3 className="font-semibold">Mobile Network</h3>
+                        <p className="text-gray-600">{selectedTrek.quickFacts.mobileNetwork}</p>
+                      </div>
+                    </div>
+                    <div className="bg-white p-4 rounded-xl flex items-center gap-4">
+                      <FaWallet className="text-3xl text-[#0071c0]" />
+                      <div>
+                        <h3 className="font-semibold">ATM Availability</h3>
+                        <p className="text-gray-600">{selectedTrek.quickFacts.atmAvailability}</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                {/* FAQs */}
+                <section>
+                  <h2 className="text-2xl font-black text-[#0071c0] mb-6 font-serif flex items-center gap-2">
+                    <FaQuestionCircle /> Frequently Asked Questions
+                  </h2>
+                  <div className="space-y-4">
+                    {selectedTrek.faqs.map((faq, i) => (
+                      <div key={i} className="bg-white rounded-xl p-4 shadow-sm">
+                        <details className="group">
+                          <summary className="flex justify-between items-center cursor-pointer">
+                            <span className="font-medium text-gray-700">{faq.question}</span>
+                            <FaChevronRight className="text-[#0071c0] transform group-open:rotate-90 transition-transform" />
+                          </summary>
+                          <p className="mt-2 text-gray-600 pl-5">{faq.answer}</p>
+                        </details>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              </div>
+            </div>
+          ) : (
+            // When no trek is selected:
+            <div className="text-center py-20">
+              <p className="text-3xl text-gray-600 font-medium bg-white p-8 rounded-2xl shadow-xl inline-block">
+                Select your journey 🌄
+              </p>
+            </div>
+
+          )}
+        </div>
+
+        {/* Right Sidebar  */}
+        <div className="lg:sticky lg:top-[150px] h-fit space-y-6 md:space-y-8 transform -translate-y-12 md:-translate-y-16">
+          <div className="bg-gradient-to-br from-[#0071c0] to-[#005a9b] text-white rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+            <div className="absolute w-32 h-32 bg-white/10 -top-8 -right-8 rounded-full" />
+            <div className="relative z-10">
+              <h3 className="text-2xl font-black mb-4 font-serif">Ready to Explore?</h3>
+              <p className="opacity-90 mb-6">Reserve your spot now</p>
+              <button className="bg-white/90 text-[#0071c0] px-8 py-4 rounded-xl font-bold hover:bg-white w-full shadow-lg transition-all duration-300 hover:translate-y-1">
+                Book Now <FaChevronRight className="inline-block ml-2" />
+              </button>
+            </div>
+          </div>
+
+          {/* Key Facts */}
+          {selectedTrek && (
+            <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg md:shadow-xl">
+              <h4 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif">
+                <FaMountain className="inline mr-2" /> Trek Snapshot
+              </h4>
+              <div className="space-y-4">
+                {Object.entries(selectedTrek.details).map(([key, value]) => (
+                  <div key={key} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                    <span className="text-sm text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1')}:</span>
+                    <span className="font-medium text-[#0071c0] text-right">
+                      {Array.isArray(value) ? value.join(", ") : value}
+                    </span>
                   </div>
                 ))}
               </div>
