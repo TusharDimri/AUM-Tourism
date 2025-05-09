@@ -49,7 +49,7 @@ const PackagesSection = () => {
     };
 
     return (
-        <section className="py-16 px-4 sm:px-8 bg-gray-50 font-sans">
+        <section className="pt-8 lg:pt-16 pb-16 px-4 sm:px-8 bg-gray-50 font-sans">
             <h2 className="text-center text-3xl md:text-4xl font-bold mb-12 relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4 font-serif">
                 Our Packages
             </h2>

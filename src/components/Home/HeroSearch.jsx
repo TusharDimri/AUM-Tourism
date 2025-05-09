@@ -81,6 +81,11 @@ export default function HeroSearch() {
           })}
         </div>
       )}
+      {results.length === 0 && query.length > 2 && (
+        <div className="absolute z-20 w-full mt-2 bg-white rounded-lg shadow-lg overflow-hidden">
+          <p className="px-4 py-3 text-gray-800">No results found</p>
+        </div>
+      )}
     </div>
   );
 }

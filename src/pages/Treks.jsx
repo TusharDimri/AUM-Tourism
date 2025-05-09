@@ -32,7 +32,7 @@ import {
   FaUserFriends,
   FaStar
 } from "react-icons/fa";
-import { GiPathDistance} from "react-icons/gi";
+import { GiPathDistance } from "react-icons/gi";
 import { BiCalendar } from "react-icons/bi";
 import { div } from "framer-motion/client";
 import { FaTents } from "react-icons/fa6";
@@ -163,7 +163,7 @@ const TreksPage = () => {
           </Swiper>
 
           {/* dots */}
-          <div className="absolute bottom-1 sm:bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+          <div className="absolute bottom-1 sm:bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-3 hidden lg:flex">
             {treks.map((_, idx) => (
               <button
                 key={idx}
@@ -209,96 +209,11 @@ const TreksPage = () => {
         </div>
       </section>
 
-      {/* <main className="max-w-7xl mx-auto px-4 pt-12 grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-8 md:gap-12">
-        <div className="space-y-8 md:space-y-12 relative">
+      <main className="max-w-7xl mx-auto px-4 pt-6 md:pt-12 pb-6 md:pb-12 grid grid-cols-1 lg:grid-cols-[1fr_400px] lg:gap-8">
+        <div className="space-y-4 md:space-y-8 relative">
           {selectedTrek ? (
-            <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl md:shadow-3xl transform -translate-y-24 md:-translate-y-32 z-10">
-              <div className="relative h-64 sm:h-80 md:h-[500px] rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-2xl">
-                <img
-                  src={selectedTrek.image}
-                  alt={selectedTrek.name}
-                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40" />
-                <h1 className="absolute bottom-4 left-4 md:bottom-6 md:left-6 text-2xl md:text-4xl font-black text-white font-serif">
-                  {selectedTrek.name}
-                </h1>
-              </div>
-
-              <div className="mt-6 md:mt-8 space-y-6 md:space-y-8">
-                <h2 className="text-2xl md:text-3xl font-black text-[#0071c0] font-serif">
-                  Journey Overview
-                </h2>
-                <p className="text-base md:text-lg leading-relaxed text-gray-700">
-                  {selectedTrek.description}
-                </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                  {selectedTrek.highlights.map((h, i) => (
-                    <div
-                      key={i}
-                      className="p-4 md:p-6 bg-gray-50 rounded-lg md:rounded-xl border-l-4 border-[#0071c0] hover:border-[#005a9b] transition-colors"
-                    >
-                      <p className="text-sm md:text-base text-gray-700">{h}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="text-center py-20">
-              <p className="text-3xl text-gray-600 font-medium bg-white p-8 rounded-2xl shadow-xl inline-block">
-                Select your journey 🌄
-              </p>
-            </div>
-          )}
-        </div>
-
-        <div className="lg:sticky lg:top-[150px] h-fit space-y-6 md:space-y-8 transform -translate-y-12 md:-translate-y-16">
-          <div className="bg-gradient-to-br from-[#0071c0] to-[#005a9b] text-white rounded-2xl p-8 shadow-2xl relative overflow-hidden">
-            <div className="absolute w-32 h-32 bg-white/10 -top-8 -right-8 rounded-full" />
-            <div className="relative z-10">
-              <h3 className="text-2xl font-black mb-4 font-serif">Ready to Explore?</h3>
-              <p className="opacity-90 mb-6">Reserve your spot now</p>
-              <button className="bg-white/90 text-[#0071c0] px-8 py-4 rounded-xl font-bold hover:bg-white w-full shadow-lg transition-all duration-300 hover:translate-y-1">
-                Book Now <FaChevronRight className="inline-block ml-2" />
-              </button>
-            </div>
-          </div>
-
-          {selectedTrek && (
-            <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg md:shadow-xl">
-              <h4 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif">
-                Key Facts
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-                {[
-                  { label: "Difficulty", value: selectedTrek.difficulty },
-                  { label: "Duration", value: selectedTrek.duration },
-                  { label: "Max Altitude", value: "4,500m" },
-                  { label: "Best Season", value: "Spring" },
-                ].map((fact) => (
-                  <div
-                    key={fact.label}
-                    className="p-3 md:p-4 bg-gray-50 rounded-lg md:rounded-xl text-center hover:bg-gray-100 transition-colors"
-                  >
-                    <p className="text-xs md:text-sm text-gray-600 font-medium">{fact.label}</p>
-                    <p className="text-lg md:text-xl font-bold text-[#0071c0] mt-1">
-                      {fact.value}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      </main> */}
-
-      <main className="max-w-7xl mx-auto px-4 pt-12 grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-8 md:gap-12">
-        <div className="space-y-8 md:space-y-12 relative">
-          {selectedTrek ? (
-            <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl md:shadow-3xl transform -translate-y-24 md:-translate-y-32 z-10">
-              <div className="relative h-64 sm:h-80 md:h-[500px] rounded-xl md:rounded-2xl overflow-hidden shadow-lg md:shadow-2xl">
+            <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl md:shadow-3xl lg:transform lg:-translate-y-24 xl:-translate-y-32 z-10">
+              <div className="relative h-48 sm:h-64 md:h-[500px] rounded-lg md:rounded-2xl overflow-hidden shadow-lg">
                 <img
                   src={selectedTrek.image}
                   alt={selectedTrek.name}
@@ -311,13 +226,13 @@ const TreksPage = () => {
               </div>
 
               {/* Detailed Information Sections */}
-              <div className="mt-6 space-y-12">
+              <div className="mt-4 space-y-8 md:space-y-12">
                 {/* Trek Details Grid */}
-                <section className="bg-gray-50 rounded-2xl p-6 md:p-8">
-                  <h2 className="text-2xl font-black text-[#0071c0] mb-6 font-serif flex items-center gap-2">
-                    <FaMapMarkerAlt className="text-xl" /> Trek Details
+                <section className="bg-gray-50 rounded-xl p-4 md:p-8">
+                  <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
+                    <FaMapMarkerAlt className="text-lg md:text-xl" /> Trek Details
                   </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
                     {Object.entries(selectedTrek.details).map(([key, value]) => (
                       <div key={key} className="flex items-start gap-4 p-3 bg-white rounded-lg">
                         <div className="text-[#0071c0] mt-1">
@@ -344,69 +259,89 @@ const TreksPage = () => {
 
                 {/* Itinerary Section */}
                 <section>
-                  <h2 className="text-2xl font-black text-[#0071c0] mb-6 font-serif flex items-center gap-2">
+                  <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
                     <FaRegClock /> Detailed Itinerary
                   </h2>
-                  <div className="space-y-6">
+                  <div className="space-y-4 lg:space-y-10">
                     {selectedTrek.itinerary.map((day, index) => (
-                      <div key={index} className="bg-white rounded-xl p-6 shadow-md border-l-4 border-[#0071c0]">
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="bg-[#0071c0] text-white w-8 h-8 rounded-full flex items-center justify-center">
+                      <div
+                        key={index}
+                        className="bg-white rounded-lg p-4 md:p-6 shadow-md border-l-4 border-[#0071c0] transition-all duration-300 hover:shadow-lg"
+                      >
+                        <div className="flex items-center gap-3 mb-4 md:mb-5">
+                          <div className="bg-[#0071c0] text-white w-6 h-6 md:w-9 md:h-9 rounded-full flex items-center justify-center text-sm md:text-base font-medium shadow-md">
                             {index + 1}
                           </div>
-                          <h3 className="text-xl font-semibold">{day.title}</h3>
+                          <h3 className="text-lg md:text-2xl font-semibold">{day.title}</h3>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div className="flex items-center gap-2">
-                            <FaMountain className="text-[#0071c0]" />
-                            <span className="font-medium">Altitude:</span>
-                            <span>{day.altitude}</span>
+
+                        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 gap-y-3">
+                          {/* Altitude */}
+                          <div className="flex items-center gap-2 md:gap-3">
+                            <FaMountain className="text-[#0071c0] text-lg md:text-xl" />
+                            <span className="font-medium text-sm md:text-base">Altitude:</span>
+                            <span className="text-sm md:text-base">{day.altitude}</span>
                           </div>
+
+                          {/* Drive (if exists) */}
                           {day.drive && (
-                            <div className="flex items-center gap-2">
-                              <FaBus className="text-[#0071c0]" />
-                              <span className="font-medium">Drive:</span>
-                              <span>{day.drive}</span>
+                            <div className="flex items-center gap-2 md:gap-3">
+                              <FaBus className="text-[#0071c0] text-lg md:text-xl" />
+                              <span className="font-medium text-sm md:text-base">Drive:</span>
+                              <span className="text-sm md:text-base">{day.drive}</span>
                             </div>
                           )}
-                          <div className="flex items-center gap-2">
-                            <GiPathDistance className="text-[#0071c0]" />
-                            <span className="font-medium">Trek:</span>
-                            <span>{day.trek}</span>
+
+                          {/* Trek Distance */}
+                          <div className="flex items-center gap-2 md:gap-3">
+                            <GiPathDistance className="text-[#0071c0] text-lg md:text-xl" />
+                            <span className="font-medium text-sm md:text-base">Trek:</span>
+                            <span className="text-sm md:text-base">{day.trek}</span>
                           </div>
-                          <div className="flex items-center gap-2">
-                            <FaRegClock className="text-[#007a0]" />
-                            <span className="font-medium">Time:</span>
-                            <span>{day.trekTime}</span>
+
+                          {/* Trek Time */}
+                          <div className="flex items-center gap-2 md:gap-3">
+                            <FaRegClock className="text-[#007a0] text-lg md:text-xl" />
+                            <span className="font-medium text-sm md:text-base">Time:</span>
+                            <span className="text-sm md:text-base">{day.trekTime}</span>
                           </div>
+
+                          {/* Stay (if exists) */}
                           {day.stay && (
-                            <div className="flex items-center gap-2">
-                              <FaCampground className="text-[#0071c0]" />
-                              <span className="font-medium">Stay:</span>
-                              <span>{day.stay}</span>
+                            <div className="flex items-center gap-2 md:gap-3">
+                              <FaCampground className="text-[#0071c0] text-lg md:text-xl" />
+                              <span className="font-medium text-sm md:text-base">Stay:</span>
+                              <span className="text-sm md:text-base">{day.stay}</span>
                             </div>
                           )}
-                          <div className="col-span-full">
-                            <h4 className="font-semibold mb-2 flex items-center gap-2">
+
+                          {/* Meals */}
+                          <div className="col-span-full mt-3 md:mt-4">
+                            <h4 className="font-semibold mb-2 flex items-center gap-2 text-sm md:text-base">
                               <FaUtensils className="text-[#0071c0]" />
                               Meals Included:
                             </h4>
-                            <div className="flex gap-2 flex-wrap">
+                            <div className="flex flex-wrap gap-1.5 md:gap-3">
                               {day.meals.map((meal, i) => (
-                                <span key={i} className="bg-[#0071c0]/10 text-[#0071c0] px-3 py-1 rounded-full text-sm">
+                                <span
+                                  key={i}
+                                  className="bg-[#0071c0]/10 text-[#0071c0] px-2.5 py-1 md:px-4 md:py-1.5 rounded-full text-xs md:text-sm font-medium"
+                                >
                                   {meal}
                                 </span>
                               ))}
                             </div>
                           </div>
-                          <div className="col-span-full">
-                            <h4 className="font-semibold mb-2 flex items-center gap-2">
+
+                          {/* Highlights */}
+                          <div className="col-span-full mt-3 md:mt-5">
+                            <h4 className="font-semibold mb-2 flex items-center gap-2 text-sm md:text-base">
                               <FaMountain className="text-[#0071c0]" />
                               Highlights:
                             </h4>
-                            <ul className="list-disc pl-6 space-y-2">
+                            <ul className="list-disc pl-5 md:pl-7 space-y-1.5 md:space-y-2">
                               {day.highlights.map((highlight, i) => (
-                                <li key={i} className="text-gray-600">{highlight}</li>
+                                <li key={i} className="text-gray-600 text-sm md:text-base ml-1 md:ml-2">{highlight}</li>
                               ))}
                             </ul>
                           </div>
@@ -417,7 +352,7 @@ const TreksPage = () => {
                 </section>
 
                 {/* Cost & Gear Section */}
-                <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <section className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <div className="bg-green-50 rounded-xl p-6">
                     <h3 className="text-xl font-semibold mb-4 flex items-center gap-2 text-green-800">
                       <FaCheckCircle /> Includes
@@ -449,10 +384,10 @@ const TreksPage = () => {
 
                 {/* Things to Carry */}
                 <section>
-                  <h2 className="text-2xl font-black text-[#0071c0] mb-6 font-serif flex items-center gap-2">
+                  <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
                     <FaTents /> Essential Gear
                   </h2>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                  <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
                     {selectedTrek.thingsToCarry.map((item, i) => (
                       <div key={i} className="bg-white p-3 rounded-lg border border-gray-200 flex items-center gap-2">
                         <FaCheckCircle className="text-[#0071c0] flex-shrink-0" />
@@ -464,10 +399,10 @@ const TreksPage = () => {
 
                 {/* Best Time to Visit */}
                 <section>
-                  <h2 className="text-2xl font-black text-[#0071c0] mb-6 font-serif flex items-center gap-2">
+                  <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
                     <BiCalendar /> Ideal Seasons
                   </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
                     {selectedTrek.bestTime.map((season, i) => (
                       <div key={i} className="bg-white p-6 rounded-xl shadow-md text-center">
                         {/* <div className="text-4xl mb-3 text-[#0071c0] mx-auto">
@@ -481,11 +416,11 @@ const TreksPage = () => {
                 </section>
 
                 {/* Why Choose Us */}
-                <section className="bg-[#0071c0]/10 rounded-2xl p-6 md:p-8">
-                  <h2 className="text-2xl font-black text-[#0071c0] mb-6 font-serif flex items-center gap-2">
+                <section className="bg-[#0071c0]/10 rounded-xl p-4 md:p-8">
+                  <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
                     <FaCheckCircle className="text-[#0071c0]" /> Why Choose Us for {selectedTrek.name} Trek
                   </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
                     {selectedTrek.whyChooseUs.map((point, i) => {
                       let icon;
                       switch (true) {
@@ -521,10 +456,10 @@ const TreksPage = () => {
 
                 {/* Quick Facts */}
                 <section>
-                  <h2 className="text-2xl font-black text-[#0071c0] mb-6 font-serif flex items-center gap-2">
+                  <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
                     <FaQuestionCircle /> Quick Facts
                   </h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
                     <div className="bg-white p-4 rounded-xl flex items-center gap-4">
                       <FaTrain className="text-3xl text-[#0071c0]" />
                       <div>
@@ -558,10 +493,10 @@ const TreksPage = () => {
 
                 {/* FAQs */}
                 <section>
-                  <h2 className="text-2xl font-black text-[#0071c0] mb-6 font-serif flex items-center gap-2">
+                  <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
                     <FaQuestionCircle /> Frequently Asked Questions
                   </h2>
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     {selectedTrek.faqs.map((faq, i) => (
                       <div key={i} className="bg-white rounded-xl p-4 shadow-sm">
                         <details className="group">
@@ -569,7 +504,7 @@ const TreksPage = () => {
                             <span className="font-medium text-gray-700">{faq.question}</span>
                             <FaChevronRight className="text-[#0071c0] transform group-open:rotate-90 transition-transform" />
                           </summary>
-                          <p className="mt-2 text-gray-600 pl-5">{faq.answer}</p>
+                          <p className="mt-2 text-gray-600">{faq.answer}</p>
                         </details>
                       </div>
                     ))}
@@ -589,8 +524,8 @@ const TreksPage = () => {
         </div>
 
         {/* Right Sidebar  */}
-        <div className="lg:sticky lg:top-[150px] h-fit space-y-6 md:space-y-8 transform -translate-y-12 md:-translate-y-16">
-          <div className="bg-gradient-to-br from-[#0071c0] to-[#005a9b] text-white rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+        <div className="lg:sticky lg:top-[150px] h-fit space-y-4 md:space-y-6 mt-8 lg:mt-0 lg:transform lg:-translate-y-12 xl:-translate-y-16">
+          <div className="bg-gradient-to-br from-[#0071c0] to-[#005a9b] text-white rounded-xl p-6 md:p-8 shadow-xl relative overflow-hidden">
             <div className="absolute w-32 h-32 bg-white/10 -top-8 -right-8 rounded-full" />
             <div className="relative z-10">
               <h3 className="text-2xl font-black mb-4 font-serif">Ready to Explore?</h3>
@@ -603,11 +538,11 @@ const TreksPage = () => {
 
           {/* Key Facts */}
           {selectedTrek && (
-            <div className="bg-white rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg md:shadow-xl">
-              <h4 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif">
-                <FaMountain className="inline mr-2" /> Trek Snapshot
+            <div className="bg-white rounded-xl p-4 md:p-8 shadow-lg">
+              <h4 className="text-lg md:text-2xl font-black text-[#0071c0] mb-3 md:mb-6 font-serif flex items-center gap-2">
+                <FaMountain className="inline mr-1 md:mr-2" /> Trek Snapshot
               </h4>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {Object.entries(selectedTrek.details).map(([key, value]) => (
                   <div key={key} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <span className="text-sm text-gray-600 capitalize">{key.replace(/([A-Z])/g, ' $1')}:</span>

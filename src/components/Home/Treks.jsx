@@ -43,19 +43,21 @@ const Treks = () => {
         autoplay: true,
         autoplaySpeed: 3000,
         responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                },
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                dots: false // Hide dots on medium screens
             },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                },
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                dots: false // Hide dots on small screens
             },
-        ],
+        },
+    ],
     };
 
     return (
