@@ -45,7 +45,7 @@ export default function HeroSearch() {
     <div className="relative w-full w-[60vw] md:max-w-[40vw] mx-auto">
       <input
         type="text"
-        className="w-full px-5 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500
+        className="w-[80vw] md:w-full block mx-auto px-5 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500
                    bg bg-opacity-90 placeholder-gray-500 text-gray-800"
         placeholder="Search"
         value={query}
