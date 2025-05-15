@@ -43,6 +43,47 @@ const TreksPage = () => {
   const queryParams = new URLSearchParams(location.search);
   const trekId = queryParams.get("trekId");
 
+  const [openSections, setOpenSections] = useState({
+    trekDetails: false,
+    itinerary: false,
+    costGear: true,
+    gear: true,
+    bestTime: true,
+    whyChooseUs: false,
+    quickFacts: false,
+  });
+
+  const ResponsiveSection = ({ id, title, children }) => {
+    const isMobile = window.innerWidth < 768; // Tailwind's `md` breakpoint
+    const isOpen = openSections[id] || false;
+
+    const toggleSection = () => {
+      if (!isMobile) return;
+      setOpenSections(prev => ({ ...prev, [id]: !isOpen }));
+    };
+
+    return (
+      <>
+        {/* Mobile Toggle Button */}
+        <div className="lg:hidden">
+          <div
+            onClick={toggleSection}
+            className="flex items-center justify-between w-full p-4 bg-gray-100 rounded-t-lg cursor-pointer"
+          >
+            <h2 className="text-lg font-bold text-[#0071c0]">{title}</h2>
+            <span className="text-xl font-bold text-[#0071c0]">
+              {isOpen ? "−" : "+"}
+            </span>
+          </div>
+          {isOpen && <div className="p-4 bg-white rounded-b-lg">{children}</div>}
+        </div>
+
+        {/* Desktop View */}
+        <div className="hidden lg:block">{children}</div>
+      </>
+    );
+  };
+
   // Compute which index in our `treks` array corresponds to the URL
   const selectedIndex = useMemo(
     () => Math.max(0, treks.findIndex((t) => t.id === trekId)),
@@ -85,6 +126,7 @@ const TreksPage = () => {
   };
 
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 font-sans">
       <section className="relative py-16 md:h-[800px] bg-gradient-to-br from-[#0071c0] to-[#005a9b] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 h-full relative">
@@ -209,7 +251,7 @@ const TreksPage = () => {
         </div>
       </section>
 
-      <main className="max-w-7xl mx-auto px-4 pt-6 md:pt-12 pb-6 md:pb-12 grid grid-cols-1 lg:grid-cols-[1fr_400px] lg:gap-8">
+      <main className="max-w-7xl xl:max-w-[75vw] mx-auto px-4 pt-6 md:pt-12 pb-6 md:pb-12 grid grid-cols-1 lg:grid-cols-[1fr_400px] lg:gap-8">
         <div className="space-y-4 md:space-y-8 relative">
           {selectedTrek ? (
             <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl md:shadow-3xl lg:transform lg:-translate-y-24 xl:-translate-y-32 z-10">
@@ -227,131 +269,146 @@ const TreksPage = () => {
 
               {/* Detailed Information Sections */}
               <div className="mt-4 space-y-8 md:space-y-12">
+
                 {/* Trek Details Grid */}
-                <section className="bg-gray-50 rounded-xl p-4 md:p-8">
-                  <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
-                    <FaMapMarkerAlt className="text-lg md:text-xl" /> Trek Details
-                  </h2>
-                  <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-                    {Object.entries(selectedTrek.details).map(([key, value]) => (
-                      <div key={key} className="flex items-start gap-4 p-3 bg-white rounded-lg">
-                        <div className="text-[#0071c0] mt-1">
-                          {{
-                            location: <FaMapMarkerAlt />,
-                            altitude: <FaMountain />,
-                            duration: <FaRegClock />,
-                            distance: <GiPathDistance />,
-                            difficulty: <FaHiking />,
-                            startingPoint: <FaBus />,
-                            bestTime: <BiCalendar />
-                          }[key]}
+                <ResponsiveSection
+                  id="trekDetails"
+                  title={<><FaMapMarkerAlt className="inline mr-2" /> Trek Details</>}
+                >
+
+                  <section className="bg-gray-50 rounded-xl p-4 md:p-8">
+                    <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
+                      <FaMapMarkerAlt className="text-lg md:text-xl" /> Trek Details
+                    </h2>
+                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+                      {Object.entries(selectedTrek.details).map(([key, value]) => (
+                        <div key={key} className="flex items-start gap-4 p-3 bg-white rounded-lg">
+                          <div className="text-[#0071c0] mt-1">
+                            {{
+                              location: <FaMapMarkerAlt />,
+                              altitude: <FaMountain />,
+                              duration: <FaRegClock />,
+                              distance: <GiPathDistance />,
+                              difficulty: <FaHiking />,
+                              startingPoint: <FaBus />,
+                              bestTime: <BiCalendar />
+                            }[key]}
+                          </div>
+                          <div>
+                            <h3 className="font-semibold capitalize">{key.replace(/([A-Z])/g, ' $1')}</h3>
+                            <p className="text-gray-600">
+                              {Array.isArray(value) ? value.join(" | ") : value}
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <h3 className="font-semibold capitalize">{key.replace(/([A-Z])/g, ' $1')}</h3>
-                          <p className="text-gray-600">
-                            {Array.isArray(value) ? value.join(" | ") : value}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </section>
+                      ))}
+                    </div>
+                  </section>
+
+                </ResponsiveSection>
 
                 {/* Itinerary Section */}
-                <section>
-                  <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
-                    <FaRegClock /> Detailed Itinerary
-                  </h2>
-                  <div className="space-y-4 lg:space-y-10">
-                    {selectedTrek.itinerary.map((day, index) => (
-                      <div
-                        key={index}
-                        className="bg-white rounded-lg p-4 md:p-6 shadow-md border-l-4 border-[#0071c0] transition-all duration-300 hover:shadow-lg"
-                      >
-                        <div className="flex items-center gap-3 mb-4 md:mb-5">
-                          <div className="bg-[#0071c0] text-white w-6 h-6 md:w-9 md:h-9 rounded-full flex items-center justify-center text-sm md:text-base font-medium shadow-md">
-                            {index + 1}
-                          </div>
-                          <h3 className="text-lg md:text-2xl font-semibold">{day.title}</h3>
-                        </div>
+                <ResponsiveSection
+                  id="itinerary"
+                  title={<><FaRegClock className="inline mr-2" /> Detailed Itinerary</>}
+                >
 
-                        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 gap-y-3">
-                          {/* Altitude */}
-                          <div className="flex items-center gap-2 md:gap-3">
-                            <FaMountain className="text-[#0071c0] text-lg md:text-xl" />
-                            <span className="font-medium text-sm md:text-base">Altitude:</span>
-                            <span className="text-sm md:text-base">{day.altitude}</span>
+                  <section>
+                    <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
+                      <FaRegClock /> Detailed Itinerary
+                    </h2>
+                    <div className="space-y-4 lg:space-y-10">
+                      {selectedTrek.itinerary.map((day, index) => (
+                        <div
+                          key={index}
+                          className="bg-white rounded-lg p-4 md:p-6 shadow-md border-l-4 border-[#0071c0] transition-all duration-300 hover:shadow-lg"
+                        >
+                          <div className="flex items-center gap-3 mb-4 md:mb-5">
+                            <div className="bg-[#0071c0] text-white w-6 h-6 md:w-9 md:h-9 rounded-full flex items-center justify-center text-sm md:text-base font-medium shadow-md">
+                              {index + 1}
+                            </div>
+                            <h3 className="text-lg md:text-2xl font-semibold">{day.title}</h3>
                           </div>
 
-                          {/* Drive (if exists) */}
-                          {day.drive && (
+                          <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 gap-y-3">
+                            {/* Altitude */}
                             <div className="flex items-center gap-2 md:gap-3">
-                              <FaBus className="text-[#0071c0] text-lg md:text-xl" />
-                              <span className="font-medium text-sm md:text-base">Drive:</span>
-                              <span className="text-sm md:text-base">{day.drive}</span>
+                              <FaMountain className="text-[#0071c0] text-lg md:text-xl" />
+                              <span className="font-medium text-sm md:text-base">Altitude:</span>
+                              <span className="text-sm md:text-base">{day.altitude}</span>
                             </div>
-                          )}
 
-                          {/* Trek Distance */}
-                          <div className="flex items-center gap-2 md:gap-3">
-                            <GiPathDistance className="text-[#0071c0] text-lg md:text-xl" />
-                            <span className="font-medium text-sm md:text-base">Trek:</span>
-                            <span className="text-sm md:text-base">{day.trek}</span>
-                          </div>
+                            {/* Drive (if exists) */}
+                            {day.drive && (
+                              <div className="flex items-center gap-2 md:gap-3">
+                                <FaBus className="text-[#0071c0] text-lg md:text-xl" />
+                                <span className="font-medium text-sm md:text-base">Drive:</span>
+                                <span className="text-sm md:text-base">{day.drive}</span>
+                              </div>
+                            )}
 
-                          {/* Trek Time */}
-                          <div className="flex items-center gap-2 md:gap-3">
-                            <FaRegClock className="text-[#007a0] text-lg md:text-xl" />
-                            <span className="font-medium text-sm md:text-base">Time:</span>
-                            <span className="text-sm md:text-base">{day.trekTime}</span>
-                          </div>
-
-                          {/* Stay (if exists) */}
-                          {day.stay && (
+                            {/* Trek Distance */}
                             <div className="flex items-center gap-2 md:gap-3">
-                              <FaCampground className="text-[#0071c0] text-lg md:text-xl" />
-                              <span className="font-medium text-sm md:text-base">Stay:</span>
-                              <span className="text-sm md:text-base">{day.stay}</span>
+                              <GiPathDistance className="text-[#0071c0] text-lg md:text-xl" />
+                              <span className="font-medium text-sm md:text-base">Trek:</span>
+                              <span className="text-sm md:text-base">{day.trek}</span>
                             </div>
-                          )}
 
-                          {/* Meals */}
-                          <div className="col-span-full mt-3 md:mt-4">
-                            <h4 className="font-semibold mb-2 flex items-center gap-2 text-sm md:text-base">
-                              <FaUtensils className="text-[#0071c0]" />
-                              Meals Included:
-                            </h4>
-                            <div className="flex flex-wrap gap-1.5 md:gap-3">
-                              {day.meals.map((meal, i) => (
-                                <span
-                                  key={i}
-                                  className="bg-[#0071c0]/10 text-[#0071c0] px-2.5 py-1 md:px-4 md:py-1.5 rounded-full text-xs md:text-sm font-medium"
-                                >
-                                  {meal}
-                                </span>
-                              ))}
+                            {/* Trek Time */}
+                            <div className="flex items-center gap-2 md:gap-3">
+                              <FaRegClock className="text-[#007a0] text-lg md:text-xl" />
+                              <span className="font-medium text-sm md:text-base">Time:</span>
+                              <span className="text-sm md:text-base">{day.trekTime}</span>
                             </div>
-                          </div>
 
-                          {/* Highlights */}
-                          <div className="col-span-full mt-3 md:mt-5">
-                            <h4 className="font-semibold mb-2 flex items-center gap-2 text-sm md:text-base">
-                              <FaMountain className="text-[#0071c0]" />
-                              Highlights:
-                            </h4>
-                            <ul className="list-disc pl-5 md:pl-7 space-y-1.5 md:space-y-2">
-                              {day.highlights.map((highlight, i) => (
-                                <li key={i} className="text-gray-600 text-sm md:text-base ml-1 md:ml-2">{highlight}</li>
-                              ))}
-                            </ul>
+                            {/* Stay (if exists) */}
+                            {day.stay && (
+                              <div className="flex items-center gap-2 md:gap-3">
+                                <FaCampground className="text-[#0071c0] text-lg md:text-xl" />
+                                <span className="font-medium text-sm md:text-base">Stay:</span>
+                                <span className="text-sm md:text-base">{day.stay}</span>
+                              </div>
+                            )}
+
+                            {/* Meals */}
+                            <div className="col-span-full mt-3 md:mt-4">
+                              <h4 className="font-semibold mb-2 flex items-center gap-2 text-sm md:text-base">
+                                <FaUtensils className="text-[#0071c0]" />
+                                Meals Included:
+                              </h4>
+                              <div className="flex flex-wrap gap-1.5 md:gap-3">
+                                {day.meals.map((meal, i) => (
+                                  <span
+                                    key={i}
+                                    className="bg-[#0071c0]/10 text-[#0071c0] px-2.5 py-1 md:px-4 md:py-1.5 rounded-full text-xs md:text-sm font-medium"
+                                  >
+                                    {meal}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+
+                            {/* Highlights */}
+                            <div className="col-span-full mt-3 md:mt-5">
+                              <h4 className="font-semibold mb-2 flex items-center gap-2 text-sm md:text-base">
+                                <FaMountain className="text-[#0071c0]" />
+                                Highlights:
+                              </h4>
+                              <ul className="list-disc pl-5 md:pl-7 space-y-1.5 md:space-y-2">
+                                {day.highlights.map((highlight, i) => (
+                                  <li key={i} className="text-gray-600 text-sm md:text-base ml-1 md:ml-2">{highlight}</li>
+                                ))}
+                              </ul>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                </section>
+                      ))}
+                    </div>
+                  </section>
 
-                {/* Cost & Gear Section */}
+                </ResponsiveSection>
+
+                {/* Inclusions and Exclusions */}
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <div className="bg-green-50 rounded-xl p-6">
                     <h3 className="text-xl font-semibold mb-4 flex items-center gap-2 text-green-800">
@@ -382,20 +439,22 @@ const TreksPage = () => {
                   </div>
                 </section>
 
-                {/* Things to Carry */}
-                <section>
-                  <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
-                    <FaTents /> Essential Gear
-                  </h2>
-                  <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
-                    {selectedTrek.thingsToCarry.map((item, i) => (
-                      <div key={i} className="bg-white p-3 rounded-lg border border-gray-200 flex items-center gap-2">
-                        <FaCheckCircle className="text-[#0071c0] flex-shrink-0" />
-                        <span className="text-sm">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </section>
+                {/* Essential Gear */}
+                <ResponsiveSection id="gear" title="Essential Gear">
+                  <section>
+                    <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
+                      <FaTents /> Essential Gear
+                    </h2>
+                    <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+                      {selectedTrek.thingsToCarry.map((item, i) => (
+                        <div key={i} className="bg-white p-3 rounded-lg border border-gray-200 flex items-center gap-2">
+                          <FaCheckCircle className="text-[#0071c0] flex-shrink-0" />
+                          <span className="text-sm">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                </ResponsiveSection>
 
                 {/* Best Time to Visit */}
                 <section>
@@ -416,80 +475,84 @@ const TreksPage = () => {
                 </section>
 
                 {/* Why Choose Us */}
-                <section className="bg-[#0071c0]/10 rounded-xl p-4 md:p-8">
-                  <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
-                    <FaCheckCircle className="text-[#0071c0]" /> Why Choose Us for {selectedTrek.name} Trek
-                  </h2>
-                  <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-                    {selectedTrek.whyChooseUs.map((point, i) => {
-                      let icon;
-                      switch (true) {
-                        case point.includes('Experienced'):
-                          icon = <FaUserTie className="text-2xl" />;
-                          break;
-                        case point.includes('safety'):
-                          icon = <FaShieldAlt className="text-2xl" />;
-                          break;
-                        case point.includes('camping'):
-                          icon = <FaCampground className="text-2xl" />;
-                          break;
-                        case point.includes('Eco-friendly'):
-                          icon = <FaSeedling className="text-2xl" />;
-                          break;
-                        case point.includes('personalized'):
-                          icon = <FaUserFriends className="text-2xl" />;
-                          break;
-                        default:
-                          icon = <FaCheckCircle className="text-2xl" />;
-                      }
-                      return (
-                        <div key={i} className="flex items-start gap-4 p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
-                          <div className="text-[#0071c0] mt-1 flex-shrink-0">
-                            {icon}
+                <ResponsiveSection id="whyChooseUs" title="Why Choose Us">
+                  <section className="bg-[#0071c0]/10 rounded-xl p-4 md:p-8">
+                    <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
+                      <FaCheckCircle className="text-[#0071c0]" /> Why Choose Us for {selectedTrek.name} Trek
+                    </h2>
+                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+                      {selectedTrek.whyChooseUs.map((point, i) => {
+                        let icon;
+                        switch (true) {
+                          case point.includes('Experienced'):
+                            icon = <FaUserTie className="text-2xl" />;
+                            break;
+                          case point.includes('safety'):
+                            icon = <FaShieldAlt className="text-2xl" />;
+                            break;
+                          case point.includes('camping'):
+                            icon = <FaCampground className="text-2xl" />;
+                            break;
+                          case point.includes('Eco-friendly'):
+                            icon = <FaSeedling className="text-2xl" />;
+                            break;
+                          case point.includes('personalized'):
+                            icon = <FaUserFriends className="text-2xl" />;
+                            break;
+                          default:
+                            icon = <FaCheckCircle className="text-2xl" />;
+                        }
+                        return (
+                          <div key={i} className="flex items-start gap-4 p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+                            <div className="text-[#0071c0] mt-1 flex-shrink-0">
+                              {icon}
+                            </div>
+                            <p className="text-gray-700 leading-relaxed">{point}</p>
                           </div>
-                          <p className="text-gray-700 leading-relaxed">{point}</p>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </section>
+                        );
+                      })}
+                    </div>
+                  </section>
+                </ResponsiveSection>
 
                 {/* Quick Facts */}
-                <section>
-                  <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
-                    <FaQuestionCircle /> Quick Facts
-                  </h2>
-                  <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-                    <div className="bg-white p-4 rounded-xl flex items-center gap-4">
-                      <FaTrain className="text-3xl text-[#0071c0]" />
-                      <div>
-                        <h3 className="font-semibold">Nearest Railway</h3>
-                        <p className="text-gray-600">{selectedTrek.quickFacts.nearestRailway}</p>
+                <ResponsiveSection id="quickFacts" title="Quick Facts">
+                  <section>
+                    <h2 className="text-xl md:text-2xl font-black text-[#0071c0] mb-4 md:mb-6 font-serif flex items-center gap-2">
+                      <FaQuestionCircle /> Quick Facts
+                    </h2>
+                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+                      <div className="bg-white p-4 rounded-xl flex items-center gap-4">
+                        <FaTrain className="text-3xl text-[#0071c0]" />
+                        <div>
+                          <h3 className="font-semibold">Nearest Railway</h3>
+                          <p className="text-gray-600">{selectedTrek.quickFacts.nearestRailway}</p>
+                        </div>
+                      </div>
+                      <div className="bg-white p-4 rounded-xl flex items-center gap-4">
+                        <FaPlane className="text-3xl text-[#0071c0]" />
+                        <div>
+                          <h3 className="font-semibold">Nearest Airport</h3>
+                          <p className="text-gray-600">{selectedTrek.quickFacts.nearestAirport}</p>
+                        </div>
+                      </div>
+                      <div className="bg-white p-4 rounded-xl flex items-center gap-4">
+                        <FaMobileAlt className="text-3xl text-[#0071c0]" />
+                        <div>
+                          <h3 className="font-semibold">Mobile Network</h3>
+                          <p className="text-gray-600">{selectedTrek.quickFacts.mobileNetwork}</p>
+                        </div>
+                      </div>
+                      <div className="bg-white p-4 rounded-xl flex items-center gap-4">
+                        <FaWallet className="text-3xl text-[#0071c0]" />
+                        <div>
+                          <h3 className="font-semibold">ATM Availability</h3>
+                          <p className="text-gray-600">{selectedTrek.quickFacts.atmAvailability}</p>
+                        </div>
                       </div>
                     </div>
-                    <div className="bg-white p-4 rounded-xl flex items-center gap-4">
-                      <FaPlane className="text-3xl text-[#0071c0]" />
-                      <div>
-                        <h3 className="font-semibold">Nearest Airport</h3>
-                        <p className="text-gray-600">{selectedTrek.quickFacts.nearestAirport}</p>
-                      </div>
-                    </div>
-                    <div className="bg-white p-4 rounded-xl flex items-center gap-4">
-                      <FaMobileAlt className="text-3xl text-[#0071c0]" />
-                      <div>
-                        <h3 className="font-semibold">Mobile Network</h3>
-                        <p className="text-gray-600">{selectedTrek.quickFacts.mobileNetwork}</p>
-                      </div>
-                    </div>
-                    <div className="bg-white p-4 rounded-xl flex items-center gap-4">
-                      <FaWallet className="text-3xl text-[#0071c0]" />
-                      <div>
-                        <h3 className="font-semibold">ATM Availability</h3>
-                        <p className="text-gray-600">{selectedTrek.quickFacts.atmAvailability}</p>
-                      </div>
-                    </div>
-                  </div>
-                </section>
+                  </section>
+                </ResponsiveSection>
 
                 {/* FAQs */}
                 <section>

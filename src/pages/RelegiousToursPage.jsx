@@ -111,7 +111,7 @@ const ReligiousToursPage = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-8">
+      <div className="relative max-w-7xl xl:w-[75vw] mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-8">
         {/* Left Column: Tour Details */}
         <div className="space-y-8">
           {selectedTour ? (
