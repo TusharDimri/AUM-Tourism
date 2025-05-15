@@ -11,10 +11,10 @@ const Treks = () => {
         const { onClick } = props;
         return (
             <div
-                className="absolute top-1/2 -right-4 sm:-right-8 transform translate-y-[-50%] cursor-pointer"
+                className="absolute top-1/2 -right-4 sm:-right-8 transform -translate-y-1/2 cursor-pointer bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-all"
                 onClick={onClick}
             >
-                <FaChevronRight size={30} />
+                <FaChevronRight size={30} className="text-[#0071c0]" />
             </div>
         );
     };
@@ -23,10 +23,10 @@ const Treks = () => {
         const { onClick } = props;
         return (
             <div
-                className="absolute top-1/2 -left-4 sm:-left-8 transform translate-y-[-50%] cursor-pointer"
+                className="absolute top-1/2 -left-4 sm:-left-8 transform -translate-y-1/2 cursor-pointer bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-all z-10"
                 onClick={onClick}
             >
-                <FaChevronLeft size={30} />
+                <FaChevronLeft size={30} className="text-[#0071c0]" />
             </div>
         );
     };
@@ -43,27 +43,27 @@ const Treks = () => {
         autoplay: true,
         autoplaySpeed: 3000,
         responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
-                dots: false // Hide dots on medium screens
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    dots: false // Hide dots on medium screens
+                },
             },
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1,
-                dots: false // Hide dots on small screens
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    dots: false // Hide dots on small screens
+                },
             },
-        },
-    ],
+        ],
     };
 
     return (
-        <div className={`mt-[40px] xl:mt-[50px] flex flex-col justify-center`}>
+        <div className={`mt-[40px] xl:mt-[70px] flex flex-col justify-center`}>
             <h2 className="text-center text-3xl font-bold mb-[40px] xl:mb-[50px] relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4 font-serif">
-                Himalayan Treks
+                Treks
             </h2>
             <div className="w-[97vw] sm:w-[90vw] mx-auto px-4">
                 <Slider {...settings}>
