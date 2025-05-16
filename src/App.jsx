@@ -10,6 +10,7 @@ import TreksPage from './pages/Treks';
 import PackagesPage from "./pages/PackagesPage";
 import ContactUs from "./pages/ContactUs";
 import Footer from './components/Footer';
+import TaxiServices from './pages/TaxiServices';
 
 function App() {
   const [isTransparent, setIsTransparent] = useState(true);
@@ -56,6 +57,7 @@ function App() {
         <Route path="/packages/:id?" element={<PackagesPage />} />
         <Route path="/contact?" element={<ContactUs />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/taxi-services" element={<TaxiServices />} />
       </Routes>
       <Footer />
     </>

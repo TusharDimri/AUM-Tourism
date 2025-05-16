@@ -251,7 +251,7 @@ const TreksPage = () => {
         </div>
       </section>
 
-      <main className="max-w-7xl xl:max-w-[75vw] mx-auto px-4 pt-6 md:pt-12 pb-6 md:pb-12 grid grid-cols-1 lg:grid-cols-[1fr_400px] lg:gap-8">
+      <main className="max-w-7xl xl:max-w-[75vw] mx-auto px-4 pt-6 md:pt-12 pb-6 md:pb-0 grid grid-cols-1 lg:grid-cols-[1fr_400px] lg:gap-8">
         <div className="space-y-4 md:space-y-8 relative">
           {selectedTrek ? (
             <div className="relative bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl md:shadow-3xl lg:transform lg:-translate-y-24 xl:-translate-y-32 z-10">

@@ -9,6 +9,7 @@ const navLinks = [
     { name: "Road Trips", link: `/road-trips/?id=${"uttarakhand"}` },
     { name: "Treks", link: `/treks/?trekId=${"garhwal-trek"}` },
     { name: "Packages", link: `/packages/?packageId=${"holiday"}` },
+    { name: "Taxi Services", link: "/taxi-services" },
     { name: "Contact Us", link: "/contact" },
 ];
 

@@ -124,7 +124,7 @@ const PackagesPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 font-sans">
+        <div className=" bg-gray-50 font-sans">
             {/* Navigation Header */}
             <div className="mt-[64px] z-40 bg-white shadow-sm py-4 border-b border-gray-100">
                 <div className="max-w-7xl mx-auto px-4">
