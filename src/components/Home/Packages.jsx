@@ -8,14 +8,14 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 
 const PackagesSection = () => {
     const NextArrow = ({ onClick }) => (
-        <div className="absolute top-1/2 -right-4 sm:-right-8 transform -translate-y-1/2 cursor-pointer z-10 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-all"
+        <div className="absolute top-1/2 -right-[38px]  transform -translate-y-1/2 cursor-pointer z-10 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-all"
             onClick={onClick}>
             <FaChevronRight className="text-[#0071c0] text-2xl sm:text-3xl" />
         </div>
     );
 
     const PrevArrow = ({ onClick }) => (
-        <div className="absolute top-1/2 -left-4 sm:-left-8 transform -translate-y-1/2 cursor-pointer z-10 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-all"
+        <div className="absolute top-1/2 -left-[38px] transform -translate-y-1/2 cursor-pointer z-10 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-all"
             onClick={onClick}>
             <FaChevronLeft className="text-[#0071c0] text-2xl sm:text-3xl" />
         </div>

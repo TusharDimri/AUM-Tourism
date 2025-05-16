@@ -39,7 +39,7 @@ const RelegiousTours = () => {
     };
 
     const settings = {
-        dots: true,
+        // dots: true,
         arrows: true,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
