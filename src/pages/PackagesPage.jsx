@@ -123,6 +123,13 @@ const PackagesPage = () => {
         swiperRef.current?.swiper.slideTo(index);
     };
 
+    const getWhatsAppLink = () => {
+        const message = selectedPackage
+            ? `I want to know more about ${selectedPackage.name}`
+            : "I want to know more about your tours";
+        return `https://wa.me/?text=${encodeURIComponent(message)}`;
+    };
+
     return (
         <div className=" bg-gray-50 font-sans">
             {/* Navigation Header */}
@@ -232,10 +239,13 @@ const PackagesPage = () => {
                                     {/* Right Column */}
                                     <div className="space-y-6 lg:sticky lg:top-[90px]">
                                         <div className="">
-                                            <div className="bg-gradient-to-br from-blue-600 to-blue-700 p-6 rounded-2xl shadow-lg">
-                                                <button className="w-full bg-white/90 hover:bg-white text-blue-600 py-4 rounded-xl font-semibold shadow-xs transition-all duration-300">
+                                            <div className="bg-gradient-to-br from-blue-600 to-blue-700 p-6 rounded-2xl shadow-lg flex items-center justify-center">
+                                                <a 
+                                                className="px-3 bg-white/90 hover:bg-white text-blue-600 py-4 rounded-xl font-semibold shadow-xs transition-all duration-300 w-full text-center"
+                                                href={getWhatsAppLink()}
+                                                >
                                                     Reserve Your Adventure
-                                                </button>
+                                                </a>
                                             </div>
 
                                             <div className="mt-6 space-y-6">

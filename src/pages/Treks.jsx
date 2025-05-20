@@ -125,6 +125,13 @@ const TreksPage = () => {
     }
   };
 
+  const getWhatsAppLink = () => {
+    const message = selectedTrek
+      ? `I want to know more about ${selectedTrek.name}`
+      : "I want to know more about your tours";
+    return `https://wa.me/?text=${encodeURIComponent(message)}`;
+  };
+
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 font-sans">
@@ -590,12 +597,12 @@ const TreksPage = () => {
         <div className="lg:sticky lg:top-[150px] h-fit space-y-4 md:space-y-6 mt-8 lg:mt-0 lg:transform lg:-translate-y-12 xl:-translate-y-16">
           <div className="bg-gradient-to-br from-[#0071c0] to-[#005a9b] text-white rounded-xl p-6 md:p-8 shadow-xl relative overflow-hidden">
             <div className="absolute w-32 h-32 bg-white/10 -top-8 -right-8 rounded-full" />
-            <div className="relative z-10">
+            <div className="relative z-10 flex flex-col items-center justify-center">
               <h3 className="text-2xl font-black mb-4 font-serif">Ready to Explore?</h3>
               <p className="opacity-90 mb-6">Reserve your spot now</p>
-              <button className="bg-white/90 text-[#0071c0] px-8 py-4 rounded-xl font-bold hover:bg-white w-full shadow-lg transition-all duration-300 hover:translate-y-1">
+              <a href={getWhatsAppLink()} className="bg-white/90 text-[#0071c0] px-8 py-4 rounded-xl font-bold hover:bg-whiteshadow-lg transition-all duration-300 hover:translate-y-1 cursor-pointer">
                 Book Now <FaChevronRight className="inline-block ml-2" />
-              </button>
+              </a>
             </div>
           </div>
 

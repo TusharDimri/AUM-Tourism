@@ -55,7 +55,7 @@ const tours = [
         "id": "adi-kailash",
         "title": "Adi Kailash & Om Parvat Yatra",
         "subtitle": "The Himalayan Mystery",
-        "image": "/AdiKailash.webp",
+        "image": "/AdiKailash.jpg",
         "description": "Adi Kailash & Om Parvat Yatra (9 Days / 8 Nights)\nRoute: Kathgodam → Pithoragarh → Dharchula → Gunji → Adi Kailash → Om Parvat → Kathgodam\nRegion: Kumaon Himalayas, Uttarakhand\nMax Altitude: 15,500 ft approx.",
         "highlights": [
             "Darshan of Adi Kailash, known as the Chhota Kailash, sacred to Lord Shiva",
@@ -142,7 +142,7 @@ const tours = [
         "id": "char-dham-yatra",
         "title": "Char Dham Yatra",
         "subtitle": "Yamunotri, Gangotri, Kedarnath & Badrinath Pilgrimage",
-        "image": "/CharDham.avif",
+        "image": "/CharDham.jpg",
         "description": "Char Dham Yatra from Haridwar (11 Days / 10 Nights)\nRoute: Haridwar → Barkot → Yamunotri → Uttarkashi → Gangotri → Guptkashi → Kedarnath → Badrinath → Haridwar\nRegion: Garhwal Himalayas, Uttarakhand",
         "highlights": [
             "Visit the four sacred Dhams: Yamunotri, Gangotri, Kedarnath, and Badrinath",
@@ -241,7 +241,7 @@ const tours = [
         "id": "do-dham-yatra",
         "title": "Do Dham Yatra",
         "subtitle": "Kedarnath & Badrinath Pilgrimage",
-        "image": "/DoDham.webp",
+        "image": "/DoDham.jpg",
         "description": "Do Dham Yatra – Kedarnath & Badrinath (6 Days / 5 Nights)",
         "highlights": [
             "Seek blessings at the revered Kedarnath and Badrinath Temples.",

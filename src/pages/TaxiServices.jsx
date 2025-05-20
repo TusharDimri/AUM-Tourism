@@ -2,59 +2,69 @@ import React from 'react';
 import { FaCheckCircle, FaCarSide, FaMapMarkedAlt, FaUsers, FaRegClock, FaMoneyBillAlt } from 'react-icons/fa';
 
 const TaxiServices = () => {
+    const getWhatsAppLink = () => {
+    const message = "I want to know more about your cab services";
+    return `https://wa.me/?text=${encodeURIComponent(message)}`;
+  };
     return (
-        <section className="py-8 bg-gray-50 mt-[80px]">
-            <div className="container mx-auto px-4 lg:px-8">
-                {/* Section Heading */}
-                {/* <h2 className="text-3xl font-bold text-center mb-12 relative after:content-[''] after:block after:w-16 after:h-1 after:bg-[#0071c0] after:mx-auto after:mt-4 font-serif">
-                    Premium Taxi Services
-                </h2> */}
-
+        <section className="py-16 bg-gradient-to-b from-white to-blue-50 mt-20">
+            <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
                 {/* Hero Section */}
-                <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
-                    <div className="rounded-xl overflow-hidden shadow-xl h-96 bg-cover bg-center"
-                        style={{ backgroundImage: "url(CabService.jpg)" }}>
+                <div className="grid md:grid-cols-2 gap-12 mb-20 items-center">
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl h-96 bg-cover bg-center group">
+                        <div
+                            className="absolute inset-0 bg-gradient-to-r from-blue-900/30 to-blue-800/20"
+                            style={{ backgroundImage: "url(CabBooking.png)", backgroundSize: "cover", backgroundPosition: "center" }}
+                        >
+                            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-blue-900/80 to-transparent">
+                                <h2 className="text-3xl font-bold text-white font-serif">
+                                    Premium Taxi Services in Uttarakhand
+                                </h2>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="space-y-6">
+                    <div className="space-y-8">
                         <p className="text-lg text-gray-600 leading-relaxed">
-                            Exploring Uttarakhand becomes effortless with Aum Tourism's dedicated taxi services.
-                            Whether it's a pilgrimage, adventure trip, weekend escape, or business tour - we ensure
-                            your journey is smooth, safe, and timely.
+                            Experience Uttarakhand in unparalleled comfort with our executive transportation solutions.
+                            Tailored for discerning travelers, we combine luxury, safety, and local expertise for
+                            unforgettable journeys through the Himalayas.
                         </p>
 
-                        {/* Quick Features Grid */}
-                        <div className="grid grid-cols-2 gap-4">
+                        {/* Features Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {[
-                                { icon: FaCarSide, text: 'Wide Vehicle Range' },
-                                { icon: FaMapMarkedAlt, text: 'Expert Local Drivers' },
-                                { icon: FaRegClock, text: 'On-Time Service' },
-                                { icon: FaMoneyBillAlt, text: 'Transparent Pricing' }
+                                { icon: FaCarSide, text: 'Luxury Fleet Selection', color: 'text-blue-600' },
+                                { icon: FaMapMarkedAlt, text: 'GPS Navigation', color: 'text-blue-600' },
+                                { icon: FaRegClock, text: 'Punctuality Guarantee', color: 'text-blue-600' },
+                                { icon: FaMoneyBillAlt, text: 'All-Inclusive Rates', color: 'text-blue-600' }
                             ].map((item, index) => (
-                                <div key={index} className="flex items-center space-x-3 p-3 bg-white rounded-lg shadow-sm">
-                                    <item.icon className="text-[#0071c0] text-xl" />
-                                    <span className="text-gray-700">{item.text}</span>
+                                <div key={index} className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                                    <item.icon className={`${item.color} text-2xl flex-shrink-0`} />
+                                    <span className="text-gray-700 font-medium">{item.text}</span>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
 
-                {/* Services Details */}
-                <div className="grid lg:grid-cols-2 gap-12">
-                    {/* Ideal For Section */}
-                    <div className="bg-white p-8 rounded-xl shadow-lg">
-                        <h3 className="text-2xl font-serif font-bold text-[#0071c0] mb-6">Ideal For</h3>
-                        <div className="grid gap-4">
+                {/* Services Section */}
+                <div className="grid lg:grid-cols-2 gap-8">
+                    {/* Ideal For */}
+                    <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                        <h3 className="text-2xl font-serif font-bold text-blue-900 mb-8 border-l-4 border-blue-600 pl-4">
+                            Curated Experiences
+                        </h3>
+                        <div className="space-y-6">
                             {[
-                                'Char Dham Yatra & Pilgrimages',
-                                'Hill Station Tours (Mussoorie, Nainital, Auli)',
-                                'Treks & Camping Transfers',
-                                'Airport/Railway Pickups',
-                                'Customizable Road Trips'
+                                'Spiritual Journeys (Char Dham Yatra)',
+                                'Alpine Retreats (Mussoorie, Auli)',
+                                'Adventure Expeditions',
+                                'Corporate Retreats',
+                                'Customized Itineraries'
                             ].map((item, index) => (
-                                <div key={index} className="flex items-start space-x-3">
-                                    <FaCheckCircle className="text-[#f2942b] mt-1" />
+                                <div key={index} className="flex items-center space-x-4">
+                                    <FaCheckCircle className="text-blue-600 text-lg flex-shrink-0" />
                                     <span className="text-gray-700">{item}</span>
                                 </div>
                             ))}
@@ -62,18 +72,26 @@ const TaxiServices = () => {
                     </div>
 
                     {/* Fleet Options */}
-                    <div className="bg-white p-8 rounded-xl shadow-lg">
-                        <h3 className="text-2xl font-serif font-bold text-[#0071c0] mb-6">Fleet Options</h3>
+                    <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                        <h3 className="text-2xl font-serif font-bold text-blue-900 mb-8 border-l-4 border-blue-600 pl-4">
+                            Executive Fleet
+                        </h3>
                         <div className="grid gap-6">
                             {[
-                                { type: 'Sedans', desc: 'For couples & solo travelers' },
-                                { type: 'SUVs', desc: 'For families & off-road destinations' },
-                                { type: 'Tempo Travelers', desc: 'Group tours & corporate travel' },
-                                { type: 'All Vehicles', desc: 'Clean, well-maintained with licensed drivers' }
+                                { type: 'Premium Sedans', desc: 'Mercedes E-Class, BMW 5 Series' },
+                                { type: 'Luxury SUVs', desc: 'Toyota Fortuner, Mercedes GLS' },
+                                { type: 'VIP Vans', desc: 'Customized Tempo Travellers' },
+                                { type: 'Specialty Vehicles', desc: '4x4 for mountain terrain' }
                             ].map((item, index) => (
-                                <div key={index} className="border-l-4 border-[#0071c0] pl-4">
-                                    <h4 className="font-semibold text-gray-800">{item.type}</h4>
-                                    <p className="text-gray-600">{item.desc}</p>
+                                <div key={index} className="flex space-x-4">
+                                    <div className="flex flex-col items-center">
+                                        <div className="w-2 h-2 bg-blue-600 rounded-full mt-2" />
+                                        <div className="w-px h-full bg-gray-200" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-semibold text-blue-900">{item.type}</h4>
+                                        <p className="text-gray-600 mt-1">{item.desc}</p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -81,17 +99,23 @@ const TaxiServices = () => {
                 </div>
 
                 {/* CTA Section */}
-                <div className="mt-16 text-center bg-[#0071c0] rounded-xl p-8 shadow-xl">
+                <div className="mt-20 text-center bg-blue-900 rounded-2xl p-12 shadow-2xl bg-[url('texture.png')] bg-cover">
                     <div className="max-w-2xl mx-auto text-white">
-                        <h3 className="text-2xl font-serif font-bold mb-4">Ready to Explore Uttarakhand?</h3>
-                        <p className="mb-6">Share your travel details and we'll handle the rest</p>
-                        <div className="flex flex-col sm:flex-row justify-center gap-4">
-                            <button className="bg-white text-[#0071c0] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all">
-                                📞 Call Now
-                            </button>
-                            <button className="bg-[#f2942b] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#da8324] transition-all">
-                                💬 Get Quick Quote
-                            </button>
+                        <h3 className="text-3xl font-serif font-bold mb-6">
+                            Begin Your Himalayan Journey
+                        </h3>
+                        <p className="mb-8 text-lg text-blue-100">
+                            Let our travel experts craft your perfect itinerary
+                        </p>
+                        <div className="flex flex-col sm:flex-row justify-center gap-5">
+                            <a href='tel:+919876543210' className="bg-white text-blue-900 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 cursor-pointer">
+                                <span>📞</span>
+                                <span>Connect with Us</span>
+                            </a>
+                            <a  href={getWhatsAppLink()} className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 cursor-pointer">
+                                <span>📩</span>
+                                <span>Request Custom Quote</span>
+                            </a>
                         </div>
                     </div>
                 </div>
