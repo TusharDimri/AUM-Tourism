@@ -3,6 +3,7 @@ import RelegiousToursData from "../utils/RelegiousToursData";
 import roadTrips from "../utils/RoadTripsData";
 import treks from "../utils/TreksData";
 import packages from "../utils/PackagesData";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -29,9 +30,9 @@ const Footer = () => {
                             <ul className="space-y-2">
                                 {RelegiousToursData.map((item) => (
                                     <li key={item.id} className="text-center">
-                                        <a href={`/religious-tours/?tourId=${item.id}`} className="text-sm hover:text-[#f2942b] transition-colors">
+                                        <Link to={`/religious-tours/?tourId=${item.id}`} className="text-sm hover:text-[#f2942b] transition-colors">
                                             {item.title}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -43,9 +44,9 @@ const Footer = () => {
                             <ul className="space-y-2">
                                 {roadTrips.map((item) => (
                                     <li key={item.id} className="text-center">
-                                        <a href={`/road-trips/?id=${item.id}`} className="text-sm hover:text-[#f2942b] transition-colors">
+                                        <Link to={`/road-trips/?id=${item.id}`} className="text-sm hover:text-[#f2942b] transition-colors">
                                             {item.name}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -57,9 +58,9 @@ const Footer = () => {
                             <ul className="space-y-2">
                                 {treks.map((item) => (
                                     <li key={item.id} className="text-center">
-                                        <a href={`/treks/?trek=${item.id}`} className="text-sm hover:text-[#f2942b] transition-colors">
+                                        <Link to={`/treks/?trekId=${item.id}`} className="text-sm hover:text-[#f2942b] transition-colors">
                                             {item.name}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -71,9 +72,9 @@ const Footer = () => {
                             <ul className="space-y-2">
                                 {packages.map((item) => (
                                     <li key={item.id} className="text-center">
-                                        <a href={`/packages/?package=${item.id}`} className="text-sm hover:text-[#f2942b] transition-colors">
+                                        <Link to={`/packages/?package=${item.id}`} className="text-sm hover:text-[#f2942b] transition-colors">
                                             {item.name}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>

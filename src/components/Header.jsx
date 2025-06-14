@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import { FaWhatsapp, FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const navLinks = [
     { name: "Home", link: "/" },
     { name: "About Us", link: "/about-us" },
     { name: "Religious Tours", link: `/religious-tours/?tourId=${"kedarnath-yatra"}` },
-    { name: "Road Trips", link: `/road-trips/?id=${"uttarakhand"}` },
-    { name: "Treks", link: `/treks/?trekId=${"garhwal-trek"}` },
+    { name: "Road Trips", link: `/road-trips/?id=${"ukhimath-chopta-mandal"}` },
+    { name: "Treks", link: `/treks/?trekId=${"nag-tibba-trek"}` },
     { name: "Packages", link: `/packages/?packageId=${"holiday"}` },
     { name: "Taxi Services", link: "/taxi-services" },
     { name: "Contact Us", link: "/contact" },
 ];
 
 const Header = ({ isTransparent }) => {
+    const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -42,7 +44,8 @@ const Header = ({ isTransparent }) => {
                 <ul className="hidden lg:flex ml-auto space-x-6 font-sans">
                     {navLinks.map(({ name, link }) => (
                         <li key={name} className="hover:text-[#f2942b] cursor-pointer transition-colors duration-200">
-                            <Link to={link}>{name}</Link>
+                            {/* <Link to={link}>{name}</Link> */}
+                            <button onClick={ () => {navigate(link);} }> {name}</button>
                         </li>
                     ))}
                 </ul>
