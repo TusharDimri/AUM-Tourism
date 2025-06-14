@@ -53,7 +53,7 @@ const AboutUs = () => {
                         <div className="space-y-6">
                             <div className="relative h-96 rounded-2xl overflow-hidden shadow-lg">
                                 <img
-                                    src="Mukesh Airy.jpg"
+                                    src="Mukesh Airy.webp"
                                     alt="Mukesh Airy - Founder"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40" />
@@ -71,7 +71,7 @@ const AboutUs = () => {
                         <div className="space-y-6">
                             <div className="relative h-96 rounded-2xl overflow-hidden shadow-lg">
                                 <img
-                                    src="Ashish Kumar.JPG"
+                                    src="Ashish Kumar.webp"
                                     alt="Ashish Kumar - Co-Founder"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40" />

@@ -77,7 +77,7 @@ const RoadTrips = () => {
                                 <div className="mx-4 h-full pb-8">
                                     <div className="relative group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-white  h-full">
                                         <div
-                                            className="h-[400px] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                            className="h-[350px] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                                             style={{ backgroundImage: `url(${destination.image})` }}
                                         >
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent">

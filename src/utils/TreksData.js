@@ -2,7 +2,7 @@ const treks = [
     {
         id: "nag-tibba-trek",
         name: "Nag Tibba",
-        image: "/NagTibbaTrek.JPG",
+        image: "/NagTibbaTrek.webp",
         subtitle: "Serpent’s Peak Adventure",
         description: "Nag Tibba, meaning 'Serpent’s Peak', is the highest peak in the Nag Tibba range of the Garhwal Himalayas, Uttarakhand. Standing tall at an altitude of 9,915 ft, Nag Tibba offers stunning views of Bandarpunch, Swargarohini, Srikantha, and Black Peak. It is a perfect weekend trek for beginners and adventure lovers. With dense forests, beautiful meadows, and a panoramic summit view, Nag Tibba Trek is a must-do for all nature enthusiasts.",
         highlights: [
@@ -133,7 +133,7 @@ const treks = [
     {
         id: "deoriatal-chandrashila-trek",
         name: "Deoriatal Chandrashila",
-        image: "/DeoriatalChandrashilaTrek.png",
+        image: "/DeoriatalChandrashilaTrek.webp",
         subtitle: "Scenic Himalayan Summit",
         description: "The Deoriatal Chandrashila trek is one of the most scenic and rewarding treks in the Garhwal Himalayas of Uttarakhand. This trek combines the beauty of Deoria Tal, the mystical forests of Rohini Bugyal, and the grand summit climb to Chandrashila Peak (12,083 ft). Famous for its 360-degree views of the most prominent Himalayan peaks like Nanda Devi, Chaukhamba, Trishul, Kedar Dome, and many others, it is the perfect choice for trekkers who want a taste of high mountains without difficult climbs.",
         highlights: [
@@ -289,7 +289,7 @@ const treks = [
     {
         id: "kedarkantha-trek",
         name: "Kedarkantha",
-        image: "/KedarkanthaTrek.jpg",
+        image: "/KedarkanthaTrek.webp",
         subtitle: "Queen of Winter Treks",
         description: "The Kedarkantha trek is often called the “Queen of Winter Treks” in India. Nestled in the Govind Wildlife Sanctuary of Uttarkashi, Uttarakhand, this trek offers a classic summit experience at an altitude of 12,500 ft, with breathtaking views of the snow-covered Himalayas. Ideal for beginners and seasoned trekkers alike, Kedarkantha is famous for its pristine snow trails, charming campsites, dense pine forests, and the spectacular 360-degree panoramic view from the summit.",
         highlights: [
@@ -461,7 +461,7 @@ const treks = [
     {
         id: "dayara-bugyal-trek",
         name: "Dayara Bugyal",
-        image: "/DayaraBugyalTrek.png",
+        image: "/DayaraBugyalTrek.webp",
         subtitle: "Endless Meadow Magic",
         description: "The Dayara Bugyal trek takes you to one of the most stunning high-altitude meadows in India. 'Bugyal' in the local language means 'meadow,' and Dayara Bugyal, perched at 12,000 ft, is an endless carpet of lush greenery (in summer) and sparkling snowfields (in winter). Located in the Uttarkashi district of Uttarakhand, Dayara Bugyal offers wide open landscapes, dense oak forests, charming villages, and grand mountain views, making it a must-do trek for beginners and seasoned trekkers alike.",
         highlights: [
@@ -634,7 +634,7 @@ const treks = [
     {
         id: "brahmatal-trek",
         name: "Brahmatal",
-        image: "/BrahmatalTrek.jpg",
+        image: "/BrahmatalTrek.webp",
         subtitle: "Frozen Lake Serenity",
         description: "The Brahmatal Trek offers a rare combination of snow trekking, alpine lakes, and magnificent Himalayan views, making it one of the best winter treks in India. Sitting at an altitude of 12,250 ft, the mystical Brahmatal Lake remains frozen in winter, surrounded by endless ridges, ancient forests, and spectacular vistas. This trek takes you deep into the heart of Uttarakhand’s Garhwal region, showcasing the majestic peaks of Trishul, Nanda Ghunti, and more.",
         highlights: [
@@ -804,7 +804,7 @@ const treks = [
     {
         id: "valley-of-flowers-trek",
         name: "Valley of Flowers and Hemkund Sahib",
-        image: "/ValleyOfFlowersTrek.jpg",
+        image: "/ValleyOfFlowersTrek.webp",
         subtitle: "Floral Paradise and Sacred Serenity",
         description: "Nestled in the heart of the Western Himalayas, the Valley of Flowers is a UNESCO World Heritage Site, renowned for its breathtaking meadows of endemic alpine flowers and diverse fauna. The lush valley, carpeted with colorful blossoms against the backdrop of snow-clad mountains, is a sight straight out of a dream. Paired with the sacred pilgrimage to Hemkund Sahib, a revered Sikh shrine located at 14,100 ft, this trek blends natural beauty with spiritual serenity.",
         highlights: [
@@ -977,7 +977,7 @@ const treks = [
     {
         id: "har-ki-dun-trek",
         name: "Har Ki Dun",
-        image: "/HarKiDunTrek.JPG",
+        image: "/HarKiDunTrek.webp",
         subtitle: "Walk into the Valley of Gods",
         description: "Hidden in the far reaches of the Garhwal Himalayas, the Har Ki Dun valley, also known as the \"Valley of Gods,\" is a timeless beauty. Rich in ancient culture, lush forests, alpine meadows, glacier basins, and towering peaks, Har Ki Dun offers a perfect blend of scenic landscapes and mythological significance. Legend says this is the path the Pandavas took to ascend to heaven!",
         highlights: [
@@ -1131,7 +1131,7 @@ const treks = [
     {
         id: "kuari-pass-trek",
         name: "Kuari Pass",
-        image: "/KuariPassTrek.JPG",
+        image: "/KuariPassTrek.webp",
         subtitle: "The Curated Himalayan Panorama",
         description: "Kuari Pass, meaning \"The Doorway,\" is a classic Himalayan trek nestled in the Garhwal region of Uttarakhand. Made famous when Lord Curzon traversed it in 1905, the Kuari Pass trek is renowned for its staggering views of some of India's highest peaks like Nanda Devi, Dronagiri, Kamet, Chaukhamba, and Hathi Ghoda Parvat. Perfect for beginners and experienced trekkers alike, Kuari Pass gifts you stunning ridge walks, ancient forests of oak and rhododendron, and mesmerizing campsites overlooking an amphitheater of 7000-meter giants.",
         highlights: [
@@ -1474,7 +1474,7 @@ const treks = [
     {
         id: "pangarchulla-peak-trek",
         name: "Pangarchulla Peak",
-        image: "/PangarchullaPeakTrek.jpg",
+        image: "/PangarchullaPeakTrek.webp",
         subtitle: "",
         description: "Pangarchulla Peak Trek is a thrilling summit climb located in the Garhwal Himalayas of Uttarakhand. Towering at an altitude of 15,069 ft, this trek offers breathtaking views of snow-capped Himalayan giants like Nanda Devi, Kamet, Mana, and Chaukhamba. The trek is a perfect blend of scenic meadows, dense forests, boulder-strewn trails, and a thrilling summit climb that challenges and excites trekkers.",
         highlights: [
@@ -1861,7 +1861,7 @@ const treks = [
     {
         id: "gaumukh-tapovan-trek",
         name: "Gaumukh Tapovan",
-        image: "/GaumukhTapovanTrek.jpg",
+        image: "/GaumukhTapovanTrek.webp",
         subtitle: "",
         description: "The Gaumukh Tapovan Trek is a sacred and scenic high-altitude trail in Uttarakhand that takes you to the source of the holy Ganga River—Gaumukh (the Cow's Mouth) and then ascends to the stunning alpine meadows of Tapovan. This trek is a spiritual journey combined with majestic Himalayan views of towering peaks like Shivling (6,543 m) and Bhagirathi I, II, III. Traversing through Gangotri National Park, the trail offers glaciers, lush forests, cascading streams, and a close encounter with mythology and spirituality. Tapovan, a serene meadow above the glacier, is known for its panoramic mountain views and as a sadhus' meditation retreat.",
         highlights: [
@@ -2031,7 +2031,7 @@ const treks = [
     {
         id: "satopanth-tal-trek",
         name: "Satopanth Tal",
-        image: "/SatopanthTalTrek.jpg",
+        image: "/SatopanthTalTrek.webp",
         subtitle: "",
         description: "The Satopanth Tal Trek is a mystical journey to a high-altitude glacial lake nestled at 14,100 ft in the Garhwal Himalayas of Uttarakhand. Surrounded by majestic peaks like Chaukhamba, Neelkanth, and Balakun, the emerald Satopanth Tal is considered sacred by locals and trekkers alike. This offbeat trail from Mana village near Badrinath offers a perfect blend of mythology, alpine beauty, and solitude. The name \"Satopanth\" translates to \"Path of Truth,\" believed to be the route taken by the Pandavas on their final journey to heaven. With serene campsites and spectacular Himalayan vistas, it’s one of the most spiritually and visually rewarding treks in India.",
         highlights: [
@@ -2336,126 +2336,126 @@ const treks = [
     {
         id: "pindari-glacier-trek",
         name: "Pindari Glacier",
-        image: "/PindariGlacierTrek.JPG",
+        image: "/PindariGlacierTrek.webp",
         subtitle: "",
         description: "The Pindari Glacier Trek is one of the most accessible and scenic glacier treks in the Kumaon region of Uttarakhand. Situated at an altitude of 12,300 ft, the glacier lies between the snow-capped peaks of Nanda Devi and Nanda Kot. Known for its easy gradient and captivating views, this trek is ideal for beginners and families looking for a Himalayan adventure. The trail takes you through quaint villages, rhododendron forests, waterfalls, and lush meadows, culminating in awe-inspiring views of the Pindari Glacier snout.",
         highlights: [
-          "🧊 Trek to the famous zero point of Pindari Glacier",
-          "🏞 Lush valleys, alpine meadows, waterfalls",
-          "🏔 Stunning views of Nanda Devi, Nanda Kot & Maiktoli",
-          "🌸 Rich flora including rhododendrons and oak forests",
-          "🧺 Interact with welcoming Kumaoni villagers"
+            "🧊 Trek to the famous zero point of Pindari Glacier",
+            "🏞 Lush valleys, alpine meadows, waterfalls",
+            "🏔 Stunning views of Nanda Devi, Nanda Kot & Maiktoli",
+            "🌸 Rich flora including rhododendrons and oak forests",
+            "🧺 Interact with welcoming Kumaoni villagers"
         ],
         details: {
-          location: "Kumaon, Uttarakhand",
-          altitude: "12,300 ft (3,750 m)",
-          duration: "7 Days / 6 Nights",
-          distance: "~48 km",
-          difficulty: "Easy to Moderate",
-          startingPoint: "Khati Village (Base reached via Loharkhet/Bageshwar)",
-          bestTime: ["April–June & September–October"]
+            location: "Kumaon, Uttarakhand",
+            altitude: "12,300 ft (3,750 m)",
+            duration: "7 Days / 6 Nights",
+            distance: "~48 km",
+            difficulty: "Easy to Moderate",
+            startingPoint: "Khati Village (Base reached via Loharkhet/Bageshwar)",
+            bestTime: ["April–June & September–October"]
         },
         whoCanDo: [
-          "Beginners and first-time trekkers",
-          "Families and kids (above 10 years)",
-          "Photographers and nature lovers"
+            "Beginners and first-time trekkers",
+            "Families and kids (above 10 years)",
+            "Photographers and nature lovers"
         ],
         itinerary: [
-          {
-            day: 1,
-            title: "Drive from Kathgodam to Bageshwar",
-            altitude: "1,870 ft",
-            drive: "180 km | 7-8 hrs",
-            stay: "Guesthouse/Hotel in Bageshwar",
-            meals: ["Dinner"],
-            highlights: ["Scenic drive through Almora and Bhimtal"]
-          },
-          {
-            day: 2,
-            title: "Drive to Loharkhet, Trek to Khati",
-            drive: "40 km | 2 hrs",
-            trek: "7 km | 4-5 hrs",
-            altitude: "7,300 ft",
-            stay: "Guesthouse in Khati",
-            meals: ["Breakfast", "Lunch", "Dinner"],
-            highlights: ["First glimpse of village life, forested trails"]
-          },
-          {
-            day: 3,
-            title: "Khati to Dwali",
-            altitude: "8,600 ft",
-            trek: "13 km | 6-7 hrs",
-            stay: "Campsite",
-            meals: ["Breakfast", "Lunch", "Dinner"],
-            highlights: ["Riverside trek with waterfalls and bridges"]
-          },
-          {
-            day: 4,
-            title: "Dwali to Phurkia",
-            altitude: "10,500 ft",
-            trek: "5 km | 4-5 hrs",
-            stay: "Campsite",
-            meals: ["Breakfast", "Lunch", "Dinner"],
-            highlights: ["Rhododendron forests, beautiful Himalayan views"]
-          },
-          {
-            day: 5,
-            title: "Phurkia to Pindari Glacier Zero Point, back to Phurkia",
-            altitude: "12,300 ft",
-            trek: "7 km | 5-6 hrs round trip",
-            stay: "Campsite",
-            meals: ["Breakfast", "Lunch", "Dinner"],
-            highlights: ["Glacier views, snout of Pindari, Nanda Devi peaks"]
-          },
-          {
-            day: 6,
-            title: "Phurkia to Khati",
-            trek: "18 km | 7-8 hrs",
-            stay: "Guesthouse",
-            meals: ["Breakfast", "Lunch", "Dinner"],
-            highlights: ["Descending trail through forests and meadows"]
-          },
-          {
-            day: 7,
-            title: "Drive to Kathgodam",
-            drive: "220 km | 8-9 hrs",
-            meals: ["Breakfast"],
-            highlights: ["End of trek with scenic return journey"]
-          }
+            {
+                day: 1,
+                title: "Drive from Kathgodam to Bageshwar",
+                altitude: "1,870 ft",
+                drive: "180 km | 7-8 hrs",
+                stay: "Guesthouse/Hotel in Bageshwar",
+                meals: ["Dinner"],
+                highlights: ["Scenic drive through Almora and Bhimtal"]
+            },
+            {
+                day: 2,
+                title: "Drive to Loharkhet, Trek to Khati",
+                drive: "40 km | 2 hrs",
+                trek: "7 km | 4-5 hrs",
+                altitude: "7,300 ft",
+                stay: "Guesthouse in Khati",
+                meals: ["Breakfast", "Lunch", "Dinner"],
+                highlights: ["First glimpse of village life, forested trails"]
+            },
+            {
+                day: 3,
+                title: "Khati to Dwali",
+                altitude: "8,600 ft",
+                trek: "13 km | 6-7 hrs",
+                stay: "Campsite",
+                meals: ["Breakfast", "Lunch", "Dinner"],
+                highlights: ["Riverside trek with waterfalls and bridges"]
+            },
+            {
+                day: 4,
+                title: "Dwali to Phurkia",
+                altitude: "10,500 ft",
+                trek: "5 km | 4-5 hrs",
+                stay: "Campsite",
+                meals: ["Breakfast", "Lunch", "Dinner"],
+                highlights: ["Rhododendron forests, beautiful Himalayan views"]
+            },
+            {
+                day: 5,
+                title: "Phurkia to Pindari Glacier Zero Point, back to Phurkia",
+                altitude: "12,300 ft",
+                trek: "7 km | 5-6 hrs round trip",
+                stay: "Campsite",
+                meals: ["Breakfast", "Lunch", "Dinner"],
+                highlights: ["Glacier views, snout of Pindari, Nanda Devi peaks"]
+            },
+            {
+                day: 6,
+                title: "Phurkia to Khati",
+                trek: "18 km | 7-8 hrs",
+                stay: "Guesthouse",
+                meals: ["Breakfast", "Lunch", "Dinner"],
+                highlights: ["Descending trail through forests and meadows"]
+            },
+            {
+                day: 7,
+                title: "Drive to Kathgodam",
+                drive: "220 km | 8-9 hrs",
+                meals: ["Breakfast"],
+                highlights: ["End of trek with scenic return journey"]
+            }
         ],
         costIncludes: [
-          "Transport from Kathgodam to trek start point and return",
-          "All accommodation during the trek",
-          "All meals (veg) during the trek",
-          "Experienced guide, trek leader and support staff",
-          "Camping and kitchen equipment",
-          "Entry fees and permits"
+            "Transport from Kathgodam to trek start point and return",
+            "All accommodation during the trek",
+            "All meals (veg) during the trek",
+            "Experienced guide, trek leader and support staff",
+            "Camping and kitchen equipment",
+            "Entry fees and permits"
         ],
         costExcludes: [
-          "Personal expenses like tips, laundry, telephone calls, and beverages.",
-          "Travel insurance and emergency evacuation charges (if required).",
-          "Transport costs from home city to the trek start point (unless specifically mentioned).",
-          "Meals during transit to and from the base camp.",
-          "Trekking gear like shoes, jackets, walking sticks, raincoats, and backpacks.",
-          "Porter or mule charges for personal luggage.",
-          "Any medical costs including oxygen cylinders or other health-related expenses.",
-          "Entry fees for monuments, camera charges, or permits (if applicable and not mentioned).",
-          "Any cost arising due to unforeseen circumstances such as bad weather, landslides, road blockage, political disturbances, or personal reasons.",
-          "GST (Goods and Services Tax) and other applicable government taxes if not included in the package price."
+            "Personal expenses like tips, laundry, telephone calls, and beverages.",
+            "Travel insurance and emergency evacuation charges (if required).",
+            "Transport costs from home city to the trek start point (unless specifically mentioned).",
+            "Meals during transit to and from the base camp.",
+            "Trekking gear like shoes, jackets, walking sticks, raincoats, and backpacks.",
+            "Porter or mule charges for personal luggage.",
+            "Any medical costs including oxygen cylinders or other health-related expenses.",
+            "Entry fees for monuments, camera charges, or permits (if applicable and not mentioned).",
+            "Any cost arising due to unforeseen circumstances such as bad weather, landslides, road blockage, political disturbances, or personal reasons.",
+            "GST (Goods and Services Tax) and other applicable government taxes if not included in the package price."
         ],
         thingsToCarry: [
-          "50L backpack",
-          "Trekking shoes",
-          "Warm clothes and layers",
-          "Raincoat/poncho",
-          "Cap, sunglasses, sunscreen",
-          "Snacks, water bottles",
-          "First-aid kit and personal medication",
-          "Trekking poles (optional)"
+            "50L backpack",
+            "Trekking shoes",
+            "Warm clothes and layers",
+            "Raincoat/poncho",
+            "Cap, sunglasses, sunscreen",
+            "Snacks, water bottles",
+            "First-aid kit and personal medication",
+            "Trekking poles (optional)"
         ],
         bestTime: [
-          "April–June: Blooming forests and clear trails",
-          "September–October: Post-monsoon freshness and scenic beauty"
+            "April–June: Blooming forests and clear trails",
+            "September–October: Post-monsoon freshness and scenic beauty"
         ],
         whyChooseUs: [
             "High-quality camping gear and expert guides.",
@@ -2465,660 +2465,660 @@ const treks = [
             "Curated itinerary with maximum adventure & safety."
         ],
         quickFacts: {
-          nearestRailway: "Kathgodam",
-          nearestAirport: "Pantnagar Airport",
-          mobileNetwork: "BSNL/Airtel (patchy beyond Bageshwar)",
-          atmAvailability: "Bageshwar"
+            nearestRailway: "Kathgodam",
+            nearestAirport: "Pantnagar Airport",
+            mobileNetwork: "BSNL/Airtel (patchy beyond Bageshwar)",
+            atmAvailability: "Bageshwar"
         },
         faqs: []
-      },
-      {
+    },
+    {
         id: "hampta-pass-trek",
         name: "Hampta Pass",
-        image: "/HamptaPassTrek.jpg",
+        image: "/HamptaPassTrek.webp",
         subtitle: "",
         description: "Hampta Pass Trek is one of the most dramatic crossover treks in the Indian Himalayas. Located at an altitude of 14,100 ft, it connects the lush green Kullu Valley to the barren landscape of Lahaul. This trek offers a stunning contrast — from forests and meadows to stark, arid mountains and glaciers. If you want to experience two dramatically different worlds within days, Hampta Pass is your perfect trek!",
         highlights: [
-          "🌟 Crossover trek from Kullu's greenery to Lahaul's barren beauty.",
-          "🌟 Spectacular river crossings and dramatic mountain landscapes.",
-          "🌟 Beautiful campsites like Jobra, Jwara, and Shea Goru.",
-          "🌟 Optional visit to Chandratal Lake (Moon Lake).",
-          "🌟 Exciting river crossings and snow patches.",
-          "🌟 Great trek for beginners seeking high-altitude experience."
+            "🌟 Crossover trek from Kullu's greenery to Lahaul's barren beauty.",
+            "🌟 Spectacular river crossings and dramatic mountain landscapes.",
+            "🌟 Beautiful campsites like Jobra, Jwara, and Shea Goru.",
+            "🌟 Optional visit to Chandratal Lake (Moon Lake).",
+            "🌟 Exciting river crossings and snow patches.",
+            "🌟 Great trek for beginners seeking high-altitude experience."
         ],
         details: {
-          location: "Manali Region, Himachal Pradesh",
-          altitude: "14,100 ft",
-          duration: "5 Days / 4 Nights",
-          distance: "26 km approx",
-          difficulty: "Moderate",
-          startingPoint: "Jobra (near Manali)",
-          bestTime: ["June to September"]
+            location: "Manali Region, Himachal Pradesh",
+            altitude: "14,100 ft",
+            duration: "5 Days / 4 Nights",
+            distance: "26 km approx",
+            difficulty: "Moderate",
+            startingPoint: "Jobra (near Manali)",
+            bestTime: ["June to September"]
         },
         whoCanDo: [
-          "Beginners who want to experience Himalayan high-altitude trekking.",
-          "Adventure lovers wanting a crossover trek experience.",
-          "Trekkers looking for varied landscapes in one trek."
+            "Beginners who want to experience Himalayan high-altitude trekking.",
+            "Adventure lovers wanting a crossover trek experience.",
+            "Trekkers looking for varied landscapes in one trek."
         ],
         itinerary: [
-          {
-            day: 1,
-            title: "Manali to Jobra | Trek to Chika",
-            altitude: "6,700 ft to 9,800 ft",
-            drive: "16 km – 1 hour",
-            trek: "2 km",
-            trekTime: "2 hours",
-            stay: "Campsite at Chika",
-            meals: ["Lunch", "Dinner"],
-            highlights: [
-              "Drive through pine forests to Jobra.",
-              "Gentle trek alongside Rani Nallah.",
-              "First camping experience by the riverside."
-            ]
-          },
-          {
-            day: 2,
-            title: "Chika to Balu Ka Ghera",
-            altitude: "9,800 ft to 11,900 ft",
-            trek: "8 km",
-            trekTime: "5-6 hours",
-            stay: "Campsite at Balu Ka Ghera",
-            meals: ["Breakfast", "Lunch", "Dinner"],
-            highlights: [
-              "Trek through beautiful meadows and streams.",
-              "First glimpse of snow-capped mountains.",
-              "Stunning campsite on a riverbed surrounded by mountains."
-            ]
-          },
-          {
-            day: 3,
-            title: "Balu Ka Ghera to Hampta Pass | Trek to Shea Goru",
-            altitude: "11,900 ft to 14,100 ft (Hampta Pass), then descend to 12,900 ft (Shea Goru)",
-            trek: "7 km",
-            trekTime: "9-10 hours",
-            stay: "Campsite at Shea Goru",
-            meals: ["Breakfast", "Lunch", "Dinner"],
-            highlights: [
-              "Early morning summit climb.",
-              "Dramatic crossover from green Kullu to barren Lahaul.",
-              "Thrilling snow patches and rocky ascent to Hampta Pass.",
-              "Majestic views of Indrasan and Deo Tibba peaks."
-            ]
-          },
-          {
-            day: 4,
-            title: "Shea Goru to Chhatru | Drive to Chandratal (optional) | Return to Chhatru",
-            altitude: "12,900 ft to 10,800 ft",
-            trek: "6 km",
-            trekTime: "4-5 hours",
-            drive: "70 km (Chhatru to Chandratal and back) – optional",
-            stay: "Campsite at Chhatru",
-            meals: ["Breakfast", "Lunch", "Dinner"],
-            highlights: [
-              "Easy descent along rivers and scree slopes.",
-              "Explore the barren beauty of Spiti valley.",
-              "Optional drive to the stunning Chandratal Lake if weather and road conditions permit."
-            ]
-          },
-          {
-            day: 5,
-            title: "Chhatru to Manali",
-            drive: "85 km – 4-5 hours",
-            meals: ["Breakfast"],
-            highlights: [
-              "Drive through the famous Rohtang Pass (13,050 ft).",
-              "Trip ends at Manali with beautiful memories!"
-            ]
-          }
+            {
+                day: 1,
+                title: "Manali to Jobra | Trek to Chika",
+                altitude: "6,700 ft to 9,800 ft",
+                drive: "16 km – 1 hour",
+                trek: "2 km",
+                trekTime: "2 hours",
+                stay: "Campsite at Chika",
+                meals: ["Lunch", "Dinner"],
+                highlights: [
+                    "Drive through pine forests to Jobra.",
+                    "Gentle trek alongside Rani Nallah.",
+                    "First camping experience by the riverside."
+                ]
+            },
+            {
+                day: 2,
+                title: "Chika to Balu Ka Ghera",
+                altitude: "9,800 ft to 11,900 ft",
+                trek: "8 km",
+                trekTime: "5-6 hours",
+                stay: "Campsite at Balu Ka Ghera",
+                meals: ["Breakfast", "Lunch", "Dinner"],
+                highlights: [
+                    "Trek through beautiful meadows and streams.",
+                    "First glimpse of snow-capped mountains.",
+                    "Stunning campsite on a riverbed surrounded by mountains."
+                ]
+            },
+            {
+                day: 3,
+                title: "Balu Ka Ghera to Hampta Pass | Trek to Shea Goru",
+                altitude: "11,900 ft to 14,100 ft (Hampta Pass), then descend to 12,900 ft (Shea Goru)",
+                trek: "7 km",
+                trekTime: "9-10 hours",
+                stay: "Campsite at Shea Goru",
+                meals: ["Breakfast", "Lunch", "Dinner"],
+                highlights: [
+                    "Early morning summit climb.",
+                    "Dramatic crossover from green Kullu to barren Lahaul.",
+                    "Thrilling snow patches and rocky ascent to Hampta Pass.",
+                    "Majestic views of Indrasan and Deo Tibba peaks."
+                ]
+            },
+            {
+                day: 4,
+                title: "Shea Goru to Chhatru | Drive to Chandratal (optional) | Return to Chhatru",
+                altitude: "12,900 ft to 10,800 ft",
+                trek: "6 km",
+                trekTime: "4-5 hours",
+                drive: "70 km (Chhatru to Chandratal and back) – optional",
+                stay: "Campsite at Chhatru",
+                meals: ["Breakfast", "Lunch", "Dinner"],
+                highlights: [
+                    "Easy descent along rivers and scree slopes.",
+                    "Explore the barren beauty of Spiti valley.",
+                    "Optional drive to the stunning Chandratal Lake if weather and road conditions permit."
+                ]
+            },
+            {
+                day: 5,
+                title: "Chhatru to Manali",
+                drive: "85 km – 4-5 hours",
+                meals: ["Breakfast"],
+                highlights: [
+                    "Drive through the famous Rohtang Pass (13,050 ft).",
+                    "Trip ends at Manali with beautiful memories!"
+                ]
+            }
         ],
         costIncludes: [
-          "Transportation from Manali to trek starting point and back.",
-          "All vegetarian meals during the trek.",
-          "Accommodation in tents during the trek.",
-          "Experienced trek leaders and local guides.",
-          "Camping equipment (tents, sleeping bags, mattresses).",
-          "Forest permits and permissions.",
-          "First aid medical support and oxygen cylinder backup."
+            "Transportation from Manali to trek starting point and back.",
+            "All vegetarian meals during the trek.",
+            "Accommodation in tents during the trek.",
+            "Experienced trek leaders and local guides.",
+            "Camping equipment (tents, sleeping bags, mattresses).",
+            "Forest permits and permissions.",
+            "First aid medical support and oxygen cylinder backup."
         ],
         costExcludes: [
-          "Personal expenses like tips, laundry, telephone calls, and beverages.",
-          "Travel insurance and emergency evacuation charges (if required).",
-          "Transport costs from home city to the trek start point (unless specifically mentioned).",
-          "Meals during transit to and from the base camp.",
-          "Trekking gear like shoes, jackets, walking sticks, raincoats, and backpacks.",
-          "Porter or mule charges for personal luggage.",
-          "Any medical costs including oxygen cylinders or other health-related expenses.",
-          "Entry fees for monuments, camera charges, or permits (if applicable and not mentioned).",
-          "Any cost arising due to unforeseen circumstances such as bad weather, landslides, road blockage, political disturbances, or personal reasons.",
-          "GST (Goods and Services Tax) and other applicable government taxes if not included in the package price."
+            "Personal expenses like tips, laundry, telephone calls, and beverages.",
+            "Travel insurance and emergency evacuation charges (if required).",
+            "Transport costs from home city to the trek start point (unless specifically mentioned).",
+            "Meals during transit to and from the base camp.",
+            "Trekking gear like shoes, jackets, walking sticks, raincoats, and backpacks.",
+            "Porter or mule charges for personal luggage.",
+            "Any medical costs including oxygen cylinders or other health-related expenses.",
+            "Entry fees for monuments, camera charges, or permits (if applicable and not mentioned).",
+            "Any cost arising due to unforeseen circumstances such as bad weather, landslides, road blockage, political disturbances, or personal reasons.",
+            "GST (Goods and Services Tax) and other applicable government taxes if not included in the package price."
         ],
         thingsToCarry: [
-          "Backpack (50-60 liters)",
-          "Trekking shoes (good grip, waterproof)",
-          "Warm clothes (thermal inners, fleece jacket, down jacket)",
-          "Raincoat/Poncho",
-          "Trek pants and full-sleeve t-shirts",
-          "Woolen Cap, Gloves, Socks",
-          "Sunglasses, Sunscreen, Lip Balm",
-          "Water bottle (minimum 2 liters)",
-          "Trekking pole",
-          "Personal toiletries and towel",
-          "Basic medication kit"
+            "Backpack (50-60 liters)",
+            "Trekking shoes (good grip, waterproof)",
+            "Warm clothes (thermal inners, fleece jacket, down jacket)",
+            "Raincoat/Poncho",
+            "Trek pants and full-sleeve t-shirts",
+            "Woolen Cap, Gloves, Socks",
+            "Sunglasses, Sunscreen, Lip Balm",
+            "Water bottle (minimum 2 liters)",
+            "Trekking pole",
+            "Personal toiletries and towel",
+            "Basic medication kit"
         ],
         bestTime: [
-          "June to early July: Snow on the pass and river crossings.",
-          "July to September: Clear trails, lush green valleys, and occasional rains."
+            "June to early July: Snow on the pass and river crossings.",
+            "July to September: Clear trails, lush green valleys, and occasional rains."
         ],
         whyChooseUs: [
-          "Highly experienced and trained trek leaders.",
-          "High-quality trekking and camping equipment.",
-          "Maximum safety standards and medical support.",
-          "Eco-friendly trekking with Leave No Trace principles.",
-          "Personalized care in small group batches."
+            "Highly experienced and trained trek leaders.",
+            "High-quality trekking and camping equipment.",
+            "Maximum safety standards and medical support.",
+            "Eco-friendly trekking with Leave No Trace principles.",
+            "Personalized care in small group batches."
         ],
         quickFacts: {
-          nearestRailway: "Joginder Nagar Railway Station",
-          nearestAirport: "Bhuntar Airport, Kullu",
-          mobileNetwork: "Available till Jobra; patchy afterwards",
-          atmAvailability: "Manali"
+            nearestRailway: "Joginder Nagar Railway Station",
+            nearestAirport: "Bhuntar Airport, Kullu",
+            mobileNetwork: "Available till Jobra; patchy afterwards",
+            atmAvailability: "Manali"
         },
         faqs: [
-          {
-            question: "Is Hampta Pass good for beginners?",
-            answer: "Yes, it's perfect for first-time trekkers with basic fitness."
-          },
-          {
-            question: "Will there be snow at Hampta Pass?",
-            answer: "You will encounter snow in June and early July."
-          },
-          {
-            question: "Is it necessary to visit Chandratal?",
-            answer: "Visiting Chandratal depends on road and weather conditions but is highly recommended if possible."
-          },
-          {
-            question: "How should I prepare for the trek?",
-            answer: "Regular cardio, stamina building (walking/jogging 4-5 km daily), and basic strength training are sufficient."
-          }
+            {
+                question: "Is Hampta Pass good for beginners?",
+                answer: "Yes, it's perfect for first-time trekkers with basic fitness."
+            },
+            {
+                question: "Will there be snow at Hampta Pass?",
+                answer: "You will encounter snow in June and early July."
+            },
+            {
+                question: "Is it necessary to visit Chandratal?",
+                answer: "Visiting Chandratal depends on road and weather conditions but is highly recommended if possible."
+            },
+            {
+                question: "How should I prepare for the trek?",
+                answer: "Regular cardio, stamina building (walking/jogging 4-5 km daily), and basic strength training are sufficient."
+            }
         ]
-      },
-      {
+    },
+    {
         id: "bhrigu-lake-trek",
         name: "Bhrigu Lake",
-        image: "/BhriguLakeTrek.jpg",
+        image: "/BhriguLakeTrek.webp",
         subtitle: "",
         description: "Bhrigu Lake Trek is a perfect high-altitude alpine lake trek located near Manali in Himachal Pradesh. At an impressive height of 14,100 ft, Bhrigu Lake is known for its mythological significance and breathtaking beauty. It’s one of the few treks where you can experience snowfields, lush meadows, and a high-altitude lake — all within a short trek!",
         highlights: [
-          "🌟 Stunning high-altitude alpine lake at 14,100 ft.",
-          "🌟 Expansive meadows right from the starting point.",
-          "🌟 Magnificent views of Dhauladhar and Pir Panjal ranges.",
-          "🌟 A short, yet high-reward Himalayan trek.",
-          "🌟 Ideal for beginners and first-timers.",
-          "🌟 Witness snow even in early summer months."
+            "🌟 Stunning high-altitude alpine lake at 14,100 ft.",
+            "🌟 Expansive meadows right from the starting point.",
+            "🌟 Magnificent views of Dhauladhar and Pir Panjal ranges.",
+            "🌟 A short, yet high-reward Himalayan trek.",
+            "🌟 Ideal for beginners and first-timers.",
+            "🌟 Witness snow even in early summer months."
         ],
         details: {
-          location: "Manali Region, Himachal Pradesh",
-          altitude: "14,100 ft",
-          duration: "4 Days / 3 Nights",
-          distance: "25 km approx",
-          difficulty: "Easy to Moderate",
-          startingPoint: "Gulaba",
-          bestTime: ["May to October"]
+            location: "Manali Region, Himachal Pradesh",
+            altitude: "14,100 ft",
+            duration: "4 Days / 3 Nights",
+            distance: "25 km approx",
+            difficulty: "Easy to Moderate",
+            startingPoint: "Gulaba",
+            bestTime: ["May to October"]
         },
         whoCanDo: [
-          "Beginners looking for their first high-altitude Himalayan trek.",
-          "Nature enthusiasts wanting to explore meadows and alpine lakes.",
-          "Adventure seekers looking for a quick getaway from Manali."
+            "Beginners looking for their first high-altitude Himalayan trek.",
+            "Nature enthusiasts wanting to explore meadows and alpine lakes.",
+            "Adventure seekers looking for a quick getaway from Manali."
         ],
         itinerary: [
-          {
-            day: 1,
-            title: "Arrival in Manali",
-            altitude: "6,700 ft",
-            stay: "Guesthouse/Hotel in Manali",
-            meals: ["Dinner"],
-            highlights: [
-              "Arrival and acclimatization.",
-              "Briefing and preparation for the trek.",
-              "Explore local markets and cafes of Manali."
-            ]
-          },
-          {
-            day: 2,
-            title: "Manali to Gulaba | Trek to Rola Kholi",
-            altitude: "6,700 ft to 12,500 ft",
-            drive: "22 km (Manali to Gulaba) – 1 hour",
-            trek: "6 km",
-            trekTime: "4-5 hours",
-            stay: "Campsite at Rola Kholi",
-            meals: ["Breakfast", "Lunch", "Dinner"],
-            highlights: [
-              "Scenic drive through pine forests to Gulaba.",
-              "Trek through lush meadows and forests.",
-              "Campsite near a freshwater stream."
-            ]
-          },
-          {
-            day: 3,
-            title: "Rola Kholi to Bhrigu Lake and back",
-            altitude: "12,500 ft to 14,100 ft and return",
-            trek: "10 km",
-            trekTime: "7-8 hours",
-            stay: "Campsite at Rola Kholi",
-            meals: ["Breakfast", "Lunch", "Dinner"],
-            highlights: [
-              "Early morning trek to Bhrigu Lake.",
-              "Witness the pristine blue lake surrounded by snowfields.",
-              "Stunning panoramic views of major Himalayan peaks."
-            ]
-          },
-          {
-            day: 4,
-            title: "Rola Kholi to Gulaba | Drive to Manali",
-            trek: "6 km",
-            trekTime: "3-4 hours",
-            drive: "22 km back to Manali",
-            meals: ["Breakfast"],
-            highlights: [
-              "Descend back to Gulaba.",
-              "Drive back to Manali.",
-              "Trip ends with beautiful memories."
-            ]
-          }
+            {
+                day: 1,
+                title: "Arrival in Manali",
+                altitude: "6,700 ft",
+                stay: "Guesthouse/Hotel in Manali",
+                meals: ["Dinner"],
+                highlights: [
+                    "Arrival and acclimatization.",
+                    "Briefing and preparation for the trek.",
+                    "Explore local markets and cafes of Manali."
+                ]
+            },
+            {
+                day: 2,
+                title: "Manali to Gulaba | Trek to Rola Kholi",
+                altitude: "6,700 ft to 12,500 ft",
+                drive: "22 km (Manali to Gulaba) – 1 hour",
+                trek: "6 km",
+                trekTime: "4-5 hours",
+                stay: "Campsite at Rola Kholi",
+                meals: ["Breakfast", "Lunch", "Dinner"],
+                highlights: [
+                    "Scenic drive through pine forests to Gulaba.",
+                    "Trek through lush meadows and forests.",
+                    "Campsite near a freshwater stream."
+                ]
+            },
+            {
+                day: 3,
+                title: "Rola Kholi to Bhrigu Lake and back",
+                altitude: "12,500 ft to 14,100 ft and return",
+                trek: "10 km",
+                trekTime: "7-8 hours",
+                stay: "Campsite at Rola Kholi",
+                meals: ["Breakfast", "Lunch", "Dinner"],
+                highlights: [
+                    "Early morning trek to Bhrigu Lake.",
+                    "Witness the pristine blue lake surrounded by snowfields.",
+                    "Stunning panoramic views of major Himalayan peaks."
+                ]
+            },
+            {
+                day: 4,
+                title: "Rola Kholi to Gulaba | Drive to Manali",
+                trek: "6 km",
+                trekTime: "3-4 hours",
+                drive: "22 km back to Manali",
+                meals: ["Breakfast"],
+                highlights: [
+                    "Descend back to Gulaba.",
+                    "Drive back to Manali.",
+                    "Trip ends with beautiful memories."
+                ]
+            }
         ],
         costIncludes: [
-          "Transportation from Manali to Gulaba and back.",
-          "All meals during the trek (vegetarian).",
-          "Accommodation in tents during the trek and hotel stay in Manali (Day 1).",
-          "Experienced trek leader and support team.",
-          "Camping equipment: tents, sleeping bags, sleeping mats.",
-          "Forest permits and entrance fees.",
-          "First aid and medical support."
+            "Transportation from Manali to Gulaba and back.",
+            "All meals during the trek (vegetarian).",
+            "Accommodation in tents during the trek and hotel stay in Manali (Day 1).",
+            "Experienced trek leader and support team.",
+            "Camping equipment: tents, sleeping bags, sleeping mats.",
+            "Forest permits and entrance fees.",
+            "First aid and medical support."
         ],
         costExcludes: [
-          "Personal expenses like tips, laundry, telephone calls, and beverages.",
-          "Travel insurance and emergency evacuation charges (if required).",
-          "Transport costs from home city to the trek start point (unless specifically mentioned).",
-          "Meals during transit to and from the base camp.",
-          "Trekking gear like shoes, jackets, walking sticks, raincoats, and backpacks.",
-          "Porter or mule charges for personal luggage.",
-          "Any medical costs including oxygen cylinders or other health-related expenses.",
-          "Entry fees for monuments, camera charges, or permits (if applicable and not mentioned).",
-          "Any cost arising due to unforeseen circumstances such as bad weather, landslides, road blockage, political disturbances, or personal reasons.",
-          "GST (Goods and Services Tax) and other applicable government taxes if not included in the package price."
+            "Personal expenses like tips, laundry, telephone calls, and beverages.",
+            "Travel insurance and emergency evacuation charges (if required).",
+            "Transport costs from home city to the trek start point (unless specifically mentioned).",
+            "Meals during transit to and from the base camp.",
+            "Trekking gear like shoes, jackets, walking sticks, raincoats, and backpacks.",
+            "Porter or mule charges for personal luggage.",
+            "Any medical costs including oxygen cylinders or other health-related expenses.",
+            "Entry fees for monuments, camera charges, or permits (if applicable and not mentioned).",
+            "Any cost arising due to unforeseen circumstances such as bad weather, landslides, road blockage, political disturbances, or personal reasons.",
+            "GST (Goods and Services Tax) and other applicable government taxes if not included in the package price."
         ],
         thingsToCarry: [
-          "Backpack (40-50 liters)",
-          "Trekking shoes (good grip, waterproof)",
-          "Warm clothing (thermals, fleece jacket, down jacket)",
-          "Raincoat/Poncho",
-          "Trekking pants and quick-dry t-shirts",
-          "Woolen Cap, Gloves, Socks",
-          "Sunglasses, Sunscreen, Lip Balm",
-          "Water bottle (minimum 2 liters)",
-          "Trekking pole (optional)",
-          "Basic medicines (personal first-aid kit)"
+            "Backpack (40-50 liters)",
+            "Trekking shoes (good grip, waterproof)",
+            "Warm clothing (thermals, fleece jacket, down jacket)",
+            "Raincoat/Poncho",
+            "Trekking pants and quick-dry t-shirts",
+            "Woolen Cap, Gloves, Socks",
+            "Sunglasses, Sunscreen, Lip Balm",
+            "Water bottle (minimum 2 liters)",
+            "Trekking pole (optional)",
+            "Basic medicines (personal first-aid kit)"
         ],
         bestTime: [
-          "May to mid-June: Snow-covered trails.",
-          "Mid-June to October: Lush green meadows and clear lake views."
+            "May to mid-June: Snow-covered trails.",
+            "Mid-June to October: Lush green meadows and clear lake views."
         ],
         whyChooseUs: [
-          "Experienced and certified trek leaders.",
-          "High-quality camping and safety equipment.",
-          "Focused on eco-friendly trekking practices.",
-          "Small group sizes for personalized attention.",
-          "Safety-first approach with complete medical backup."
+            "Experienced and certified trek leaders.",
+            "High-quality camping and safety equipment.",
+            "Focused on eco-friendly trekking practices.",
+            "Small group sizes for personalized attention.",
+            "Safety-first approach with complete medical backup."
         ],
         quickFacts: {
-          nearestRailway: "Joginder Nagar Railway Station",
-          nearestAirport: "Bhuntar Airport, Kullu",
-          mobileNetwork: "Available till Gulaba; patchy after that",
-          atmAvailability: "Manali"
+            nearestRailway: "Joginder Nagar Railway Station",
+            nearestAirport: "Bhuntar Airport, Kullu",
+            mobileNetwork: "Available till Gulaba; patchy after that",
+            atmAvailability: "Manali"
         },
         faqs: [
-          {
-            question: "Is Bhrigu Lake Trek suitable for beginners?",
-            answer: "Yes, it’s one of the best short treks for first-time trekkers."
-          },
-          {
-            question: "Will there be snow on the trail?",
-            answer: "Expect snow till mid-June and lush greenery afterward."
-          },
-          {
-            question: "How difficult is the Bhrigu Lake Trek?",
-            answer: "It’s an easy to moderate trek; good fitness is recommended."
-          },
-          {
-            question: "How can I prepare for the trek?",
-            answer: "Walk 4-5 km daily for a couple of weeks and do some stamina exercises like squats and step-ups."
-          }
+            {
+                question: "Is Bhrigu Lake Trek suitable for beginners?",
+                answer: "Yes, it’s one of the best short treks for first-time trekkers."
+            },
+            {
+                question: "Will there be snow on the trail?",
+                answer: "Expect snow till mid-June and lush greenery afterward."
+            },
+            {
+                question: "How difficult is the Bhrigu Lake Trek?",
+                answer: "It’s an easy to moderate trek; good fitness is recommended."
+            },
+            {
+                question: "How can I prepare for the trek?",
+                answer: "Walk 4-5 km daily for a couple of weeks and do some stamina exercises like squats and step-ups."
+            }
         ]
-      },
-      {
+    },
+    {
         id: "triund-trek",
         name: "Triund",
         image: "/TriundTrek.jpg",
         subtitle: "",
         description: "Triund Trek is a popular and easy Himalayan trek located in the Dhauladhar range of Himachal Pradesh. At an altitude of 9,350 ft, Triund offers breathtaking views of the Kangra Valley on one side and the mighty Dhauladhar peaks on the other. Known for its mesmerizing sunsets, lush green trails, and easy accessibility from McLeod Ganj, Triund Trek is perfect for beginners and nature lovers.",
         highlights: [
-          "🌟 Short and scenic trek with mesmerizing landscapes.",
-          "🌟 Panoramic views of the Dhauladhar mountain range.",
-          "🌟 Camp under a billion stars at Triund top.",
-          "🌟 Stunning sunset and sunrise experiences.",
-          "🌟 Beginner-friendly trail with gradual ascents.",
-          "🌟 A perfect weekend trek near Delhi and Chandigarh."
+            "🌟 Short and scenic trek with mesmerizing landscapes.",
+            "🌟 Panoramic views of the Dhauladhar mountain range.",
+            "🌟 Camp under a billion stars at Triund top.",
+            "🌟 Stunning sunset and sunrise experiences.",
+            "🌟 Beginner-friendly trail with gradual ascents.",
+            "🌟 A perfect weekend trek near Delhi and Chandigarh."
         ],
         details: {
-          location: "McLeod Ganj, Himachal Pradesh",
-          altitude: "9,350 ft",
-          duration: "2 Days / 1 Night",
-          distance: "10 km approx (one way)",
-          difficulty: "Easy",
-          startingPoint: "Dharamkot (near McLeod Ganj)",
-          bestTime: ["March to June and September to December"]
+            location: "McLeod Ganj, Himachal Pradesh",
+            altitude: "9,350 ft",
+            duration: "2 Days / 1 Night",
+            distance: "10 km approx (one way)",
+            difficulty: "Easy",
+            startingPoint: "Dharamkot (near McLeod Ganj)",
+            bestTime: ["March to June and September to December"]
         },
         whoCanDo: [
-          "Beginners with no prior trekking experience.",
-          "Families, solo travelers, and groups of friends.",
-          "Weekend adventure seekers from Delhi NCR, Punjab, and Chandigarh."
+            "Beginners with no prior trekking experience.",
+            "Families, solo travelers, and groups of friends.",
+            "Weekend adventure seekers from Delhi NCR, Punjab, and Chandigarh."
         ],
         itinerary: [
-          {
-            day: 1,
-            title: "McLeod Ganj to Triund",
-            altitude: "6,800 ft to 9,350 ft",
-            trek: "9 km",
-            trekTime: "4-5 hours",
-            stay: "Campsite at Triund Top",
-            meals: ["Lunch", "Dinner"],
-            highlights: [
-              "Trek through dense Rhododendron and Oak forests.",
-              "Stunning views of Kangra Valley throughout the trail.",
-              "Reach Triund and witness a majestic sunset.",
-              "Enjoy camping under the open sky."
-            ]
-          },
-          {
-            day: 2,
-            title: "Triund to McLeod Ganj",
-            altitude: "9,350 ft to 6,800 ft",
-            trek: "9 km",
-            trekTime: "3-4 hours",
-            meals: ["Breakfast"],
-            highlights: [
-              "Wake up to a glorious sunrise over the Dhauladhar range.",
-              "Breakfast at the campsite.",
-              "Descend back to McLeod Ganj.",
-              "Explore cafes and local markets if time permits."
-            ]
-          }
+            {
+                day: 1,
+                title: "McLeod Ganj to Triund",
+                altitude: "6,800 ft to 9,350 ft",
+                trek: "9 km",
+                trekTime: "4-5 hours",
+                stay: "Campsite at Triund Top",
+                meals: ["Lunch", "Dinner"],
+                highlights: [
+                    "Trek through dense Rhododendron and Oak forests.",
+                    "Stunning views of Kangra Valley throughout the trail.",
+                    "Reach Triund and witness a majestic sunset.",
+                    "Enjoy camping under the open sky."
+                ]
+            },
+            {
+                day: 2,
+                title: "Triund to McLeod Ganj",
+                altitude: "9,350 ft to 6,800 ft",
+                trek: "9 km",
+                trekTime: "3-4 hours",
+                meals: ["Breakfast"],
+                highlights: [
+                    "Wake up to a glorious sunrise over the Dhauladhar range.",
+                    "Breakfast at the campsite.",
+                    "Descend back to McLeod Ganj.",
+                    "Explore cafes and local markets if time permits."
+                ]
+            }
         ],
         costIncludes: [
-          "Camping accommodation at Triund Top.",
-          "Meals during the trek (as per itinerary).",
-          "Experienced trek guide and support staff.",
-          "Forest entry permits and camping charges.",
-          "Basic first-aid support."
+            "Camping accommodation at Triund Top.",
+            "Meals during the trek (as per itinerary).",
+            "Experienced trek guide and support staff.",
+            "Forest entry permits and camping charges.",
+            "Basic first-aid support."
         ],
         costExcludes: [
-          "Personal expenses like tips, laundry, telephone calls, and beverages.",
-          "Travel insurance and emergency evacuation charges (if required).",
-          "Transport costs from home city to the trek start point (unless specifically mentioned).",
-          "Meals during transit to and from the base camp.",
-          "Trekking gear like shoes, jackets, walking sticks, raincoats, and backpacks.",
-          "Porter or mule charges for personal luggage.",
-          "Any medical costs including oxygen cylinders or other health-related expenses.",
-          "Entry fees for monuments, camera charges, or permits (if applicable and not mentioned).",
-          "Any cost arising due to unforeseen circumstances such as bad weather, landslides, road blockage, political disturbances, or personal reasons.",
-          "GST (Goods and Services Tax) and other applicable government taxes if not included in the package price."
+            "Personal expenses like tips, laundry, telephone calls, and beverages.",
+            "Travel insurance and emergency evacuation charges (if required).",
+            "Transport costs from home city to the trek start point (unless specifically mentioned).",
+            "Meals during transit to and from the base camp.",
+            "Trekking gear like shoes, jackets, walking sticks, raincoats, and backpacks.",
+            "Porter or mule charges for personal luggage.",
+            "Any medical costs including oxygen cylinders or other health-related expenses.",
+            "Entry fees for monuments, camera charges, or permits (if applicable and not mentioned).",
+            "Any cost arising due to unforeseen circumstances such as bad weather, landslides, road blockage, political disturbances, or personal reasons.",
+            "GST (Goods and Services Tax) and other applicable government taxes if not included in the package price."
         ],
         thingsToCarry: [
-          "Small backpack (20-30 liters)",
-          "Trekking shoes or sturdy sports shoes",
-          "Warm clothes (fleece jacket, light down jacket)",
-          "Raincoat/Poncho",
-          "Woolen Cap, Gloves",
-          "Water bottle (minimum 2 liters)",
-          "Sunglasses, Sunscreen, Lip Balm",
-          "Flashlight/headlamp with extra batteries",
-          "Basic medicines (personal first-aid kit)"
+            "Small backpack (20-30 liters)",
+            "Trekking shoes or sturdy sports shoes",
+            "Warm clothes (fleece jacket, light down jacket)",
+            "Raincoat/Poncho",
+            "Woolen Cap, Gloves",
+            "Water bottle (minimum 2 liters)",
+            "Sunglasses, Sunscreen, Lip Balm",
+            "Flashlight/headlamp with extra batteries",
+            "Basic medicines (personal first-aid kit)"
         ],
         bestTime: [
-          "Spring/Summer (March to June): Pleasant weather, blooming trails.",
-          "Autumn (September to December): Clear skies and stunning sunset views.",
-          "Winter (January-February): Snow on trail (trek may close depending on snowfall)."
+            "Spring/Summer (March to June): Pleasant weather, blooming trails.",
+            "Autumn (September to December): Clear skies and stunning sunset views.",
+            "Winter (January-February): Snow on trail (trek may close depending on snowfall)."
         ],
         whyChooseUs: [
-          "Certified and experienced trek leaders.",
-          "High-quality camping gear and safety protocols.",
-          "Small groups for better experience and attention.",
-          "Eco-friendly trekking practices.",
-          "Personalized support for beginners."
+            "Certified and experienced trek leaders.",
+            "High-quality camping gear and safety protocols.",
+            "Small groups for better experience and attention.",
+            "Eco-friendly trekking practices.",
+            "Personalized support for beginners."
         ],
         quickFacts: {
-          nearestRailway: "Pathankot Railway Station (85 km from McLeod Ganj)",
-          nearestAirport: "Gaggal Airport, Kangra",
-          mobileNetwork: "Available throughout (BSNL, Airtel, Jio)",
-          atmAvailability: "McLeod Ganj"
+            nearestRailway: "Pathankot Railway Station (85 km from McLeod Ganj)",
+            nearestAirport: "Gaggal Airport, Kangra",
+            mobileNetwork: "Available throughout (BSNL, Airtel, Jio)",
+            atmAvailability: "McLeod Ganj"
         },
         faqs: [
-          {
-            question: "Is Triund Trek good for beginners?",
-            answer: "Absolutely! It is one of the best beginner-friendly treks in India."
-          },
-          {
-            question: "Can we camp at Triund Top?",
-            answer: "Yes, camping is allowed and is a major highlight of the trek."
-          },
-          {
-            question: "What is the difficulty level of the trek?",
-            answer: "The trail is easy to moderate with gradual ascents."
-          },
-          {
-            question: "How to prepare for Triund Trek?",
-            answer: "Basic walking for 30-45 minutes daily and stretching exercises are enough."
-          }
+            {
+                question: "Is Triund Trek good for beginners?",
+                answer: "Absolutely! It is one of the best beginner-friendly treks in India."
+            },
+            {
+                question: "Can we camp at Triund Top?",
+                answer: "Yes, camping is allowed and is a major highlight of the trek."
+            },
+            {
+                question: "What is the difficulty level of the trek?",
+                answer: "The trail is easy to moderate with gradual ascents."
+            },
+            {
+                question: "How to prepare for Triund Trek?",
+                answer: "Basic walking for 30-45 minutes daily and stretching exercises are enough."
+            }
         ]
-      },
-      {
+    },
+    {
         id: "kashmir-great-lakes-trek",
         name: "Kashmir Great Lakes",
-        image: "/KashmirGreatLakesTrek.jpg",
+        image: "/KashmirGreatLakesTrek.webp",
         subtitle: "",
         description: "The Kashmir Great Lakes Trek is regarded as one of the most beautiful treks in India. Set amidst the pristine Himalayan landscape of Kashmir, this trek takes you through lush meadows, alpine lakes, snow-capped peaks, and breathtaking valleys. Covering seven stunning glacial lakes, the trek is a dream come true for nature lovers and photographers.",
         highlights: [
-          "🌟 Explore seven magnificent alpine lakes: Vishansar, Krishansar, Gadsar, Satsar, Gangbal, Nundkol, and more.",
-          "🌟 Breathtaking views of snow-clad peaks and rolling meadows.",
-          "🌟 Experience Kashmir’s untouched and heavenly landscapes.",
-          "🌟 Walk across colorful meadows carpeted with wildflowers.",
-          "🌟 Camp beside crystal-clear lakes under the starry sky.",
-          "🌟 A lifetime experience for trekking enthusiasts."
+            "🌟 Explore seven magnificent alpine lakes: Vishansar, Krishansar, Gadsar, Satsar, Gangbal, Nundkol, and more.",
+            "🌟 Breathtaking views of snow-clad peaks and rolling meadows.",
+            "🌟 Experience Kashmir’s untouched and heavenly landscapes.",
+            "🌟 Walk across colorful meadows carpeted with wildflowers.",
+            "🌟 Camp beside crystal-clear lakes under the starry sky.",
+            "🌟 A lifetime experience for trekking enthusiasts."
         ],
         details: {
-          location: "Sonamarg to Naranag, Jammu & Kashmir",
-          altitude: "13,800 ft",
-          duration: "8 Days / 7 Nights",
-          distance: "75 km approx",
-          difficulty: "Moderate to Difficult",
-          startingPoint: "Sonamarg",
-          bestTime: ["July to September"]
+            location: "Sonamarg to Naranag, Jammu & Kashmir",
+            altitude: "13,800 ft",
+            duration: "8 Days / 7 Nights",
+            distance: "75 km approx",
+            difficulty: "Moderate to Difficult",
+            startingPoint: "Sonamarg",
+            bestTime: ["July to September"]
         },
         whoCanDo: [
-          "Experienced trekkers seeking scenic and challenging trails.",
-          "Photographers and nature lovers.",
-          "Trekkers with good physical fitness and endurance."
+            "Experienced trekkers seeking scenic and challenging trails.",
+            "Photographers and nature lovers.",
+            "Trekkers with good physical fitness and endurance."
         ],
         itinerary: [
-          {
-            day: 1,
-            title: "Arrival at Srinagar | Drive to Sonamarg",
-            altitude: "7,800 ft",
-            drive: "3-4 hours from Srinagar",
-            stay: "Campsite at Sonamarg",
-            meals: ["Dinner"],
-            highlights: [
-              "Scenic drive through the heart of Kashmir.",
-              "Overnight stay by the Sindh River."
-            ]
-          },
-          {
-            day: 2,
-            title: "Sonamarg to Nichnai via Shekdur",
-            altitude: "7,800 ft to 11,500 ft",
-            trek: "11 km",
-            trekTime: "6-7 hours",
-            stay: "Campsite at Nichnai",
-            meals: ["Breakfast", "Lunch", "Dinner"],
-            highlights: [
-              "Walk through lush meadows and pine forests.",
-              "Beautiful landscapes at Shekdur.",
-              "Camp at the stunning Nichnai valley."
-            ]
-          },
-          {
-            day: 3,
-            title: "Nichnai to Vishansar Lake via Nichnai Pass",
-            altitude: "11,500 ft to 12,000 ft",
-            trek: "13 km",
-            trekTime: "6-7 hours",
-            stay: "Campsite near Vishansar Lake",
-            meals: ["Breakfast", "Lunch", "Dinner"],
-            highlights: [
-              "Cross Nichnai Pass (13,100 ft).",
-              "First views of the majestic Vishansar Lake."
-            ]
-          },
-          {
-            day: 4,
-            title: "Acclimatization/Exploration Day at Vishansar and Krishansar Lakes",
-            stay: "Same campsite",
-            meals: ["Breakfast", "Lunch", "Dinner"],
-            highlights: [
-              "Rest and acclimatization.",
-              "Explore Vishansar and Krishansar Lakes.",
-              "Optional short hikes around the lakes."
-            ]
-          },
-          {
-            day: 5,
-            title: "Vishansar to Gadsar via Gadsar Pass",
-            altitude: "12,000 ft to 13,800 ft to 12,000 ft",
-            trek: "14 km",
-            trekTime: "7-8 hours",
-            stay: "Campsite at Gadsar",
-            meals: ["Breakfast", "Lunch", "Dinner"],
-            highlights: [
-              "Cross Gadsar Pass (highest point of trek – 13,800 ft).",
-              "Stunning views of the twin lakes.",
-              "Gadsar Lake surrounded by wildflowers."
-            ]
-          },
-          {
-            day: 6,
-            title: "Gadsar to Satsar Lakes",
-            altitude: "12,000 ft",
-            trek: "12 km",
-            trekTime: "6 hours",
-            stay: "Campsite at Satsar",
-            meals: ["Breakfast", "Lunch", "Dinner"],
-            highlights: [
-              "Trek through beautiful meadows and ridges.",
-              "Multiple small lakes at Satsar."
-            ]
-          },
-          {
-            day: 7,
-            title: "Satsar to Gangbal Twin Lakes via Zaj Pass",
-            altitude: "12,000 ft to 13,400 ft",
-            trek: "9 km",
-            trekTime: "6-7 hours",
-            stay: "Campsite at Gangbal Lake",
-            meals: ["Breakfast", "Lunch", "Dinner"],
-            highlights: [
-              "Cross Zaj Pass with panoramic views.",
-              "View and camp near the twin lakes: Gangbal and Nundkol."
-            ]
-          },
-          {
-            day: 8,
-            title: "Gangbal to Naranag | Drive to Srinagar",
-            altitude: "12,000 ft to 7,450 ft",
-            trek: "15 km",
-            trekTime: "6-7 hours",
-            drive: "2-3 hours to Srinagar",
-            meals: ["Breakfast", "Lunch"],
-            highlights: [
-              "Long descent through pine forests.",
-              "Trek ends at Naranag village.",
-              "Drive back to Srinagar."
-            ]
-          }
+            {
+                day: 1,
+                title: "Arrival at Srinagar | Drive to Sonamarg",
+                altitude: "7,800 ft",
+                drive: "3-4 hours from Srinagar",
+                stay: "Campsite at Sonamarg",
+                meals: ["Dinner"],
+                highlights: [
+                    "Scenic drive through the heart of Kashmir.",
+                    "Overnight stay by the Sindh River."
+                ]
+            },
+            {
+                day: 2,
+                title: "Sonamarg to Nichnai via Shekdur",
+                altitude: "7,800 ft to 11,500 ft",
+                trek: "11 km",
+                trekTime: "6-7 hours",
+                stay: "Campsite at Nichnai",
+                meals: ["Breakfast", "Lunch", "Dinner"],
+                highlights: [
+                    "Walk through lush meadows and pine forests.",
+                    "Beautiful landscapes at Shekdur.",
+                    "Camp at the stunning Nichnai valley."
+                ]
+            },
+            {
+                day: 3,
+                title: "Nichnai to Vishansar Lake via Nichnai Pass",
+                altitude: "11,500 ft to 12,000 ft",
+                trek: "13 km",
+                trekTime: "6-7 hours",
+                stay: "Campsite near Vishansar Lake",
+                meals: ["Breakfast", "Lunch", "Dinner"],
+                highlights: [
+                    "Cross Nichnai Pass (13,100 ft).",
+                    "First views of the majestic Vishansar Lake."
+                ]
+            },
+            {
+                day: 4,
+                title: "Acclimatization/Exploration Day at Vishansar and Krishansar Lakes",
+                stay: "Same campsite",
+                meals: ["Breakfast", "Lunch", "Dinner"],
+                highlights: [
+                    "Rest and acclimatization.",
+                    "Explore Vishansar and Krishansar Lakes.",
+                    "Optional short hikes around the lakes."
+                ]
+            },
+            {
+                day: 5,
+                title: "Vishansar to Gadsar via Gadsar Pass",
+                altitude: "12,000 ft to 13,800 ft to 12,000 ft",
+                trek: "14 km",
+                trekTime: "7-8 hours",
+                stay: "Campsite at Gadsar",
+                meals: ["Breakfast", "Lunch", "Dinner"],
+                highlights: [
+                    "Cross Gadsar Pass (highest point of trek – 13,800 ft).",
+                    "Stunning views of the twin lakes.",
+                    "Gadsar Lake surrounded by wildflowers."
+                ]
+            },
+            {
+                day: 6,
+                title: "Gadsar to Satsar Lakes",
+                altitude: "12,000 ft",
+                trek: "12 km",
+                trekTime: "6 hours",
+                stay: "Campsite at Satsar",
+                meals: ["Breakfast", "Lunch", "Dinner"],
+                highlights: [
+                    "Trek through beautiful meadows and ridges.",
+                    "Multiple small lakes at Satsar."
+                ]
+            },
+            {
+                day: 7,
+                title: "Satsar to Gangbal Twin Lakes via Zaj Pass",
+                altitude: "12,000 ft to 13,400 ft",
+                trek: "9 km",
+                trekTime: "6-7 hours",
+                stay: "Campsite at Gangbal Lake",
+                meals: ["Breakfast", "Lunch", "Dinner"],
+                highlights: [
+                    "Cross Zaj Pass with panoramic views.",
+                    "View and camp near the twin lakes: Gangbal and Nundkol."
+                ]
+            },
+            {
+                day: 8,
+                title: "Gangbal to Naranag | Drive to Srinagar",
+                altitude: "12,000 ft to 7,450 ft",
+                trek: "15 km",
+                trekTime: "6-7 hours",
+                drive: "2-3 hours to Srinagar",
+                meals: ["Breakfast", "Lunch"],
+                highlights: [
+                    "Long descent through pine forests.",
+                    "Trek ends at Naranag village.",
+                    "Drive back to Srinagar."
+                ]
+            }
         ],
         costIncludes: [
-          "Transport from Srinagar to Sonamarg and return from Naranag to Srinagar.",
-          "All meals during the trek (vegetarian).",
-          "Camping accommodation on twin/triple sharing basis.",
-          "Experienced trek leaders and guides.",
-          "Permits and entry fees.",
-          "Medical kits and oxygen cylinders."
+            "Transport from Srinagar to Sonamarg and return from Naranag to Srinagar.",
+            "All meals during the trek (vegetarian).",
+            "Camping accommodation on twin/triple sharing basis.",
+            "Experienced trek leaders and guides.",
+            "Permits and entry fees.",
+            "Medical kits and oxygen cylinders."
         ],
         costExcludes: [
-          "Personal expenses like tips, laundry, telephone calls, and beverages.",
-          "Travel insurance and emergency evacuation charges (if required).",
-          "Transport costs from home city to the trek start point (unless specifically mentioned).",
-          "Meals during transit to and from the base camp.",
-          "Trekking gear like shoes, jackets, walking sticks, raincoats, and backpacks.",
-          "Porter or mule charges for personal luggage.",
-          "Any medical costs including oxygen cylinders or other health-related expenses.",
-          "Entry fees for monuments, camera charges, or permits (if applicable and not mentioned).",
-          "Any cost arising due to unforeseen circumstances such as bad weather, landslides, road blockage, political disturbances, or personal reasons.",
-          "GST (Goods and Services Tax) and other applicable government taxes if not included in the package price."
+            "Personal expenses like tips, laundry, telephone calls, and beverages.",
+            "Travel insurance and emergency evacuation charges (if required).",
+            "Transport costs from home city to the trek start point (unless specifically mentioned).",
+            "Meals during transit to and from the base camp.",
+            "Trekking gear like shoes, jackets, walking sticks, raincoats, and backpacks.",
+            "Porter or mule charges for personal luggage.",
+            "Any medical costs including oxygen cylinders or other health-related expenses.",
+            "Entry fees for monuments, camera charges, or permits (if applicable and not mentioned).",
+            "Any cost arising due to unforeseen circumstances such as bad weather, landslides, road blockage, political disturbances, or personal reasons.",
+            "GST (Goods and Services Tax) and other applicable government taxes if not included in the package price."
         ],
         thingsToCarry: [
-          "Backpack (50-60 liters)",
-          "Sturdy trekking shoes",
-          "Warm clothes (thermals, fleece jackets, padded jackets)",
-          "Rain gear (poncho or rain jacket)",
-          "Woolen Cap, Gloves, and Socks",
-          "Sunglasses, Sunscreen, Lip Balm",
-          "Water bottles (minimum 2 liters)",
-          "Trekking pole",
-          "Personal medical kit"
+            "Backpack (50-60 liters)",
+            "Sturdy trekking shoes",
+            "Warm clothes (thermals, fleece jackets, padded jackets)",
+            "Rain gear (poncho or rain jacket)",
+            "Woolen Cap, Gloves, and Socks",
+            "Sunglasses, Sunscreen, Lip Balm",
+            "Water bottles (minimum 2 liters)",
+            "Trekking pole",
+            "Personal medical kit"
         ],
         bestTime: [
-          "Summer/Monsoon (July to September): Best season for lush meadows, blooming flowers, and clear views."
+            "Summer/Monsoon (July to September): Best season for lush meadows, blooming flowers, and clear views."
         ],
         whyChooseUs: [
-          "Experienced local trek leaders familiar with terrain.",
-          "High focus on safety and acclimatization.",
-          "Best quality camping gear.",
-          "Small, well-managed groups for personal attention.",
-          "Responsible eco-trekking practices."
+            "Experienced local trek leaders familiar with terrain.",
+            "High focus on safety and acclimatization.",
+            "Best quality camping gear.",
+            "Small, well-managed groups for personal attention.",
+            "Responsible eco-trekking practices."
         ],
         quickFacts: {
-          nearestAirport: "Sheikh ul-Alam Airport, Srinagar",
-          mobileNetwork: "Available in Srinagar, patchy or no network during the trek",
-          atmAvailability: "Srinagar city"
+            nearestAirport: "Sheikh ul-Alam Airport, Srinagar",
+            mobileNetwork: "Available in Srinagar, patchy or no network during the trek",
+            atmAvailability: "Srinagar city"
         },
         faqs: [
-          {
-            question: "Is Kashmir Great Lakes Trek safe?",
-            answer: "Yes, it is safe when done with proper guidance and permits."
-          },
-          {
-            question: "Is the trek suitable for beginners?",
-            answer: "No, this trek requires prior trekking experience and good fitness."
-          },
-          {
-            question: "How should I prepare for the trek?",
-            answer: "Regular cardio exercises (running, cycling) and strength training for at least a month are recommended."
-          },
-          {
-            question: "Will there be snow on the trek?",
-            answer: "Generally, no snow during July-September, but some patches may remain on higher passes."
-          }
+            {
+                question: "Is Kashmir Great Lakes Trek safe?",
+                answer: "Yes, it is safe when done with proper guidance and permits."
+            },
+            {
+                question: "Is the trek suitable for beginners?",
+                answer: "No, this trek requires prior trekking experience and good fitness."
+            },
+            {
+                question: "How should I prepare for the trek?",
+                answer: "Regular cardio exercises (running, cycling) and strength training for at least a month are recommended."
+            },
+            {
+                question: "Will there be snow on the trek?",
+                answer: "Generally, no snow during July-September, but some patches may remain on higher passes."
+            }
         ]
-      },      
+    },
 
 
 ];

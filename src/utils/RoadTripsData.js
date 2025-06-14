@@ -2,7 +2,7 @@ const roadTrips = [
     {
         id: "darma-valley",
         name: "Darma Valley Road Trip",
-        image: "/DarmaValley.jpg",
+        image: "/DarmaValley.webp",
         description: "Explore the untouched Himalayan landscapes of Darma Valley, a pristine and culturally rich region of the Kumaon Himalayas in Uttarakhand. Starting from Haldwani, this road trip takes you deep into the alpine heartland through tribal villages, forested gorges, and eventually to the breathtaking Panchachuli Base Camp. Perfect for offbeat explorers, photographers, and mountain lovers, this trip promises total wilderness, ancient culture, and zero crowds.",
         duration: "7 Nights / 8 Days",
         maximumAltitude: "4,260 m / 13,976 ft (Panchachuli Base Camp)",
@@ -72,7 +72,7 @@ const roadTrips = [
     {
         id: "niti-valley",
         name: "Niti Valley Road Trip",
-        image: "/NitiValley.jpg",
+        image: "/NitiValley.webp",
         description: "Embark on a thrilling road trip to Niti Valley, the last civilian-accessible valley near the Indo-Tibet border. This short but high-impact itinerary starts from Rishikesh, takes you through the snow-capped heights of Auli, remote Himalayan villages like Gamshali, and ends with a cultural touch in Joshimath. With surreal mountain views and minimal crowds, this journey offers a rare glimpse into one of India’s most restricted and raw frontiers.",
         duration: "3 Nights / 4 Days",
         maximumAltitude: "3,600 m / 11,800 ft (Gamshali – near Niti Village)",
@@ -134,7 +134,7 @@ const roadTrips = [
     {
         id: "mana-pass",
         name: "Mana Pass Off-Road",
-        image: "/ManaPass.jpg",
+        image: "/ManaPass.webp",
         description: "This off-road adventure takes you to one of the most remote and rugged regions of Uttarakhand – the Mana Pass. Starting from Rishikesh, you'll travel through the famous Auli hill station and journey along tough terrains, dense forests, and rocky roads to the Mana Pass, located near the Indo-Tibet border. Along the way, you will explore Dev Tal (a beautiful high-altitude lake) and experience a thrilling off-road ride at extreme altitudes, surrounded by majestic mountains and secluded valleys.",
         duration: "3 Nights / 4 Days",
         maximumAltitude: "5,400 m / 17,700 ft (Mana Pass)",
@@ -198,7 +198,7 @@ const roadTrips = [
     {
         id: "nelong-valley",
         name: "Nelong Valley Road Trip",
-        image: "/NelongValley.jpg",
+        image: "/NelongValley.webp",
         description: "Embark on an off-road adventure to Nelong Valley, a pristine and remote region near the Indo-Tibet border in Uttarakhand. Starting from Rishikesh, this journey takes you through Harshil Valley, a picturesque hamlet known for its apple orchards and deodar forests, before reaching the high-altitude Nelong Valley. This area, once part of an ancient Indo-Tibetan trade route, offers breathtaking landscapes and a glimpse into the region's rich cultural heritage.",
         duration: "4 Days / 3 Nights",
         maximumAltitude: "4,500 m / 14,764 ft (Nelong Valley)",
@@ -280,7 +280,7 @@ const roadTrips = [
     {
         id: "ukhimath-chopta-mandal",
         name: "Ukhimath, Chopta & Mandal Road Trip",
-        image: "/ChoptaMandal.jpg",
+        image: "/ChoptaMandal.webp",
         description: "This road trip takes you through the stunning landscapes of Ukhimath, Chopta, and Mandal, in the Garhwal Himalayas. Known for its panoramic views, dense forests, and tranquil atmosphere, these destinations offer a perfect blend of spirituality and adventure. Starting from Rishikesh, you’ll pass through lush valleys, beautiful meadows, and visit important temples, making it a well-rounded road trip for nature lovers, photographers, and spiritual seekers.",
         duration: "4 Days / 3 Nights",
         maximumAltitude: "2,680 m (Chopta)",
@@ -362,7 +362,7 @@ const roadTrips = [
     {
         id: "ladakh",
         name: "Ladakh Road Trip",
-        image: "/Ladakh.jpg",
+        image: "/Ladakh.webp",
         description: "This thrilling road trip takes you through the heart of the Himalayas to explore the stunning landscapes of Ladakh. Starting from Delhi, the journey spans over 10 days and covers some of the most iconic destinations, including Leh, Nubra Valley, and Pangong Lake. Expect high-altitude passes, barren landscapes, turquoise lakes, and cultural treasures, all packed into this unforgettable adventure.",
         duration: "10 Days / 9 Nights",
         maximumAltitude: "5,359 m (Khardung La Pass)",
@@ -431,7 +431,7 @@ const roadTrips = [
     {
         id: "spiti-valley",
         name: "Spiti Valley Road Trip",
-        image: "/SpitiValley.jpg",
+        image: "/SpitiValley.webp",
         description: "The Spiti Valley road trip is a thrilling adventure through some of the highest and most rugged terrains in India. Starting from Delhi, the journey spans over 9 days, covering the towns and monasteries of Spiti Valley, including Kaza, Tabo, and Chandratal Lake. This trip is perfect for those seeking peace, adventure, and a glimpse into the culture of the Himalayas. The route includes high-altitude passes, off-road trails, ancient monasteries, and breathtaking views of barren landscapes and snow-capped peaks.",
         duration: "9 Days / 8 Nights",
         maximumAltitude: "4,420 m (Kunzum La Pass)",

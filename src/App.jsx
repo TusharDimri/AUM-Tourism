@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 import Home from './pages/home';
+import SearchPage from './components/Home/SearchPage';
 import Header from './components/Header';
 import AboutUs from './pages/AboutUs';
 import ReligiousToursPage from './pages/RelegiousToursPage';
@@ -51,6 +52,7 @@ function App() {
       <Header isTransparent={isTransparent} />
       <Routes>
         <Route path="/" element={<Home isTransparent={isTransparent} heroRef={heroRef} />} />
+        <Route path="/search" element={<SearchPage />} /> 
         <Route path="/religious-tours/:id?" element={<ReligiousToursPage />} />
         <Route path="/road-trips/:id?" element={<RoadTripsPage />} />
         <Route path="/treks/:id?" element={<TreksPage />} />

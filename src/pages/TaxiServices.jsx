@@ -14,7 +14,7 @@ const TaxiServices = () => {
                     <div className="relative rounded-2xl overflow-hidden shadow-2xl h-96 bg-cover bg-center group">
                         <div
                             className="absolute inset-0 bg-gradient-to-r from-blue-900/30 to-blue-800/20"
-                            style={{ backgroundImage: "url(CabBooking.png)", backgroundSize: "cover", backgroundPosition: "center" }}
+                            style={{ backgroundImage: "url(CabBooking.webp)", backgroundSize: "cover", backgroundPosition: "center" }}
                         >
                             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-blue-900/80 to-transparent">
                                 <h2 className="text-3xl font-bold text-white font-serif">

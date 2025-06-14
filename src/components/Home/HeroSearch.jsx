@@ -1,45 +1,41 @@
 // src/components/HeroSearch.jsx
 import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import treks from '../../utils/TreksData';
-import tours from '../../utils/RelegiousToursData';
-import roadTrips from '../../utils/RoadTripsData';
-import packages from '../../utils/PackagesData';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
-const routeConfig = {
-  'treks':       { path: '/treks',        param: 'trekId'     },
-  'religious':   { path: '/religious-tours', param: 'tourId'    },
-  'road-trips':  { path: '/road-trips',   param: 'id'         },
-  'packages':    { path: '/packages',     param: 'packageId'  },
-};
+// Note: Removed unused imports like 'Link', 'treks', 'tours', etc.,
+// as the search logic and results display are now handled by SearchPage.
 
 export default function HeroSearch() {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState([]);
+  const navigate = useNavigate(); // Initialize useNavigate hook
   const debounce = useRef(null);
 
-  // flatten and tag
-  const allItems = [
-    ...treks.map(i => ({ ...i, type: 'treks',       label: i.name })),
-    ...tours.map(i => ({ ...i, type: 'religious',   label: i.title })),
-    ...roadTrips.map(i => ({ ...i, type: 'road-trips', label: i.name })),
-    ...packages.map(i => ({ ...i, type: 'packages',   label: i.name })),
-  ];
-
+  // This useEffect now primarily handles navigation after a debounce period.
+  // It triggers a redirect to the /search page with the current query.
   useEffect(() => {
     if (debounce.current) clearTimeout(debounce.current);
-    if (query.length < 2) {
-      setResults([]);
-      return;
-    }
+
+    // Only trigger navigation if the query has at least 2 characters,
+    // or if it's "trek" or "treks" (though the main logic is on SearchPage now).
+    // This debounce helps prevent immediate navigation on every single keystroke.
     debounce.current = setTimeout(() => {
-      const q = query.toLowerCase();
-      setResults(allItems.filter(item =>
-        item.label.toLowerCase().includes(q)
-      ));
-    }, 300);
+      if (query.length >= 2 || query.toLowerCase() === "trek" || query.toLowerCase() === "treks") {
+        // Navigate to the new search page, passing the query as a URL parameter.
+        // The SearchPage will pick this up and perform the search.
+        navigate(`/search?q=${encodeURIComponent(query)}`);
+        setQuery(''); // Clear the input field on the home page after navigation.
+      }
+    }, 300); // Debounce for 300ms before navigating
+
     return () => clearTimeout(debounce.current);
-  }, [query]);
+  }, [query, navigate]); // Depend on query and navigate for re-running the effect
+
+  // This function is called when the input field is clicked.
+  // It immediately navigates to the /search page, allowing users to
+  // browse the search interface without typing anything first.
+  const handleInputClick = () => {
+    navigate('/search');
+  };
 
   return (
     <div className="relative w-full w-[60vw] md:max-w-[40vw] mx-auto">
@@ -50,42 +46,10 @@ export default function HeroSearch() {
         placeholder="Search"
         value={query}
         onChange={e => setQuery(e.target.value)}
+        onClick={handleInputClick} // This will trigger immediate navigation on click
       />
-
-      {results.length > 0 && (
-        <div className="absolute z-20 w-full mt-2 bg-white rounded-lg shadow-lg overflow-hidden">
-          {results.map(item => {
-            const { path, param } = routeConfig[item.type];
-            const to = `${path}/?${param}=${encodeURIComponent(item.id)}`;
-
-            return (
-              <Link
-                key={`${item.type}-${item.id}`}
-                to={to}
-                className="flex items-center px-4 py-3 hover:bg-gray-100 transition"
-                onClick={() => setQuery('')}
-              >
-                <img
-                  src={item.image || '/placeholder.jpg'}
-                  alt={item.label}
-                  className="w-12 h-12 rounded-md object-cover mr-4 flex-shrink-0"
-                />
-                <div className="flex-1">
-                  <p className="font-medium text-gray-800">{item.label}</p>
-                  <p className="text-sm text-gray-500 capitalize">
-                    {item.type.replace('-', ' ')}
-                  </p>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      )}
-      {results.length === 0 && query.length > 2 && (
-        <div className="absolute z-20 w-full mt-2 bg-white rounded-lg shadow-lg overflow-hidden">
-          <p className="px-4 py-3 text-gray-800">No results found</p>
-        </div>
-      )}
+      {/* The results display logic has been completely removed from this component,
+          as results are now shown on the dedicated SearchPage. */}
     </div>
   );
 }

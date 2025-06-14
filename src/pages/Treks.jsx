@@ -126,10 +126,11 @@ const TreksPage = () => {
   };
 
   const getWhatsAppLink = () => {
+    const phoneNumber = "9119058603";
     const message = selectedTrek
       ? `I want to know more about ${selectedTrek.name}`
       : "I want to know more about your tours";
-    return `https://wa.me/?text=${encodeURIComponent(message)}`;
+    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   };
 
   return (
@@ -416,35 +417,35 @@ const TreksPage = () => {
                 </ResponsiveSection>
 
                 {/* Inclusions and Exclusions */}
-                  <section className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                    <div className="bg-green-50 rounded-xl p-6">
-                      <h3 className="text-xl font-semibold mb-4 flex items-center gap-2 text-green-800">
-                        <FaCheckCircle /> Includes
-                      </h3>
-                      <ul className="space-y-2">
-                        {selectedTrek.costIncludes.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2">
-                            <FaCheckCircle className="text-green-600 mt-1 flex-shrink-0" />
-                            <span className="text-gray-700">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                <section className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                  <div className="bg-green-50 rounded-xl p-6">
+                    <h3 className="text-xl font-semibold mb-4 flex items-center gap-2 text-green-800">
+                      <FaCheckCircle /> Includes
+                    </h3>
+                    <ul className="space-y-2">
+                      {selectedTrek.costIncludes.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <FaCheckCircle className="text-green-600 mt-1 flex-shrink-0" />
+                          <span className="text-gray-700">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                    <div className="bg-red-50 rounded-xl p-6">
-                      <h3 className="text-xl font-semibold mb-4 flex items-center gap-2 text-red-800">
-                        <FaTimesCircle /> Excludes
-                      </h3>
-                      <ul className="space-y-2">
-                        {selectedTrek.costExcludes.map((item, i) => (
-                          <li key={i} className="flex items-start gap-2">
-                            <FaTimesCircle className="text-red-600 mt-1 flex-shrink-0" />
-                            <span className="text-gray-700">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </section>
+                  <div className="bg-red-50 rounded-xl p-6">
+                    <h3 className="text-xl font-semibold mb-4 flex items-center gap-2 text-red-800">
+                      <FaTimesCircle /> Excludes
+                    </h3>
+                    <ul className="space-y-2">
+                      {selectedTrek.costExcludes.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <FaTimesCircle className="text-red-600 mt-1 flex-shrink-0" />
+                          <span className="text-gray-700">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </section>
 
                 {/* Essential Gear */}
                 <ResponsiveSection id="gear" title="Essential Gear">

@@ -116,10 +116,11 @@ const RoadTripsPage = () => {
     };
 
     const getWhatsAppLink = () => {
+        const phoneNumber = "9119058603";
         const message = selectedTrip
             ? `I want to know more about ${selectedTrip.name}`
             : "I want to know more about your tours";
-        return `https://wa.me/?text=${encodeURIComponent(message)}`;
+        return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     };
 
     return (

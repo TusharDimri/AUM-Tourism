@@ -3,7 +3,7 @@ const packages = [
     id: 'corporate',
     name: 'Corporate Retreats',
     subtitle: 'Team Building in Inspiring Locations',
-    image: '/CorporatePackage.jpg',
+    image: '/CorporatePackage.webp',
     // Original keys filled with raw data
     description: `Reconnect. Rejuvenate. Rediscover your team spirit.
 
@@ -68,7 +68,7 @@ The weather is ideal for outdoor activities, sightseeing, and unwinding in natur
     id: 'holiday',
     name: 'Holiday Packages',
     subtitle: 'Perfect Getaways for Families & Friends',
-    image: '/HolidayPackage.png',
+    image: '/HolidayPackage.webp',
     description: `Discover. Explore. Celebrate with Aum Tourism.
 
 Overview

@@ -55,10 +55,11 @@ const ReligiousToursPage = () => {
   };
 
   const getWhatsAppLink = () => {
+    const phoneNumber = "9119058603";
     const message = selectedTour
       ? `I want to know more about ${selectedTour.title}`
       : "I want to know more about your tours";
-    return `https://wa.me/?text=${encodeURIComponent(message)}`;
+    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   };
 
   return (
