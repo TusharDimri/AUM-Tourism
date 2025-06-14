@@ -9,7 +9,7 @@ import "./AboutUs.css"
 const AboutUs = () => {
     const swiperRef = useRef(null);
     const certifications = [
-        "Cert1.jpg",
+        "Cert1.webp",
         // "/cert2.jpg",
     ];
     const [selectedCert, setSelectedCert] = useState(null);
@@ -53,7 +53,7 @@ const AboutUs = () => {
                         <div className="space-y-6">
                             <div className="relative h-96 rounded-2xl overflow-hidden shadow-lg">
                                 <img
-                                    src="Mukesh Airy.webp"
+                                    src="Mukesh-Airy.webp"
                                     alt="Mukesh Airy - Founder"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40" />
