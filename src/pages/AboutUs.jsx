@@ -71,7 +71,7 @@ const AboutUs = () => {
                         <div className="space-y-6">
                             <div className="relative h-96 rounded-2xl overflow-hidden shadow-lg">
                                 <img
-                                    src="Ashish Kumar.webp"
+                                    src="Ashish Kumar.jpg"
                                     alt="Ashish Kumar - Co-Founder"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40" />
